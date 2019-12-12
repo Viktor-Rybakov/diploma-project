@@ -10,19 +10,17 @@
 <body>
   <header class="header">
 
-    <button class="menu-button">
-      <span class="menu-button__bar"></span>
-      <span class="menu-button__bar"></span>
-      <span class="menu-button__bar"></span>
+    <button class="menu-button" type="button" aria-label="Открыть меню" aria-controls="menu">
+      <svg class="menu-button__icon"></svg>
     </button>
 
-    <nav class="menu">
+    <nav id="menu" class="menu">
       <ul class="menu__list">
         <li class="menu__item">
           <a class="menu__link" href="#">Услуги</a>
         </li>
 
-        <li class="menu__item">П
+        <li class="menu__item">
           <a class="menu__link" href="#">Портфолио</a>
         </li>
 
@@ -32,135 +30,158 @@
       </ul>
     </nav>
 
-    <a class="phone" href="tel:+74999955577">+7&nbsp;(499)&nbsp;995-55-77</a>
+    <div class="header-info">
+      <a class="phone" href="tel:+74999955577">+7&nbsp;(499)&nbsp;995-55-77</a>
 
-    <button id="call-back-header" class="button-mobile"></button>
-
-    <img class="photo" src="photo.jpg" alt="Фотография">
-
-    <span class="fly-tag">{&nbsp;}</span>
-    <span class="fly-tag">#</span>
-    <span class="fly-tag">&lt;div&gt;</span>
-    <span class="fly-tag">&lt;/&gt;</span>
-    <span class="fly-tag">&lt;/&gt;</span>
-
-    <h1 class="heading">Дмитрий Алексеев</h1>
-
-    <p class="subtitle">Frontend-разработчик и веб-верстальщик</p>
-
-    <button id="learn-more" class="button">Узнать больше</button>
+      <button id="call-back-header" class="button-mobile"></button>
+    </div>
   </header>
 
   <main class="main">
+    <section id="top-section" class="top-section section">
+      <div class="fix-container">
+        <img class="photo" src="photo.jpg" alt="Фотография Дмитрия Алексеева">
+
+        <h1 class="heading">
+          Дмитрий Алексеев <span class="heading__subtitle">Frontend-разработчик и веб-верстальщик</span>
+        </h1>
+
+        <button id="learn-more" class="button">Узнать больше</button>
+      </div>
+
+      <svg class="top-section__background"></svg>
+
+      <div class="fly-tag">
+        <span class="fly-tag__item">{&nbsp;}</span>
+        <span class="fly-tag__item">#</span>
+        <span class="fly-tag__item">&lt;div&gt;</span>
+        <span class="fly-tag__item">&lt;/&gt;</span>
+        <span class="fly-tag__item">&lt;/&gt;</span>
+      </div>
+    </section>
+
     <section id="what-i-do" class="services section">
-      <h2 class="section-heading">Что я делаю</h2>
+      <div class="fix-container">
+        <h2 class="section-heading">Что я делаю</h2>
 
-      <ul class="services__list">
-        <li class="services__item">Вёрстка лендинг–страниц и сайтов любой сложности</li>
-        <li class="services__item">Адаптивная вёрстка под все браузеры и устройства</li>
-        <li class="services__item">Frontend – разработка и программирование</li>
-        <li class="services__item">Исправление и доработка существующей вёрстки</li>
-      </ul>
+        <ul class="services__list">
+          <li class="services__item">Вёрстка лендинг–страниц и сайтов любой сложности</li>
+          <li class="services__item">Адаптивная вёрстка под все браузеры и устройства</li>
+          <li class="services__item">Frontend – разработка и программирование</li>
+          <li class="services__item">Исправление и доработка существующей вёрстки</li>
+        </ul>
 
-      <button id="ask-price" class="button">Узнать стоимость</button>
+        <button id="ask-price" class="button">Узнать стоимость</button>
+      </div>
     </section>
 
     <section id="my-projects" class="portfolio section">
-      <h2 class="section-heading">Примеры моих работ</h2>
+      <div class="fix-container">
+        <h2 class="section-heading">Примеры моих работ</h2>
 
-      <ul class="portfolio__list">
-        <li class="portfolio__list-item">
-          <a href="#" class="portfolio__link">
-            <figure class="portfolio__item">
-              <img class="portfolio__picture" src="" alt="Сайт психолога Веры Антоновой">
-              <figcapture class="portfolio__description">Сайт психолога Веры Антоновой</figcapture>
-            </figure>
-          </a>
-        </li>
+        <ul class="portfolio__list">
+          <li class="portfolio__list-item">
+            <a href="#" class="portfolio__link">
+              <figure class="portfolio__item">
+                <img class="portfolio__picture" src="project1.jpg" alt="Сайт психолога Веры Антоновой">
+                <figcaption class="portfolio__description">Сайт психолога Веры Антоновой</figcaption>
+              </figure>
+            </a>
+          </li>
 
-        <li class="portfolio__list-item">
-          <a href="#" class="portfolio__link">
-            <figure class="portfolio__item">
-              <img class="portfolio__picture" src="" alt="Сайт магазина детской одежды">
-              <figcapture class="portfolio__description">Сайт магазина детской одежды</figcapture>
-            </figure>
-          </a>
-        </li>
+          <li class="portfolio__list-item">
+            <a href="#" class="portfolio__link">
+              <figure class="portfolio__item">
+                <img class="portfolio__picture" src="project2.jpg" alt="Сайт магазина детской одежды">
+                <figcaption class="portfolio__description">Сайт магазина детской одежды</figcaption>
+              </figure>
+            </a>
+          </li>
 
-        <li class="portfolio__list-item">
-          <a href="#" class="portfolio__link">
-            <figure class="portfolio__item">
-              <img class="portfolio__picture" src="" alt="Сайт магазина «Рыболов»">
-              <figcapture class="portfolio__description">Сайт магазина «Рыболов»</figcapture>
-            </figure>
-          </a>
-        </li>
-      </ul>
+          <li class="portfolio__list-item">
+            <a href="#" class="portfolio__link">
+              <figure class="portfolio__item">
+                <img class="portfolio__picture" src="project3.jpg" alt="Сайт магазина «Рыболов»">
+                <figcaption class="portfolio__description">Сайт магазина «Рыболов»</figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
 
-      <button id="order-project" class="button">Заказать проект</button>
+        <button id="order-project" class="button">Заказать проект</button>
+      </div>
     </section>
 
-    <section id="price" class="section price-section">
-      <h2 class="visually-hidden">Стоимость работы</h2>
+    <section id="price" class="price-section section">
+      <div class="fix-container">
+        <h2 class="visually-hidden">Стоимость работы</h2>
 
-      <p class="description">Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*</p>
+        <p class="description">Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*</p>
 
-      <p class="sub-description">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в
-        зависимости от сложности задач.</p>
+        <p class="sub-description">
+          <small>* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в
+          зависимости от сложности задач.</small>
+        </p>
+      </div>
 
-      <span class="fly-tag">{&nbsp;}</span>
-      <span class="fly-tag">&lt;div&gt;</span>
-      <span class="fly-tag">&lt;/&gt;</span>
+      <div class="fly-tag">
+        <span class="fly-tag__item">{&nbsp;}</span>
+        <span class="fly-tag__item">&lt;div&gt;</span>
+        <span class="fly-tag__item">&lt;/&gt;</span>
+      </div>
     </section>
 
     <footer class="footer">
-      <div class="footer-top contacts socials">
-        <nav class="footer-menu">
-          <ul class="footer-menu__list">
-            <li class="footer-menu__list-item">
-              <a class="footer-menu__link" href="#">Услуги</a>
+      <div class="fix-container">
+        <div class="footer-top contacts socials">
+          <nav class="footer-menu">
+            <ul class="footer-menu__list">
+              <li class="footer-menu__list-item">
+                <a class="footer-menu__link" href="#">Услуги</a>
+              </li>
+
+              <li class="footer-menu__list-item">
+                <a class="footer-menu__link" href="#">Портфолио</a>
+              </li>
+
+              <li class="footer-menu__list-item">
+                <a class="footer-menu__link" href="#">Стоимость</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a class="contacts__link phone" href="tel:+74999957755">+7&nbsp;(499)&nbsp;995-77-55</a>
             </li>
 
-            <li class="footer-menu__list-item">
-              <a class="footer-menu__link" href="#">Портфолио</a>
-            </li>
-
-            <li class="footer-menu__list-item">
-              <a class="footer-menu__link" href="#">Стоимость</a>
+            <li class="contacts__item">
+              <a class="contacts__link email" href="mailto:dmitry@alekseev.com">dmitry@alekseev.com</a>
             </li>
           </ul>
-        </nav>
 
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <a class="contacts__link phone" href="tel:+74999957755">+7&nbsp;(499)&nbsp;995-77-55</a>
-          </li>
+          <button id="call-back-footer" class="button">Заказать звонок</button>
 
-          <li class="contacts__item">
-            <a class="contacts__link email" href="mailto:dmitry@alekseev.com">dmitry@alekseev.com</a>
-          </li>
-        </ul>
+          <ul class="socials__list">
+            <li class="socials__list-item">
+              <a class="socials__link vk" href="#"></a>
+            </li>
 
-        <button id="call-back-footer" class="button">Заказать звонок</button>
+            <li class="socials__list-item">
+              <a class="socials__link fb" href="#"></a>
+            </li>
 
-        <ul class="socials__list">
-          <li class="socials__list-item">
-            <a class="socials__link vk" href="#"></a>
-          </li>
+            <li class="socials__list-item">
+              <a class="socials__link twitter" href="#"></a>
+            </li>
 
-          <li class="socials__list-item">
-            <a class="socials__link fb" href="#"></a>
-          </li>
-
-          <li class="socials__list-item">
-            <a class="socials__link twitter" href="#"></a>
-          </li>
-
-          <li class="socials__list-item">
-            <a class="socials__link instagram" href="#"></a>
-          </li>
-        </ul>
+            <li class="socials__list-item">
+              <a class="socials__link instagram" href="#"></a>
+            </li>
+          </ul>
+        </div>
       </div>
+
 
       <p class="footer-copyright">&copy; Дмитрий Алексеев, 2016 – 2018</p>
     </footer>
