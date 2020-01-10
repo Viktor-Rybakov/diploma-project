@@ -9,31 +9,34 @@
 
 <body>
   <header class="header">
+    <div class="fix-container">
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-controls="menu">
+        <svg class="menu-button__icon"></svg>
+      </button>
 
-    <button class="menu-button" type="button" aria-label="Открыть меню" aria-controls="menu">
-      <svg class="menu-button__icon"></svg>
-    </button>
+      <nav id="menu" class="menu">
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a class="menu__link" href="#">Услуги</a>
+          </li>
 
-    <nav id="menu" class="menu">
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a class="menu__link" href="#">Услуги</a>
-        </li>
+          <li class="menu__list-item">
+            <a class="menu__link" href="#">Портфолио</a>
+          </li>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">Портфолио</a>
-        </li>
+          <li class="menu__list-item">
+            <a class="menu__link" href="#">Стоимость</a>
+          </li>
+        </ul>
+      </nav>
 
-        <li class="menu__item">
-          <a class="menu__link" href="#">Стоимость</a>
-        </li>
-      </ul>
-    </nav>
+      <div class="header-info">
+        <a class="phone" href="tel:+74999955577">+7&nbsp;(499)&nbsp;995-55-77</a>
 
-    <div class="header-info">
-      <a class="phone" href="tel:+74999955577">+7&nbsp;(499)&nbsp;995-55-77</a>
-
-      <button id="call-back-header" class="button-mobile"></button>
+        <button id="call-back-header" class="call-back-button call-back-button_mobile" type="button" aria-label="Заказать звонок" aria-controls="popup-menu">
+          <svg class="call-back-button__icon"></svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -46,10 +49,8 @@
           Дмитрий Алексеев <span class="heading__subtitle">Frontend-разработчик и веб-верстальщик</span>
         </h1>
 
-        <button id="learn-more" class="button">Узнать больше</button>
+        <button id="learn-more" class="button" type="button">Узнать больше</button>
       </div>
-
-      <svg class="top-section__background"></svg>
 
       <div class="fly-tag">
         <span class="fly-tag__item">{&nbsp;}</span>
@@ -71,44 +72,52 @@
           <li class="services__item">Исправление и доработка существующей вёрстки</li>
         </ul>
 
-        <button id="ask-price" class="button">Узнать стоимость</button>
+        <button id="ask-price" class="button" type="button">Узнать стоимость</button>
       </div>
     </section>
 
     <section id="my-projects" class="portfolio section">
       <div class="fix-container">
         <h2 class="section-heading">Примеры моих работ</h2>
+          <div class="slider">
+          <ul class="slider__list">
+            <li class="slider__list-item">
+              <a href="#" class="slider__link">
+                <figure class="slider__item">
+                  <img class="slider__picture" src="project1.jpg" alt="Сайт психолога Веры Антоновой">
+                  <figcaption class="slider__description">Сайт психолога Веры Антоновой</figcaption>
+                </figure>
+              </a>
+            </li>
 
-        <ul class="portfolio__list">
-          <li class="portfolio__list-item">
-            <a href="#" class="portfolio__link">
-              <figure class="portfolio__item">
-                <img class="portfolio__picture" src="project1.jpg" alt="Сайт психолога Веры Антоновой">
-                <figcaption class="portfolio__description">Сайт психолога Веры Антоновой</figcaption>
-              </figure>
-            </a>
-          </li>
+            <li class="slider__list-item">
+              <a href="#" class="slider__link">
+                <figure class="slider__item">
+                  <img class="slider__picture" src="project2.jpg" alt="Сайт магазина детской одежды">
+                  <figcaption class="slider__description">Сайт магазина детской одежды</figcaption>
+                </figure>
+              </a>
+            </li>
 
-          <li class="portfolio__list-item">
-            <a href="#" class="portfolio__link">
-              <figure class="portfolio__item">
-                <img class="portfolio__picture" src="project2.jpg" alt="Сайт магазина детской одежды">
-                <figcaption class="portfolio__description">Сайт магазина детской одежды</figcaption>
-              </figure>
-            </a>
-          </li>
+            <li class="slider__list-item">
+              <a href="#" class="slider__link">
+                <figure class="slider__item">
+                  <img class="slider__picture" src="project3.jpg" alt="Сайт магазина «Рыболов»">
+                  <figcaption class="slider__description">Сайт магазина «Рыболов»</figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
 
-          <li class="portfolio__list-item">
-            <a href="#" class="portfolio__link">
-              <figure class="portfolio__item">
-                <img class="portfolio__picture" src="project3.jpg" alt="Сайт магазина «Рыболов»">
-                <figcaption class="portfolio__description">Сайт магазина «Рыболов»</figcaption>
-              </figure>
-            </a>
-          </li>
-        </ul>
+          <button class="slider__prev-button" type="button" aria-label="Предыдущий слайд"></button>
+          <button class="slider__next-button" type="button" aria-label="Следующий слайд"></button>
 
-        <button id="order-project" class="button">Заказать проект</button>
+          <button class="slider__pagination slider__pagination_active" type="button" aria-label="Текущий слайд"></button>
+          <button class="slider__pagination" type="button" aria-label="Следующий слайд"></button>
+          <button class="slider__pagination" type="button" aria-label="Следующий слайд"></button>
+        </div>
+
+        <button id="order-project" class="button" type="button">Заказать проект</button>
       </div>
     </section>
 
@@ -151,34 +160,44 @@
           </nav>
 
           <ul class="contacts__list">
-            <li class="contacts__item">
+            <li class="contacts__list-item">
               <a class="contacts__link phone" href="tel:+74999957755">+7&nbsp;(499)&nbsp;995-77-55</a>
             </li>
 
-            <li class="contacts__item">
+            <li class="contacts__list-item">
               <a class="contacts__link email" href="mailto:dmitry@alekseev.com">dmitry@alekseev.com</a>
             </li>
           </ul>
 
-          <button id="call-back-footer" class="button">Заказать звонок</button>
+          <div class="footer-top-right">
+            <button id="call-back-footer" class="button" type="button">Заказать звонок</button>
 
-          <ul class="socials__list">
-            <li class="socials__list-item">
-              <a class="socials__link vk" href="#"></a>
-            </li>
+            <ul class="socials__list">
+              <li class="socials__list-item">
+                <a class="socials__link" href="#" aria-label="Ссылка на Вконтакте">
+                  <svg class="socials__icon vk"></svg>
+                </a>
+              </li>
 
-            <li class="socials__list-item">
-              <a class="socials__link fb" href="#"></a>
-            </li>
+              <li class="socials__list-item">
+                <a class="socials__link" href="#" aria-label="Ссылка на Facebook">
+                  <svg class="socials__icon fb"></svg>
+                </a>
+              </li>
 
-            <li class="socials__list-item">
-              <a class="socials__link twitter" href="#"></a>
-            </li>
+              <li class="socials__list-item">
+                <a class="socials__link" href="#" aria-label="Ссылка на Twitter">
+                  <svg class="socials__icon twitter"></svg>
+                </a>
+              </li>
 
-            <li class="socials__list-item">
-              <a class="socials__link instagram" href="#"></a>
-            </li>
-          </ul>
+              <li class="socials__list-item">
+                <a class="socials__link" href="#" aria-label="Ссылка на Instagram">
+                  <svg class="socials__icon instagram"></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
