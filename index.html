@@ -33,7 +33,7 @@
       <div class="header-info">
         <a class="phone" href="tel:+74999955577">+7&nbsp;(499)&nbsp;995-55-77</a>
 
-        <button id="call-back-header" class="call-back-button call-back-button_mobile" type="button" aria-label="Заказать звонок" aria-controls="popup-menu">
+        <button id="call-back-header" class="call-back-button call-back-button_mobile" type="button" aria-label="Заказать звонок" aria-controls="popup-form">
           <svg class="call-back-button__icon"></svg>
         </button>
       </div>
@@ -112,9 +112,17 @@
           <button class="slider__prev-button" type="button" aria-label="Предыдущий слайд"></button>
           <button class="slider__next-button" type="button" aria-label="Следующий слайд"></button>
 
-          <button class="slider__pagination slider__pagination_active" type="button" aria-label="Текущий слайд"></button>
-          <button class="slider__pagination" type="button" aria-label="Следующий слайд"></button>
-          <button class="slider__pagination" type="button" aria-label="Следующий слайд"></button>
+          <ul class="pagination">
+            <li class="pagination__list-item">
+              <button class="pagination__button pagination__button_active" type="button" aria-label="Слайд 1"></button>
+            </li>
+            <li class="pagination__list-item">
+              <button class="pagination__button" type="button" aria-label="Слайд 2"></button>
+            </li>
+            <li class="pagination__list-item">
+              <button class="pagination__button" type="button" aria-label="Слайд 3"></button>
+            </li>
+          </ul>
         </div>
 
         <button id="order-project" class="button" type="button">Заказать проект</button>
@@ -203,11 +211,18 @@
 
 
       <p class="footer-copyright">
-        <small>&copy; Дмитрий Алексеев, 2016 – 2018</small>
+        &copy; Дмитрий Алексеев, 2016 – 2018
       </p>
     </footer>
 
   </main>
+
+  <div class="modal">
+    <!--Здесь будет всплывающая форма заказа обратного звонка-->
+    <form id="popup-form" class="popup-form">
+
+    </form>
+  </div>
 </body>
 
 </html>
