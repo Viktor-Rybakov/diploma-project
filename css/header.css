@@ -1,0 +1,43 @@
+.header {
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+.menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  margin-left: 12px;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.phone {
+  display: block;
+
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.call-back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  margin-right: 13px;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+}
