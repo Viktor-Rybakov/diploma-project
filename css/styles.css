@@ -64,9 +64,3 @@ a {
   width: 100%;
   z-index: 5000;
 }
-
-.flex-container_center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}

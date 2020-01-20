@@ -8,68 +8,65 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/header.css">
+
+  <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-regular.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-500.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-700.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-900.woff2" as="font">
 </head>
 
 <body>
-  <header class="header">
-    <div class="fix-container flex-container_center">
-      <button class="menu-button" type="button" aria-label="Открыть меню" aria-controls="menu">
-        <svg  class="menu-button__icon" 
-              width="24" height="18" 
-              viewBox="0 0 24 18" 
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs>
-            <linearGradient id="linearGradient" x1="0" x2="0" y1="100%" y2="0">
-              <stop offset="0" stop-color="#f26522" />
-              <stop offset="1" stop-color="#fa0891" />
-            </linearGradient>
-          </defs>
+  <header class="header fix-container">
+    <button class="menu-button" type="button" aria-label="Открыть меню" aria-controls="menu">
+      <svg  class="menu-button__icon" 
+            width="24" height="18" 
+            viewBox="0 0 24 18" 
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <linearGradient id="linearGradient" x1="0" x2="0" y1="100%" y2="0">
+            <stop offset="0" stop-color="#f26522" />
+            <stop offset="1" stop-color="#fa0891" />
+          </linearGradient>
+        </defs>
+        <path fill="url(#linearGradient)"
+          d="M 0 15.437 h 24 V 18 H 0 Z M 0 7.72 h 24 v 2.562 H 0 Z m 0 -7.72 h 24 v 2.563 H 0 Z" />
+      </svg>
+    </button>
+
+    <nav id="menu" class="menu">
+      <ul class="menu__list">
+        <li class="menu__list-item">
+          <a class="menu__link" href="#">Услуги</a>
+        </li>
+
+        <li class="menu__list-item">
+          <a class="menu__link" href="#">Портфолио</a>
+        </li>
+
+        <li class="menu__list-item">
+          <a class="menu__link" href="#">Стоимость</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="phone" href="tel:+74999955577">+7&nbsp;(499)&nbsp;995-55-77</a>
+
+    <button id="call-back-header" class="call-back-button" type="button" aria-label="Заказать звонок" aria-controls="popup-form">
+      <svg  class="call-back-button__icon" 
+            width="26" height="26" 
+            viewBox="0 0 384 384"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g>
           <path fill="url(#linearGradient)"
-            d="M 0 15.437 h 24 V 18 H 0 Z M 0 7.72 h 24 v 2.562 H 0 Z m 0 -7.72 h 24 v 2.563 H 0 Z" />
-        </svg>
-      </button>
-
-      <nav id="menu" class="menu">
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            <a class="menu__link" href="#">Услуги</a>
-          </li>
-
-          <li class="menu__list-item">
-            <a class="menu__link" href="#">Портфолио</a>
-          </li>
-
-          <li class="menu__list-item">
-            <a class="menu__link" href="#">Стоимость</a>
-          </li>
-        </ul>
-      </nav>
-
-      <a class="phone" href="tel:+74999955577">+7&nbsp;(499)&nbsp;995-55-77</a>
-
-      <button id="call-back-header" class="call-back-button" type="button" aria-label="Заказать звонок" aria-controls="popup-form">
-        <svg  class="call-back-button__icon" 
-              width="26" height="26" 
-              viewBox="0 0 384 384"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs>
-            <linearGradient id="linearGradient" x1="0" x2="0" y1="100%" y2="0">
-              <stop offset="0" stop-color="#f26522" />
-              <stop offset="1" stop-color="#fa0891" />
-            </linearGradient>
-          </defs>
-          <g>
-            <path fill="url(#linearGradient)"
             d="M268.684,220.569 C257.499,220.569 246.517,218.82 236.11,215.381 C231.011,213.641 224.742,215.237 221.629,218.434 L201.088,233.94 C177.267,221.224 162.593,206.555 150.05,182.912 L165.1,162.906 C169.011,159.001 170.413,153.297 168.733,147.945 C165.279,137.483 163.524,126.507 163.524,115.317 C163.525,107.234 156.949,100.658 148.866,100.658 L115.316,100.658 C107.234,100.658 100.657,107.234 100.657,115.317 C100.657,207.967 176.033,283.342 268.684,283.342 C276.766,283.342 283.343,276.766 283.343,268.683 L283.343,235.228 C283.342,227.145 276.766,220.569 268.684,220.569 z" />
-            <circle cx="50%" cy="50%" r="185" fill="none" stroke="url(#linearGradient)" stroke-width="1" vector-effect="non-scaling-stroke"/>
-          </g>
-        </svg>
-      </button>
-    </div>
+          <circle cx="50%" cy="50%" r="185" fill="none" stroke="url(#linearGradient)" stroke-width="1" vector-effect="non-scaling-stroke"/>
+        </g>
+      </svg>
+    </button>
   </header>
 
   <main class="main">
