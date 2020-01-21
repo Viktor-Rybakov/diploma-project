@@ -1,40 +1,40 @@
 /* roboto-regular - cyrillic_latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Roboto'), local('Roboto-Regular'),
-       url('../fonts/roboto-v20-cyrillic_latin-regular.woff2') format('woff2'),
-       url('../fonts/roboto-v20-cyrillic_latin-regular.woff') format('woff');
+  src: local("Roboto"), local("Roboto-Regular"),
+       url("../fonts/roboto-v20-cyrillic_latin-regular.woff2") format("woff2"),
+       url("../fonts/roboto-v20-cyrillic_latin-regular.woff") format("woff");
 }
 /* roboto-500 - cyrillic_latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local('Roboto Medium'), local('Roboto-Medium'),
-       url('../fonts/roboto-v20-cyrillic_latin-500.woff2') format('woff2'),
-       url('../fonts/roboto-v20-cyrillic_latin-500.woff') format('woff');
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+       url("../fonts/roboto-v20-cyrillic_latin-500.woff2") format("woff2"),
+       url("../fonts/roboto-v20-cyrillic_latin-500.woff") format("woff");
 }
 /* roboto-700 - cyrillic_latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-       url('../fonts/roboto-v20-cyrillic_latin-700.woff2') format('woff2'),
-       url('../fonts/roboto-v20-cyrillic_latin-700.woff') format('woff');
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+       url("../fonts/roboto-v20-cyrillic_latin-700.woff2") format("woff2"),
+       url("../fonts/roboto-v20-cyrillic_latin-700.woff") format("woff");
 }
 /* roboto-900 - cyrillic_latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: local('Roboto Black'), local('Roboto-Black'),
-       url('../fonts/roboto-v20-cyrillic_latin-900.woff2') format('woff2'),
-       url('../fonts/roboto-v20-cyrillic_latin-900.woff') format('woff');
+  src: local("Roboto Black"), local("Roboto-Black"),
+       url("../fonts/roboto-v20-cyrillic_latin-900.woff2") format("woff2"),
+       url("../fonts/roboto-v20-cyrillic_latin-900.woff") format("woff");
 }
