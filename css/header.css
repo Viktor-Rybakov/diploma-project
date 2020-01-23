@@ -15,10 +15,43 @@
   width: 40px;
   height: 40px;
   margin-left: 12px;
+  padding: 0;
 
   border: none;
   background: none;
   cursor: pointer;
+}
+
+.menu-button__icon_tablet {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.menu__list-item {
+  margin-right: 35px;
+}
+
+.menu__list-item:last-of-type {
+  margin-right: 0;
+}
+
+.menu__link:hover {
+  color: #fc557c;
+  text-decoration: underline;
 }
 
 .phone {
@@ -26,6 +59,10 @@
 
   font-weight: 700;
   font-size: 19px;
+}
+
+.phone:hover {
+  color: #fc557c;
 }
 
 .call-back-button {
@@ -36,12 +73,75 @@
   width: 40px;
   height: 40px;
   margin-right: 13px;
+  padding: 0; 
 
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.menu {
+.call-back-button__text_tablet {
   display: none;
+}
+
+@media (min-width: 1024px) {
+  .header{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .menu-button {
+    width: 45px;
+    height: 32px;
+    margin-left: 40px;
+  }
+
+  .menu-button__icon_mobile {
+    display: none;
+  }
+
+  .menu-button__icon_tablet {
+    display: block;
+  }
+
+  .phone {
+    margin-right: 30px;
+    margin-left: auto;
+  }
+
+  .call-back-button__icon_mobile {
+    display: none;
+  }
+
+  .call-back-button {
+    width: 207px;
+    height: 45px;
+    margin-right: 40px;
+
+    color: #f53f4f;
+    border: 1px solid #f82370;
+  }
+
+  .call-back-button:hover {
+    color: #ffffff;
+    background-color: #f53f4f;
+  }
+
+  .call-back-button__text_tablet {
+    display: block;
+  }
+}
+
+@media (min-width: 1170px) {
+  .menu-button {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .call-back-button {
+    margin-right: 0;
+  }
 }
