@@ -64,3 +64,8 @@ a {
   width: 100%;
   z-index: 5000;
 }
+
+#gradient-vertical {
+  --color-stop-1: #fa0891;
+  --color-stop-2: #f26522;
+}

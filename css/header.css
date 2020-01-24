@@ -22,8 +22,9 @@
   cursor: pointer;
 }
 
-.menu-button__icon_tablet {
-  display: none;
+.menu-button__icon {
+  width: 24px;
+  height: 18px;
 }
 
 .menu {
@@ -80,6 +81,11 @@
   cursor: pointer;
 }
 
+.call-back-button__icon_mobile {
+  width: 26px;
+  height: 26px;
+}
+
 .call-back-button__text_tablet {
   display: none;
 }
@@ -92,16 +98,13 @@
 
   .menu-button {
     width: 45px;
-    height: 32px;
+    height: 45px;
     margin-left: 40px;
   }
 
-  .menu-button__icon_mobile {
-    display: none;
-  }
-
-  .menu-button__icon_tablet {
-    display: block;
+  .menu-button__icon {
+    width: 45px;
+    height: 32px;
   }
 
   .phone {
