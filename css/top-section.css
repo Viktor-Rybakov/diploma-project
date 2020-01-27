@@ -1,0 +1,41 @@
+.photo {
+  display: block;
+  margin: 0 18px 0 auto;
+}
+
+.heading {
+  width: auto;
+  margin: 0 auto 26 auto;
+
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  color: #1f1f24;
+}
+
+.heading__subtitle {
+  display: block;
+  margin-top: 13px;
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #8993ad;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 280px;
+  height: 55px;
+  margin: 0 auto;
+  padding: 0; 
+
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: #ff4e2e;
+  color: #ffffff;
+}
