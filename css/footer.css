@@ -1,0 +1,57 @@
+
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  padding: 0;
+  margin: 0;
+
+  background-color: #31293c;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.socials__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  margin: 50px auto 50px 20px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.socials__list-item {
+  margin-right: 10px;
+}
+
+.socials__list-item:last-of-type {
+  margin-right: 0;
+}
+
+.socials__link {
+  display: block;
+
+  font-size: 0;
+}
+
+
+.vk {
+  height: 21px;
+}
+
+.fb {
+  height: 30px;
+}
+
+.twitter {
+  height: 27px;
+}
+
+.instagram {
+  height: 25px;
+}
