@@ -50,7 +50,8 @@
   margin-right: 0;
 }
 
-.menu__link:hover {
+.menu__link:hover,
+.menu__link:focus {
   color: #fc557c;
   text-decoration: underline;
 }
@@ -62,7 +63,8 @@
   font-size: 19px;
 }
 
-.phone:hover {
+.phone:hover,
+.phone:focus {
   color: #fc557c;
 }
 
