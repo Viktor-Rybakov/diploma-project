@@ -11,7 +11,7 @@ html {
 body {
   min-width: 320px;
   margin: 0;
-  background-color: #f9f9f9;
+  background-color: #fbfbfb;
   font-family: "Roboto", sans-serif;
   font-size: 100%;
   /* line-height: ; */
@@ -32,14 +32,14 @@ a {
 }
 
 .visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
-	overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
 }
 
 .clearfix::after {
@@ -50,7 +50,7 @@ a {
 
 .fix-container {
   max-width: 1170px;
-	margin: 0 auto;
+  margin: 0 auto;
 }
 
 .hidden {
