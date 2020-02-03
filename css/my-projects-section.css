@@ -1,0 +1,69 @@
+.my-projects-section {
+  background-color: #fbfbfb;
+}
+
+.slider {
+  margin-bottom: 50px;
+}
+
+.slider__list {
+  margin: 0 0 46px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider__list-item {
+  display: none;
+}
+
+.slider__list-item_active {
+  display: block;
+}
+
+.slider__description {
+  color: #8993ad;
+  font-weight: 500;
+  text-align: center;
+}
+
+.slider__prev-button {
+  display: none;
+}
+
+.slider__next-button {
+  display: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.pagination__list-item {
+  margin-right: 15px;
+}
+
+.pagination__list-item:last-of-type {
+  margin-right: 0;
+}
+
+.pagination__button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+
+  background-color: #ebebeb;
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+}
+
+.pagination__button_active {
+  background-color: #ff4e2e;
+}

@@ -39,3 +39,8 @@
   background-color: #ff4e2e;
   color: #ffffff;
 }
+
+.button:hover,
+.button:active {
+  background-color: #fc557c;
+}
