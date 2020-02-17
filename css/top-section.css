@@ -4,12 +4,12 @@
   background-size: auto 200px;
 }
 
-.photo {
+.top-section__photo {
   display: block;
   margin: 0 18px 0 auto;
 }
 
-.heading {
+.top-section__heading {
   width: auto;
   margin: 0 auto 26 auto;
 
@@ -19,7 +19,7 @@
   color: #1f1f24;
 }
 
-.heading__subtitle {
+.top-section__subtitle {
   display: block;
   margin-top: 13px;
 
@@ -33,10 +33,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 280px;
-  height: 55px;
-  margin: 0 auto 50px auto;
   padding: 0; 
 
   border: none;
@@ -49,4 +45,11 @@
 .button:hover,
 .button:active {
   background-color: #fc557c;
+}
+
+.top-section__button {
+  width: 280px;
+  height: 55px;
+  margin: 0 auto 50px auto;
+  
 }
