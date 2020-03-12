@@ -1,0 +1,21 @@
+.footer-menu {
+
+}
+
+.footer-menu__list {
+  margin: 0;
+  padding: 0;
+
+  color: #8993ad;
+  list-style: none;
+}
+
+.footer-menu__list-item:not(:last-of-type) {
+  margin-bottom: 18px;
+}
+
+.footer-menu__link:focus,
+.footer-menu__link:hover {
+  color: #fc557c;
+  text-decoration: underline;
+}

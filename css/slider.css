@@ -1,0 +1,48 @@
+.slider {
+  
+}
+
+.slider__list {
+  margin: 0 0 46px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider__list-item {
+  display: none;
+}
+
+.slider__list-item_active {
+  display: block;
+}
+
+.slider__link {
+
+}
+
+.slider__item {
+
+}
+
+.slider__picture {
+
+}
+
+.slider__description {
+  color: #8993ad;
+  font-weight: 500;
+  text-align: center;
+}
+
+.slider__prev-button {
+  display: none;
+}
+
+.slider__next-button {
+  display: none;
+}
+
+.slider__pagination {
+  margin: 0;
+}

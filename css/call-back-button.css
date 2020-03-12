@@ -1,0 +1,50 @@
+.call-back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0; 
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .call-back-button {
+    width: 207px;
+    height: 45px;
+
+    color: #f53f4f;
+    border: 1px solid #f82370;
+  }
+
+  .call-back-button:focus,
+  .call-back-button:hover {
+    color: #ffffff;
+    background-color: #f53f4f;
+  }
+}
+
+.call-back-button__icon_mobile {
+  width: 26px;
+  height: 26px;
+}
+
+@media (min-width: 768px) {
+  .call-back-button__icon_mobile {
+    display: none;
+  }
+}
+
+.call-back-button__text_tablet {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .call-back-button__text_tablet {
+    display: block;
+  }
+}

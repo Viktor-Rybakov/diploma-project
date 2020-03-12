@@ -1,0 +1,19 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 280px;
+  min-height: 55px;
+  padding: 5px 25px;
+
+  color: #ffffff;
+  background-color: #ff4e2e;
+  border: none;
+  cursor: pointer;
+}
+
+.button:focus,
+.button:hover {
+  background-color: #fc557c;
+}

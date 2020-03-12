@@ -4,6 +4,10 @@
   background-size: auto 200px;
 }
 
+.top-section__container {
+  
+}
+
 .top-section__photo {
   display: block;
   margin: 0 18px 0 auto;
@@ -29,27 +33,10 @@
   color: #8993ad;
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0; 
-
-  border: none;
-  background: none;
-  cursor: pointer;
-  background-color: #ff4e2e;
-  color: #ffffff;
-}
-
-.button:hover,
-.button:active {
-  background-color: #fc557c;
-}
-
 .top-section__button {
-  width: 280px;
-  height: 55px;
-  margin: 0 auto 50px auto;
-  
+  margin: 0 auto 50px;
+}
+
+.top-section__fly-tags {
+  display: none;
 }

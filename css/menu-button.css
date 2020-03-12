@@ -1,0 +1,38 @@
+.menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button__icon {
+  width: 24px;
+  height: 18px;
+}
+
+@media (min-width: 768px) {
+  .menu-button__icon {
+    width: 45px;
+    height: 32px;
+  }
+}
