@@ -9,13 +9,17 @@
 
   border: none;
   background: none;
+
   cursor: pointer;
 }
 
 @media (min-width: 768px) {
   .call-back-button {
-    width: 207px;
-    height: 45px;
+    width: auto;
+    height: auto;
+    min-width: 207px;
+    min-height: 45px;
+    padding: 5px 25px;
 
     color: #f53f4f;
     border: 1px solid #f82370;
