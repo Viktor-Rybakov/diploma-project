@@ -7,11 +7,11 @@
 }
 
 .contacts__list-item:not(:last-of-type) {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 .contacts__link {
-  padding-left: 25px;
+  padding-left: 32px;
 
   background-repeat: no-repeat;
   background-position: 0 50%;

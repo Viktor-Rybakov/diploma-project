@@ -1,6 +1,6 @@
 .price-section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 41px;
+  padding-bottom: 45px;
 
   background: linear-gradient(#ff2f96, #ff8f5a);
 }
@@ -33,7 +33,7 @@
 }
 
 .price-section__description {
-  margin: 0 0 47px;
+  margin: 0 0 30px;
   padding: 0;
 
   font-weight: 700;

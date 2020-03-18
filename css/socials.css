@@ -9,7 +9,7 @@
 }
 
 .socials__list-item:not(:last-of-type) {
-  margin-right: 10px;
+  margin-right: 25px;
 }
 
 .socials__link {

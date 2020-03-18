@@ -4,17 +4,19 @@
   justify-content: space-between;
   align-items: center;
 
-  padding-bottom: 51px;
+  padding-top: 43px;
+  padding-bottom: 43px;
 }
 
 @media (min-width: 1024px) {
   .what-i-do-section {
-    padding-bottom: 105px;
+    padding-top: 97px;
   }
 }
 
 .what-i-do-section__heading {
   margin: 0 auto 46px;
+  padding: 0 20px;
 
   font-weight: 900;
   font-size: 30px;
@@ -34,7 +36,7 @@
 }
 
 .what-i-do-section__services {
-  margin: 0 auto 57px;
+  margin: 0 auto 63px;
 }
 
 @media (min-width: 1024px) {

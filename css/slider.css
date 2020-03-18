@@ -3,7 +3,7 @@
 }
 
 .slider__list {
-  margin: 0 0 46px 0;
+  margin: 0 0 40px;
   padding: 0;
 
   list-style: none;
@@ -22,16 +22,26 @@
 }
 
 .slider__item {
+  width: fit-content;
+  margin: 0 auto;
 
 }
 
-.slider__picture {
+.slider__image {
+  display: block;
+  width: 282px;
+  height: 251px;
+  margin-bottom: 17px;
 
+  object-fit: cover;
+  object-position: center top;
 }
 
 .slider__description {
-  color: #8993ad;
   font-weight: 500;
+  font-size: 18px;
+  color: #8993ad;
+
   text-align: center;
 }
 
