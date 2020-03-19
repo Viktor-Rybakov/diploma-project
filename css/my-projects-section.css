@@ -5,9 +5,10 @@
   background-color: #fbfbfb;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .my-projects-section {
-    padding-top: 105px;
+    padding-top: 88px;
+    padding-bottom: 102px;
   }
 }
 
@@ -22,8 +23,28 @@
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .my-projects-section__heading {
+    margin: 0 auto 99px;
+
+    font-size: 54px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .my-projects-section__heading {
+    margin: 0 auto 104px;
+  }
+}
+
 .my-projects-section__slider {
-  margin-bottom: 47px;
+  margin: 0 auto 47px;
+}
+
+@media (min-width: 1024px) {
+  .my-projects-section__slider {
+    margin: 0 auto 97px;
+  }
 }
 
 .my-projects-section__button {

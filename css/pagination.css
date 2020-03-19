@@ -10,6 +10,12 @@
   margin-right: 15px;
 }
 
+@media (min-width: 1024px) {
+  .pagination__list-item:not(:last-of-type) {
+    margin-right: 29px;
+  }
+}
+
 .pagination__button {
   width: 10px;
   height: 10px;
@@ -20,6 +26,13 @@
   border: none;
 
   cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .pagination__button{
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .pagination__button_active {

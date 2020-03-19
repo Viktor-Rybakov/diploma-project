@@ -15,7 +15,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .button {
     min-width: 320px;
     min-height: 68px;
@@ -24,7 +24,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1210px) {
   .button {
     min-width: 270px;
     min-height: 60px;
