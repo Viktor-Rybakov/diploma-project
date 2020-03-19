@@ -90,11 +90,15 @@
   <main class="main">
     <section id="top-section" class="top-section">
       <div class="top-section__container fix-container">
-        <img class="top-section__photo" src="img/photo.png" alt="Фотография Дмитрия Алексеева">
+        <picture class="top-section__photo">
+          <source media="(min-width: 1200px)" srcset="img/top-section__photo_desktop@1x.png">
+          <source media="(min-width: 800px)" srcset="img/top-section__photo_tablet@1x.png">
+
+          <img class="top-section__image" src="img/top-section__photo.png" alt="Фотография Дмитрия Алексеева">
+        </picture>
 
         <h1 class="top-section__heading">
-          Дмитрий Алексеев <span class="top-section__subtitle">Frontend-разработчик<br>
-            и&nbsp;веб-верстальщик</span>
+          Дмитрий Алексеев <span class="top-section__subtitle">Frontend&#8209;разработчик и&nbsp;веб&#8209;верстальщик</span>
         </h1>
 
         <a id="learn-more" class="top-section__button button" href="#what-i-do">Узнать больше</a>
