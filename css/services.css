@@ -19,11 +19,11 @@
                           "frontend coding";
     grid-template-columns: repeat(2, 270px);
     grid-template-rows: repeat(2, 1fr);
-    gap: 50px 125px;
+    gap: 80px 125px;
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1210px) {
   .services {
     width: 100%;
     grid-template-areas:  "pages adaptiv frontend coding";
@@ -49,6 +49,8 @@
 
 @media (min-width: 1024px) {
   .services__item {
+    padding-top: 88px;
+
     font-size: 20px;
     line-height: 30px;
 
