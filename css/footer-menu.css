@@ -10,8 +10,24 @@
   list-style: none;
 }
 
+.footer-menu__list-item {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .footer-menu__list-item {
+    font-size: 18px;
+  }
+}
+
 .footer-menu__list-item:not(:last-of-type) {
   margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .footer-menu__list-item:not(:last-of-type) {
+    margin-bottom: 13px;
+  }
 }
 
 .footer-menu__link:focus,
