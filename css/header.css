@@ -14,7 +14,7 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1230px) {
+@media (min-width: 1025px) and (max-width: 1210px) {
   .header {
     margin-right: 20px;
     margin-left: 20px;
@@ -31,11 +31,17 @@
   }
 }
 
+@media (min-width: 1025px) {
+  .header__menu-button {
+    display: none !important;
+  }
+}
+
 .header__menu {
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .header__menu {
     display: block;
   }
@@ -76,7 +82,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .header__call-back-button {
     margin-right: 0;
   }
