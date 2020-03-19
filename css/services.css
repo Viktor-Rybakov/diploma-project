@@ -13,7 +13,7 @@
   list-style: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .services {
     grid-template-areas:  "pages adaptiv"
                           "frontend coding";
@@ -47,7 +47,7 @@
   background-position: 50% 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .services__item {
     padding-top: 88px;
 

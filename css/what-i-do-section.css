@@ -8,9 +8,10 @@
   padding-bottom: 43px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .what-i-do-section {
     padding-top: 85px;
+    padding-bottom: 105px;
   }
 }
 
@@ -25,7 +26,7 @@
   text-align: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .what-i-do-section__heading {
     margin: 0 auto 93px;
 
@@ -39,13 +40,13 @@
   margin: 0 auto 63px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .what-i-do-section__services {
     margin: 0 auto 97px;
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1210px) {
   .what-i-do-section__services {
     margin: 0 auto 95px;
   }
