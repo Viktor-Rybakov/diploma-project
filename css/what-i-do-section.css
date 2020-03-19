@@ -15,7 +15,7 @@
   }
 }
 
-.what-i-do-section__heading {
+.what-i-do-section__title {
   margin: 0 auto 46px;
   padding: 0 20px;
 
@@ -27,7 +27,7 @@
 }
 
 @media (min-width: 768px) {
-  .what-i-do-section__heading {
+  .what-i-do-section__title {
     margin: 0 auto 93px;
 
     font-weight: 700;

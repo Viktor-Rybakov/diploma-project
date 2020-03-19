@@ -12,7 +12,7 @@
   }
 }
 
-.my-projects-section__heading {
+.my-projects-section__title {
   margin: 0 auto 44px;
   padding: 0 20px;
 
@@ -24,7 +24,7 @@
 }
 
 @media (min-width: 768px) {
-  .my-projects-section__heading {
+  .my-projects-section__title {
     margin: 0 auto 99px;
 
     font-size: 54px;
@@ -32,7 +32,7 @@
 }
 
 @media (min-width: 1280px) {
-  .my-projects-section__heading {
+  .my-projects-section__title {
     margin: 0 auto 104px;
   }
 }
