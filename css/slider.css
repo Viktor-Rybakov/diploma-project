@@ -23,7 +23,7 @@
 
 @media (min-width: 1024px) {
   .slider__list {
-    width: 968px; /* 2 средних слайда */
+    width: 948px; /* 2 средних слайда */
     margin: 0 auto 101px;
   }
 }
