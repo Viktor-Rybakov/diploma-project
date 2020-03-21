@@ -9,24 +9,24 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/menu-button.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/call-back-button.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/fly-tags.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/footer-menu.css">
+  <link rel="stylesheet" href="css/contacts.css">
+  <link rel="stylesheet" href="css/socials.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/top-section.css">
   <link rel="stylesheet" href="css/what-i-do-section.css">
   <link rel="stylesheet" href="css/my-projects-section.css">
   <link rel="stylesheet" href="css/price-section.css">
   <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/footer-menu.css">
-  <link rel="stylesheet" href="css/contacts.css">
-  <link rel="stylesheet" href="css/socials.css">
-  <link rel="stylesheet" href="css/button.css">
-  <link rel="stylesheet" href="css/slider.css">
-  <link rel="stylesheet" href="css/pagination.css">
-  <link rel="stylesheet" href="css/services.css">
-  <link rel="stylesheet" href="css/fly-tags.css">
-  <link rel="stylesheet" href="css/menu-button.css">
-  <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/call-back-button.css">
-  
+
   <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-regular.woff2" as="font">
   <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-500.woff2" as="font">
   <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-700.woff2" as="font">
@@ -40,14 +40,14 @@
       viewBox="0 0 0 0">
   <defs>
     <linearGradient id="gradient-vertical" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="var(--color-stop-1)" />
-      <stop offset="1" stop-color="var(--color-stop-2)" />
+      <stop offset="0" stop-color="#fa0891" />
+      <stop offset="1" stop-color="#f26522" />
     </linearGradient>
   </defs>
 </svg>
 
   <header class="header fix-container">
-    <button class="header__menu-button menu-button" type="button" aria-label="Открыть меню" aria-controls="menu">
+    <button class="menu-button header__menu-button" type="button" aria-label="Открыть меню" aria-controls="menu">
       <svg  class="menu-button__icon" 
             viewBox="0 0 24 18">
         <path fill="url(#gradient-vertical)"
@@ -55,7 +55,7 @@
       </svg>
     </button>
 
-    <nav id="menu" class="header__menu menu">
+    <nav id="menu" class="menu header__menu">
       <ul class="menu__list">
         <li class="menu__list-item">
           <a class="menu__link" href="#what-i-do">Услуги</a>
@@ -73,7 +73,7 @@
 
     <a class="header__phone" href="tel:+74999955577">+7&nbsp;(499)&nbsp;995-55-77</a>
 
-    <button id="header-call-back" class="header__call-back-button call-back-button" type="button" aria-label="Заказать звонок" aria-controls="popup-form">
+    <button id="header-call-back" class="call-back-button header__call-back-button" type="button" aria-label="Заказать звонок" aria-controls="popup-form">
       <svg  class="call-back-button__icon_mobile" 
             viewBox="0 0 384 384">
         <g>
@@ -91,7 +91,6 @@
     <section id="top-section" class="top-section">
       <div class="top-section__container fix-container">
         <picture class="top-section__photo">
-          <source media="(min-width: 1200px)" srcset="img/top-section__photo_desktop@1x.png">
           <source media="(min-width: 800px)" srcset="img/top-section__photo_tablet@1x.png">
 
           <img class="top-section__image" src="img/top-section__photo.png" alt="Фотография Дмитрия Алексеева">
@@ -101,10 +100,10 @@
           Дмитрий Алексеев <span class="top-section__subtitle">Frontend&#8209;разработчик и&nbsp;веб&#8209;верстальщик</span>
         </h1>
 
-        <a id="learn-more" class="top-section__button button" href="#what-i-do">Узнать больше</a>
+        <a id="learn-more" class="button top-section__button" href="#what-i-do">Узнать больше</a>
       </div>
 
-      <div class="top-section__fly-tags fly-tags">
+      <div class="fly-tags top-section__fly-tags">
         <span class="fly-tags__item">{&nbsp;}</span>
         <span class="fly-tags__item">#</span>
         <span class="fly-tags__item">&lt;div&gt;</span>
@@ -116,20 +115,20 @@
     <section id="what-i-do" class="what-i-do-section fix-container">
       <h2 class="what-i-do-section__title">Что я делаю</h2>
 
-      <ul class="what-i-do-section__services services">
+      <ul class="services what-i-do-section__services">
         <li class="services__item services__item_pages">Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности</li>
         <li class="services__item services__item_adaptiv">Адаптивная вёрстка под все браузеры и устройства</li>
         <li class="services__item services__item_frontend">Frontend — разработка и программирование</li>
         <li class="services__item services__item_coding">Исправление и доработка существующей вёрстки</li>
       </ul>
 
-      <a id="ask-price" class="what-i-do-section__button button" href="#price">Узнать стоимость</a>
+      <a id="ask-price" class="button what-i-do-section__button" href="#price">Узнать стоимость</a>
     </section>
 
     <section id="my-projects" class="my-projects-section fix-container">
       <h2 class="my-projects-section__title">Примеры моих работ</h2>
 
-      <div class="my-projects-section__slider slider">
+      <div class="slider my-projects-section__slider">
         <ul class="slider__list">
           <li class="slider__list-item slider__list-item_active">
             <a href="#" class="slider__link">
@@ -162,7 +161,7 @@
         <button class="slider__button slider__button_prev" type="button" aria-label="Предыдущий слайд"></button>
         <button class="slider__button slider__button_next" type="button" aria-label="Следующий слайд"></button>
 
-        <ul class="slider__pagination pagination">
+        <ul class="pagination slider__pagination">
           <li class="pagination__list-item">
             <button class="pagination__button pagination__button_active" type="button" aria-label="Слайд 1"></button>
           </li>
@@ -175,11 +174,11 @@
         </ul>
       </div>
 
-      <button id="order-project" class="my-projects-section__button button" type="button" aria-controls="popup-form">Заказать проект</button>
+      <button id="order-project" class="button my-projects-section__button" type="button" aria-controls="popup-form">Заказать проект</button>
     </section>
 
     <section id="price" class="price-section">
-      <div class="price-section__container fix-container">
+      <div class="price-section__container">
         <h2 class="price-section__title visually-hidden">Стоимость работы</h2>
 
         <p class="price-section__description">Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за 4 часа.*</p>
@@ -190,7 +189,7 @@
         </p>
       </div>
 
-      <div class="price-section__fly-tags fly-tags">
+      <div class="fly-tags price-section__fly-tags">
         <span class="fly-tags__item">{&nbsp;}</span>
         <span class="fly-tags__item">&lt;div&gt;</span>
         <span class="fly-tags__item">&lt;/&gt;</span>
@@ -200,7 +199,7 @@
 
   <footer class="footer">
     <div class="footer__container fix-container">
-      <nav class="footer__menu footer-menu">
+      <nav class="footer-menu footer__menu">
         <ul class="footer-menu__list">
           <li class="footer-menu__list-item">
             <a class="footer-menu__link" href="#">Услуги</a>
@@ -216,7 +215,7 @@
         </ul>
       </nav>
 
-      <ul class="footer__contacts contacts">
+      <ul class="contacts footer__contacts">
         <li class="contacts__list-item">
           <a class="contacts__link contacts__link_phone" href="tel:+74999957755">+7&nbsp;(499)&nbsp;995-77-55</a>
         </li>
@@ -228,7 +227,7 @@
 
       <button id="call-back-footer" class="footer__callback-button" type="button">Заказать звонок</button>
 
-      <ul class="footer__socials socials">
+      <ul class="socials footer__socials">
         <li class="socials__list-item">
           <a class="socials__link" href="#" aria-label="Ссылка на Вконтакте">
             <svg  class="socials__icon_vk"

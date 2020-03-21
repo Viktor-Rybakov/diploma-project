@@ -12,7 +12,7 @@ body {
   min-width: 320px;
   margin: 0;
   background-color: #fbfbfb;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   font-size: 100%;
   /* line-height: ; */
   color: #000000;
@@ -63,9 +63,4 @@ a {
   left: 0;
   width: 100%;
   z-index: 5000;
-}
-
-#gradient-vertical {
-  --color-stop-1: #fa0891;
-  --color-stop-2: #f26522;
 }

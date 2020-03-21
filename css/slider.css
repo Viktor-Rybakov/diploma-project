@@ -164,6 +164,6 @@
 
 @media (min-width: 1280px) {
   .slider__pagination {
-    display: none !important;
+    display: none;
   }
 }

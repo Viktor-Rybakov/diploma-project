@@ -35,7 +35,7 @@
 
 @media (min-width: 1025px) {
   .header__menu-button {
-    display: none !important;
+    display: none;
   }
 }
 
