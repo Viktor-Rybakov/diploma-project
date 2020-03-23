@@ -25,7 +25,7 @@
     grid-template-areas:  "pages adaptiv frontend coding";
     grid-template-columns: repeat(4, 270px);
     grid-template-rows: 1fr;
-    gap: initial;
+    gap: 30px;
     justify-content: space-between;
   }
 

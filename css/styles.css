@@ -487,6 +487,10 @@ a {
   margin-right: 35px;
 }
 
+.menu__link {
+  color: #1f1f24;
+}
+
 .menu__link:focus, .menu__link:hover {
   color: #fc557c;
   text-decoration: underline;
@@ -545,6 +549,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
   min-width: 280px;
   min-height: 55px;
   padding: 5px 25px;
@@ -598,7 +603,7 @@ a {
     grid-template-areas: "pages adaptiv frontend coding";
     grid-template-columns: repeat(4, 270px);
     grid-template-rows: 1fr;
-    gap: initial;
+    gap: 30px;
     justify-content: space-between;
   }
 }
@@ -881,6 +886,7 @@ a {
 
 .contacts__link {
   padding-left: 32px;
+  color: #1f1f24;
   background-repeat: no-repeat;
   background-position: 0 50%;
 }
@@ -1003,6 +1009,7 @@ a {
 
 .header__phone {
   display: block;
+  color: #1f1f24;
   font-weight: 700;
   font-size: 18px;
 }
@@ -1206,6 +1213,7 @@ a {
   margin-top: 13px;
   font-weight: 400;
   font-size: 16px;
+  color: #8993ad;
   text-align: center;
 }
 
