@@ -10,13 +10,13 @@
 
     list-style: none;
 
-    @media (min-width: 620px) {
+    @include min-width(620px) {
       justify-content: space-between;
 
       width: 580px; /* 2 маленьких слайда */
     }
 
-    @media (min-width: 1024px) {
+    @include min-width(1024px) {
       width: 948px; /* 2 средних слайда */
       margin: 0 auto 101px;
     }
@@ -45,7 +45,7 @@
     object-fit: cover;
     object-position: center top;
 
-    @media (min-width: 1024px) {
+    @include min-width(1024px) {
       width: 456px;
       height: 359px;
       margin-bottom: 22px;
@@ -61,11 +61,11 @@
   &__description {
     font-weight: 500;
     font-size: 18px;
-    color: #8993ad;
+    color: $text-color-2;
 
     text-align: center;
 
-    @media (min-width: 1024px) {
+    @include min-width(1024px) {
       font-size: 25px;
     }
 
@@ -127,13 +127,13 @@
   display: block;
 }
 
-@media (min-width: 620px) {
+@include min-width(620px) {
   .slider__list-item:nth-of-type(2) {
     display: block;
   }
 }
 
-@media (min-width: 1210px) {
+@include min-width(1210px) {
   .slider__list-item:nth-of-type(3) {
     display: block;
   }

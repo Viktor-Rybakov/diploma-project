@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
 
-    color: #8993ad;
+    color: $text-color-2;
     list-style: none;
   }
 
@@ -28,7 +28,7 @@
 
     &:focus,
     &:hover {
-      color: #fc557c;
+      color: $link-hover;
       text-decoration: underline;
     }
   }

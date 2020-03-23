@@ -6,14 +6,14 @@
   padding-top: 19px;
   padding-bottom: 19px;
 
-  background-color: #fbfbfb;
+  background-color: $background-color-2;
 
   @include tablet {
     padding-top: 30px;
     padding-bottom: 30px;
   }
 
-  @media (min-width: 1025px) and (max-width: 1210px) {
+  @include min-max-width(1025px, 1210px) {
     margin-right: 20px;
     margin-left: 20px;
   }
@@ -25,7 +25,7 @@
       margin-left: 40px;
     }
 
-    @media (min-width: 1025px) {
+    @include min-width(1025px) {
       display: none;
     }
   }
@@ -33,7 +33,7 @@
   &__menu {
     display: none;
 
-    @media (min-width: 1025px) {
+    @include min-width(1025px) {
       display: block;
     }
   }
@@ -55,7 +55,7 @@
 
     &:focus,
     &:hover {
-      color: #fc557c;
+      color: $link-hover;
     }
   }
 
@@ -66,7 +66,7 @@
       margin-right: 40px;
     }
 
-    @media (min-width: 1025px) {
+    @include min-width(1025px) {
       margin-right: 0;
     }
   }

@@ -7,9 +7,9 @@
   min-height: 55px;
   padding: 5px 25px;
 
-  color: #ffffff;
+  color: $button-text-color-1;
 
-  background-color: #ff4e2e;
+  background-color: $button-background-color-1;
   border: none;
   
   cursor: pointer;
@@ -28,6 +28,6 @@
 
   &:focus,
   &:hover {
-    background-color: #fc557c;
+    background-color: lighten($button-background-color-1, 10%);
   }
 }

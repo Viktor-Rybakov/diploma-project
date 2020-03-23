@@ -1,7 +1,7 @@
 .contacts {
   padding: 0;
 
-  color: #8993ad;
+  color: $text-color-2;
   font-size: 20px;
   list-style: none;
 
@@ -50,7 +50,7 @@
 
     &:focus,
     &:hover {
-      color: #fc557c;
+      color: $link-hover;
       text-decoration: underline;
     }
   }

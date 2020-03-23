@@ -2,7 +2,7 @@
   padding-top: 51px;
   padding-bottom: 51px;
 
-  background-color: #fbfbfb;
+  background-color: $background-color-2;
 
   @include tablet {
     padding-top: 88px;
@@ -15,7 +15,7 @@
 
     font-weight: 900;
     font-size: 30px;
-    color: #1f1f24;
+    color: $text-color-1;
 
     text-align: center;
 
@@ -33,7 +33,7 @@
   &__slider {
     margin: 0 auto 47px;
 
-    @media (min-width: 1024px) {
+    @include min-width(1024px) {
       margin: 0 auto 97px;
     }
   }

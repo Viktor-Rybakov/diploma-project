@@ -22,7 +22,7 @@
 
     &:focus,
     &:hover {
-      color: #fc557c;
+      color: $link-hover;
       text-decoration: underline;
     }
   }

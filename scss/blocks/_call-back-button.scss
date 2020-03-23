@@ -19,14 +19,14 @@
     min-height: 45px;
     padding: 5px 25px;
 
-    color: #f53f4f;
-    border: 1px solid #f82370;
-  }
+    color: $button-text-color-2;
+    border: 1px solid $button-background-color-1;
 
-  &:focus,
-  &:hover {
-    color: #ffffff;
-    background-color: #f53f4f;
+    &:focus,
+    &:hover {
+      color: $button-text-color-1;
+      background-color: $button-background-color-1;
+    }
   }
 
   &__icon_mobile {

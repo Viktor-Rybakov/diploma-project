@@ -10,7 +10,7 @@
     &:not(:last-of-type) {
       margin-right: 15px;
 
-      @media (min-width: 1024px) {
+      @include min-width(1024px) {
         margin-right: 29px;
       }
     }
@@ -27,7 +27,7 @@
 
     cursor: pointer;
 
-    @media (min-width: 1024px) {
+    @include min-width(1024px) {
       width: 18px;
       height: 18px;
     }

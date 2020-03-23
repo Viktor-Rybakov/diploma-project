@@ -2,9 +2,9 @@
   padding-top: 41px;
   padding-bottom: 45px;
 
-  background: linear-gradient(#ff2f96, #ff8f5a);
+  background: linear-gradient($gradient-color-1, $gradient-color-2);
 
-  @media (min-width: 1024px) {
+  @include min-width(1024px) {
     padding-top: 72px;
     padding-bottom: 81px;
   }
@@ -25,7 +25,7 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 40px;
-    color: #ffffff;
+    color: $text-color-3;
 
     @include tablet {
       font-size: 45px;
@@ -38,7 +38,7 @@
     margin: 0;
     padding: 0 0 0 10px;
 
-    color: #ffffff;
+    color: $text-color-3;
 
     text-indent: -10px;
   }

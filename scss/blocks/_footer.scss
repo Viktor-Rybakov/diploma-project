@@ -1,5 +1,5 @@
 .footer {
-  background-color: #fff;
+  background-color: $background-color-1;
 
   &__container {
     display: grid;
@@ -14,7 +14,7 @@
     padding-top: 46px;
     padding-bottom: 50px;
 
-    @media (min-width:480px) {
+    @include min-width(480px) {
       grid-template-areas:  "footer-menu contacts"
                             "callback-button callback-button"
                             "socials socials";
@@ -72,11 +72,11 @@
     margin: 0 auto 49px; 
     padding: 5px 25px;
 
-    color: #ffffff;
+    color: $button-text-color-1;
 
     border: none;
     background: none;
-    background-color: #ff4e2e;
+    background-color: $button-background-color-1;
 
     cursor: pointer;
 
@@ -85,20 +85,20 @@
       min-height: 45px;
       margin: 0 0 24px;
 
-      color: #ff6375;
+      color: $button-text-color-2;
 
-      border: 1px solid #ff5e79;
-      background-color: #fff;
+      border: 1px solid $button-background-color-1;
+      background-color: $button-background-color-2;
     }
 
     &:focus,
     &:hover {
-      background-color: #fc557c;
+      background-color: lighten($button-background-color-1, 20%);
 
       @include tablet {
-        color: #fff;
+        color: $button-text-color-1;
 
-        background-color: #fc557c;
+        background-color: $button-background-color-1;
       }
     }
   }
@@ -108,7 +108,7 @@
 
     margin: 0;
 
-    @media (min-width: 480px) {
+    @include min-width(480px) {
       justify-self: center;
     }
 
@@ -125,9 +125,9 @@
     margin: 0;
     padding: 19px 0;
 
-    background-color: #31293c;
+    background-color: $background-color-3;
     font-size: 12px;
-    color: #fff;
+    color: $text-color-3;
 
     @include tablet {
       padding: 30px 0;
