@@ -1,0 +1,138 @@
+.footer {
+  background-color: #fff;
+
+  &__container {
+    display: grid;
+    grid-template-areas:  "footer-menu"
+                          "contacts"
+                          "callback-button"
+                          "socials";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+
+    margin: 0 20px;
+    padding-top: 46px;
+    padding-bottom: 50px;
+
+    @media (min-width:480px) {
+      grid-template-areas:  "footer-menu contacts"
+                            "callback-button callback-button"
+                            "socials socials";
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+
+    @include tablet {
+      grid-template-areas:  "footer-menu contacts callback-button"
+                            "footer-menu contacts socials";
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(2, auto);
+      justify-content: space-between;
+
+      margin: 0 40px;
+      padding-top: 106px;
+      padding-bottom: 80px;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+      padding-top: 84px;
+    }
+  }
+
+  &__menu {
+    grid-area: footer-menu;
+
+    margin-bottom: 43px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts {
+    grid-area: contacts;
+
+    margin: 0 0 24px;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  &__callback-button {
+    grid-area: callback-button;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 280px;
+    min-height: 55px;
+    margin: 0 auto 49px; 
+    padding: 5px 25px;
+
+    color: #ffffff;
+
+    border: none;
+    background: none;
+    background-color: #ff4e2e;
+
+    cursor: pointer;
+
+    @include tablet {
+      min-width: 248px;
+      min-height: 45px;
+      margin: 0 0 24px;
+
+      color: #ff6375;
+
+      border: 1px solid #ff5e79;
+      background-color: #fff;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: #fc557c;
+
+      @include tablet {
+        color: #fff;
+
+        background-color: #fc557c;
+      }
+    }
+  }
+
+  &__socials {
+    grid-area: socials;
+
+    margin: 0;
+
+    @media (min-width: 480px) {
+      justify-self: center;
+    }
+
+    @include tablet {
+      justify-self: initial;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 19px 0;
+
+    background-color: #31293c;
+    font-size: 12px;
+    color: #fff;
+
+    @include tablet {
+      padding: 30px 0;
+
+      font-size: 16px;
+    }
+  }
+}

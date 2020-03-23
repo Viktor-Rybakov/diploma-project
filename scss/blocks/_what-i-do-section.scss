@@ -1,0 +1,49 @@
+.what-i-do-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 43px;
+  padding-bottom: 43px;
+
+  @include tablet {
+    padding-top: 85px;
+    padding-bottom: 105px;
+  }
+
+  &__title {
+    margin: 0 auto 46px;
+    padding: 0 20px;
+
+    font-weight: 900;
+    font-size: 30px;
+    color: #1f1f24;
+
+    text-align: center;
+
+    @include tablet {
+      margin: 0 auto 93px;
+
+      font-weight: 700;
+      font-size: 54px;
+      color: #262626;
+    }
+  }
+
+  &__services {
+    margin: 0 auto 63px;
+
+    @include tablet {
+      margin: 0 auto 97px;
+    }
+
+    @include desktop {
+      margin: 0 auto 95px;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

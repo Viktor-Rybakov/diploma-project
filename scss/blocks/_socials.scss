@@ -1,0 +1,42 @@
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  padding: 0;
+
+  list-style: none;
+
+  &__list-item {
+
+    &:not(:last-of-type) {
+      margin-right: 25px;
+    }
+  }
+
+  &__link {
+    display: block;
+    flex-shrink: 0;
+
+    font-size: 0;
+  }
+
+  &__icon {
+
+    &_vk {
+      height: 21px;
+    }
+
+    &_fb {
+      height: 30px;
+    }
+
+    &_twitter {
+      height: 27px;
+    }
+
+    &_instagram {
+      height: 25px;
+    }
+  }
+}

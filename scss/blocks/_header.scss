@@ -1,0 +1,73 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding-top: 19px;
+  padding-bottom: 19px;
+
+  background-color: #fbfbfb;
+
+  @include tablet {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: 1025px) and (max-width: 1210px) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  &__menu-button {
+    margin-left: 12px;
+
+    @include tablet {
+      margin-left: 40px;
+    }
+
+    @media (min-width: 1025px) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @media (min-width: 1025px) {
+      display: block;
+    }
+  }
+
+  &__phone {
+    display: block;
+
+    font-weight: 700;
+    font-size: 18px;
+
+    @include phone {
+      margin-right: 30px;
+      margin-left: auto;
+    }
+
+    @include tablet {
+      font-size: 25px;
+    }
+
+    &:focus,
+    &:hover {
+      color: #fc557c;
+    }
+  }
+
+  &__call-back-button {
+    margin-right: 13px;
+
+    @include tablet {
+      margin-right: 40px;
+    }
+
+    @media (min-width: 1025px) {
+      margin-right: 0;
+    }
+  }
+}

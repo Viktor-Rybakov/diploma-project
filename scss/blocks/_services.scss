@@ -1,0 +1,77 @@
+.services {
+  display: grid;
+  grid-template-areas:  "pages"
+                        "adaptiv"
+                        "frontend"
+                        "coding";
+  grid-template-columns: 220px;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 50px;
+
+  padding: 0;
+
+  list-style: none;
+
+  @include tablet {
+    grid-template-areas:  "pages adaptiv"
+                          "frontend coding";
+    grid-template-columns: repeat(2, 270px);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 80px 125px;
+  }
+
+  @include desktop {
+    width: 100%;
+    grid-template-areas:  "pages adaptiv frontend coding";
+    grid-template-columns: repeat(4, 270px);
+    grid-template-rows: 1fr;
+    gap: initial;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding-top: 69px;
+
+    line-height: 24px;
+    color: #8993ad;
+
+    text-align: center;
+
+    background-repeat: no-repeat;
+    background-size: 60px auto;
+    background-position: 50% 0;
+
+    @include tablet {
+      padding-top: 88px;
+
+      font-size: 20px;
+      line-height: 30px;
+
+      background-size: 74px auto;
+    }
+
+    &_pages {
+      grid-area: pages;
+
+      background-image: url(../img/services__item_pages.png);
+    }
+
+    &_adaptiv {
+      grid-area: adaptiv;
+
+      background-image: url(../img/services__item_adaptiv.png);
+    }
+
+    &_frontend {
+      grid-area: frontend;
+
+      background-image: url(../img/services__item_frontend.png);
+    }
+
+    &_coding {
+      grid-area: coding;
+
+      background-image: url(../img/services__item_coding.png);
+    }
+  }
+}

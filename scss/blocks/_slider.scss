@@ -1,0 +1,140 @@
+.slider {
+  position: relative;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    margin: 0 auto 40px;
+    padding: 0;
+
+    list-style: none;
+
+    @media (min-width: 620px) {
+      justify-content: space-between;
+
+      width: 580px; /* 2 маленьких слайда */
+    }
+
+    @media (min-width: 1024px) {
+      width: 948px; /* 2 средних слайда */
+      margin: 0 auto 101px;
+    }
+
+    @include desktop {
+      width: 1170px; /* 3 больших слайда */
+      margin: 0 auto;
+    }
+  }
+
+  &__list-item {
+    display: none;
+  }
+
+  &__item {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  &__image {
+    display: block;
+    width: 282px;
+    height: 251px;
+    margin-bottom: 17px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    @media (min-width: 1024px) {
+      width: 456px;
+      height: 359px;
+      margin-bottom: 22px;
+    }
+
+    @include desktop {
+      width: 370px;
+      height: 290px;
+      margin-bottom: 34px;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 18px;
+    color: #8993ad;
+
+    text-align: center;
+
+    @media (min-width: 1024px) {
+      font-size: 25px;
+    }
+
+    @include desktop {
+      font-size: 20px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 119px;
+
+    display: none;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14px 24px;
+
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+
+    cursor: pointer;
+
+    @include desktop {
+      display: block;
+    }
+
+    &_prev {
+      left: -30px;
+
+      background-image: url(../img/slider__button_prev.png);
+    }
+
+    &_next {
+      right: -30px;
+
+      background-image: url(../img/slider__button_next.png);
+    }
+  }
+
+  &__pagination {
+    margin: 0;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+}
+
+
+/* !Вот это всё временно, пока не напишем нормальный слайдер*/
+.slider__list-item:nth-of-type(1) {
+  display: block;
+}
+
+@media (min-width: 620px) {
+  .slider__list-item:nth-of-type(2) {
+    display: block;
+  }
+}
+
+@media (min-width: 1210px) {
+  .slider__list-item:nth-of-type(3) {
+    display: block;
+  }
+}

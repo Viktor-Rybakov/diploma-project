@@ -1,0 +1,29 @@
+.menu {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__list-item {
+    
+    &:not(:last-of-type) {
+      margin-right: 35px;
+    }
+  }
+
+  &__link {
+
+    &:focus,
+    &:hover {
+      color: #fc557c;
+      text-decoration: underline;
+    }
+  }
+}
