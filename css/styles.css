@@ -355,7 +355,7 @@ body {
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 100%;
   line-height: 1;
-  color: #000000;
+  color: #8993ad;
 }
 
 body.modal-active {
@@ -606,7 +606,6 @@ a {
 .services__item {
   padding-top: 69px;
   line-height: 24px;
-  color: #8993ad;
   text-align: center;
   background-repeat: no-repeat;
   background-size: 60px auto;
@@ -753,7 +752,6 @@ a {
 .slider__description {
   font-weight: 500;
   font-size: 18px;
-  color: #8993ad;
   text-align: center;
 }
 
@@ -831,7 +829,6 @@ a {
 .footer-menu__list {
   margin: 0;
   padding: 0;
-  color: #8993ad;
   list-style: none;
 }
 
@@ -862,7 +859,6 @@ a {
 
 .contacts {
   padding: 0;
-  color: #8993ad;
   font-size: 20px;
   list-style: none;
 }
@@ -1210,7 +1206,6 @@ a {
   margin-top: 13px;
   font-weight: 400;
   font-size: 16px;
-  color: #8993ad;
   text-align: center;
 }
 
