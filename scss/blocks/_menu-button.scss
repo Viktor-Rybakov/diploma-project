@@ -15,14 +15,14 @@
     width: 45px;
     height: 45px;
   }
+}
 
-  &__icon {
-    width: 24px;
-    height: 18px;
+.menu-button__icon {
+  width: 24px;
+  height: 18px;
 
-    @include tablet {
-      width: 45px;
-      height: 32px;
-    }
+  @include tablet {
+    width: 45px;
+    height: 32px;
   }
 }

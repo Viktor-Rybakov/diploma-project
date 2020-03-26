@@ -4,36 +4,36 @@
   padding: 0;
 
   list-style: none;
+}
 
-  &__list-item {
+.pagination__list-item {
 
-    &:not(:last-of-type) {
-      margin-right: 15px;
-
-      @include min-width(1024px) {
-        margin-right: 29px;
-      }
-    }
-  }
-
-  &__button {
-    width: 10px;
-    height: 10px;
-    padding: 0;
-
-    background-color: #ebebeb;
-    border-radius: 50%;
-    border: none;
-
-    cursor: pointer;
+  &:not(:last-of-type) {
+    margin-right: 15px;
 
     @include min-width(1024px) {
-      width: 18px;
-      height: 18px;
+      margin-right: 29px;
     }
+  }
+}
 
-    &_active {
-      background-color: #ff4e2e;
-    }
+.pagination__button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+
+  background-color: #ebebeb;
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+
+  @include min-width(1024px) {
+    width: 18px;
+    height: 18px;
+  }
+
+  &_active {
+    background-color: #ff4e2e;
   }
 }

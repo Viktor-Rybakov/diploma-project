@@ -1,50 +1,24 @@
 .what-i-do-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
   padding-top: 43px;
   padding-bottom: 43px;
 
   background-color: $background-color-1;
+}
+
+.what-i-do-section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-i-do-section__services {
+  margin-bottom: 63px;
 
   @include tablet {
-    padding-top: 85px;
-    padding-bottom: 105px;
+    margin-bottom: 97px;
   }
 
-  &__title {
-    margin: 0 auto 46px;
-    padding: 0 20px;
-
-    font-weight: 900;
-    font-size: 30px;
-    color: $text-color-1;
-
-    text-align: center;
-
-    @include tablet {
-      margin: 0 auto 93px;
-
-      font-weight: 700;
-      font-size: 54px;
-    }
-  }
-
-  &__services {
-    margin: 0 auto 63px;
-
-    @include tablet {
-      margin: 0 auto 97px;
-    }
-
-    @include desktop {
-      margin: 0 auto 95px;
-    }
-  }
-
-  &__button {
-    margin: 0 auto;
+  @include desktop {
+    margin-bottom: 95px;
   }
 }

@@ -1,0 +1,21 @@
+.navigation__menu-button{
+  margin-left: 12px;
+
+  @include tablet {
+    margin-left: 40px;
+  }
+
+  @include min-width(1025px) {
+    display: none;
+  }
+}
+
+.navigation__menu {
+  display: none;
+
+  @include min-width(1025px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

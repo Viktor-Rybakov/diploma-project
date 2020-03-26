@@ -1,123 +1,121 @@
 .slider {
   position: relative;
+}
 
-  &__list {
-    display: flex;
-    justify-content: center;
+.slider__list {
+  display: flex;
+  justify-content: center;
 
-    margin: 0 auto 40px;
-    padding: 0;
+  margin: 0 auto 40px;
+  padding: 0;
 
-    list-style: none;
+  list-style: none;
 
-    @include min-width(620px) {
-      justify-content: space-between;
+  @include min-width(620px) {
+    justify-content: space-between;
 
-      width: 580px; /* 2 маленьких слайда */
-    }
-
-    @include min-width(1024px) {
-      width: 948px; /* 2 средних слайда */
-      margin: 0 auto 101px;
-    }
-
-    @include desktop {
-      width: 1170px; /* 3 больших слайда */
-      margin: 0 auto;
-    }
+    width: 580px; /* 2 маленьких слайда */
   }
 
-  &__list-item {
-    display: none;
+  @include min-width(1024px) {
+    width: 948px; /* 2 средних слайда */
+    margin: 0 auto 101px;
   }
 
-  &__item {
-    width: fit-content;
+  @include desktop {
+    width: 1170px; /* 3 больших слайда */
     margin: 0 auto;
   }
+}
 
-  &__image {
+.slider__list-item {
+  display: none;
+}
+
+.slider__item {
+  margin: 0 auto;
+}
+
+.slider__image {
+  display: block;
+  width: 282px;
+  height: 251px;
+  margin-bottom: 17px;
+
+  object-fit: cover;
+  object-position: center top;
+
+  @include min-width(1024px) {
+    width: 456px;
+    height: 359px;
+    margin-bottom: 22px;
+  }
+
+  @include desktop {
+    width: 370px;
+    height: 290px;
+    margin-bottom: 34px;
+  }
+}
+
+.slider__description {
+  font-weight: 500;
+  font-size: 18px;
+
+  text-align: center;
+
+  @include min-width(1024px) {
+    font-size: 25px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 119px;
+
+  display: none;
+
+  width: 60px;
+  height: 60px;
+
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px 24px;
+
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+
+  cursor: pointer;
+
+  @include desktop {
     display: block;
-    width: 282px;
-    height: 251px;
-    margin-bottom: 17px;
-
-    object-fit: cover;
-    object-position: center top;
-
-    @include min-width(1024px) {
-      width: 456px;
-      height: 359px;
-      margin-bottom: 22px;
-    }
-
-    @include desktop {
-      width: 370px;
-      height: 290px;
-      margin-bottom: 34px;
-    }
   }
 
-  &__description {
-    font-weight: 500;
-    font-size: 18px;
+  &_prev {
+    left: -30px;
 
-    text-align: center;
-
-    @include min-width(1024px) {
-      font-size: 25px;
-    }
-
-    @include desktop {
-      font-size: 20px;
-    }
+    background-image: url(../img/slider__button_prev.png);
   }
 
-  &__button {
-    position: absolute;
-    top: 119px;
+  &_next {
+    right: -30px;
 
+    background-image: url(../img/slider__button_next.png);
+  }
+}
+
+.slider__pagination {
+  margin: 0;
+
+  @include desktop {
     display: none;
-
-    width: 60px;
-    height: 60px;
-
-    background-color: #ffffff;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 14px 24px;
-
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-
-    cursor: pointer;
-
-    @include desktop {
-      display: block;
-    }
-
-    &_prev {
-      left: -30px;
-
-      background-image: url(../img/slider__button_prev.png);
-    }
-
-    &_next {
-      right: -30px;
-
-      background-image: url(../img/slider__button_next.png);
-    }
   }
-
-  &__pagination {
-    margin: 0;
-
-    @include desktop {
-      display: none;
-    }
-  }
-
 }
 
 

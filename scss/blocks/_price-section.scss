@@ -4,46 +4,46 @@
 
   background: linear-gradient($gradient-color-1, $gradient-color-2);
 
-  @include min-width(1024px) {
+  @include tablet-ipad {
     padding-top: 72px;
     padding-bottom: 81px;
   }
+}
 
-  &__container {
-    max-width: 946px;
-    margin: 0 20px;
+.price-section__container {
+  max-width: 946px;
+  margin: 0 20px;
 
-    @include tablet-ipad {
-      margin: 0 auto;
-    }
+  @include min-width(986px) {
+    margin: 0 auto;
   }
+}
 
-  &__description {
-    margin: 0 0 30px;
-    padding: 0;
+.price-section__description {
+  margin: 0 0 30px;
+  padding: 0;
 
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 40px;
-    color: $text-color-3;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  color: $text-color-3;
 
-    @include tablet {
-      font-size: 45px;
-      line-height: 60px;
-    }
+  @include tablet {
+    font-size: 45px;
+    line-height: 60px;
   }
+}
 
-  &__sub-description {
-    max-width: 760px;
-    margin: 0;
-    padding: 0 0 0 10px;
+.price-section__sub-description {
+  max-width: 760px;
+  margin: 0;
+  padding: 0 0 0 10px;
 
-    color: $text-color-3;
+  color: $text-color-3;
 
-    text-indent: -10px;
-  }
+  text-indent: -10px;
 
-  &__sub-description_small {
+  &_small {
     font-size: 15px;
     line-height: 30px;
 
@@ -51,8 +51,8 @@
       font-size: 18px;
     }
   }
+}
 
-  &__fly-tags {
-    display: none;
-  }
+.price-section__fly-tags {
+  display: none;
 }

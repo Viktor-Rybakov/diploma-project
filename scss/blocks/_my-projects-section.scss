@@ -1,44 +1,11 @@
-.my-projects-section {
-  padding-top: 51px;
-  padding-bottom: 51px;
+.my-projects-section__slider {
+  margin: 0 auto 47px;
 
-  background-color: $background-color-2;
-
-  @include tablet {
-    padding-top: 88px;
-    padding-bottom: 102px;
+  @include min-width(1024px) {
+    margin: 0 auto 97px;
   }
+}
 
-  &__title {
-    margin: 0 auto 44px;
-    padding: 0 20px;
-
-    font-weight: 900;
-    font-size: 30px;
-    color: $text-color-1;
-
-    text-align: center;
-
-    @include tablet {
-      margin: 0 auto 99px;
-
-      font-size: 54px;
-    }
-
-    @include desktop {
-      margin: 0 auto 104px;
-    }
-  }
-
-  &__slider {
-    margin: 0 auto 47px;
-
-    @include min-width(1024px) {
-      margin: 0 auto 97px;
-    }
-  }
-
-  &__button {
-    margin: 0 auto;
-  }
+.my-projects-section__button {
+  margin: 0 auto;
 }
