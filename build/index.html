@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виктор Рыбаков - Frontend-разработчик и HTML-верстальщик</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-regular.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-500.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-700.woff2" as="font">
+    <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-900.woff2" as="font">
+</head>
+
+<body>
+
+    <!--Градиент для svg-изображений-->
+    <svg class="visually-hidden" viewBox="0 0 0 0">
+        <defs>
+            <linearGradient id="gradient-vertical" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fa0891" />
+                <stop offset="1" stop-color="#f26522" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <header class="header fix-container">
+        <nav id="navigation" class="navigation header__navigation">
+            <button class="menu-button navigation__menu-button" type="button" aria-label="Открыть меню" aria-controls="menu">
+                <svg class="menu-button__icon" viewBox="0 0 24 18">
+                    <path fill="url(#gradient-vertical)" d="M 0 15.437 h 24 V 18 H 0 Z M 0 7.72 h 24 v 2.562 H 0 Z m 0 -7.72 h 24 v 2.563 H 0 Z" />
+                </svg>
+            </button>
+
+            <ul class="menu navigation__menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="#what-i-do">Услуги</a>
+                </li>
+
+                <li class="menu__item">
+                    <a class="menu__link" href="#my-projects">Портфолио</a>
+                </li>
+
+                <li class="menu__item">
+                    <a class="menu__link" href="#price">Стоимость</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a class="header__phone" href="tel:+74999955577">+7&nbsp;(499)&nbsp;995-55-77</a>
+
+        <button id="header-call-back" class="button button_header header__call-back-button" type="button" aria-label="Заказать звонок" aria-controls="popup-form">
+            <svg class="button__icon button__icon_mobile" viewBox="0 0 384 384">
+                <g>
+                    <path fill="url(#gradient-vertical)" d="M268.684,220.569 C257.499,220.569 246.517,218.82 236.11,215.381 C231.011,213.641 224.742,215.237 221.629,218.434 L201.088,233.94 C177.267,221.224 162.593,206.555 150.05,182.912 L165.1,162.906 C169.011,159.001 170.413,153.297 168.733,147.945 C165.279,137.483 163.524,126.507 163.524,115.317 C163.525,107.234 156.949,100.658 148.866,100.658 L115.316,100.658 C107.234,100.658 100.657,107.234 100.657,115.317 C100.657,207.967 176.033,283.342 268.684,283.342 C276.766,283.342 283.343,276.766 283.343,268.683 L283.343,235.228 C283.342,227.145 276.766,220.569 268.684,220.569 z" />
+                    <circle cx="50%" cy="50%" r="185" fill="none" stroke="url(#gradient-vertical)" stroke-width="1" vector-effect="non-scaling-stroke" />
+                </g>
+            </svg>
+
+            <span class="button__text button__text_tablet">Заказать звонок</span>
+        </button>
+    </header>
+
+    <main class="main">
+        <section id="top-section" class="top-section">
+            <div class="top-section__container fix-container">
+                <picture class="top-section__photo">
+                    <source media="(min-width: 960px)" srcset="img/top-section__photo_tablet@1x.png">
+
+                    <img class="top-section__image" src="img/top-section__photo.png" alt="Фотография Дмитрия Алексеева">
+                </picture>
+
+                <h1 class="top-section__title">
+                    Дмитрий Алексеев
+                    <div class="top-section__subtitle">Frontend&#8209;разработчик и&nbsp;веб&#8209;верстальщик</div>
+                </h1>
+
+                <a id="learn-more" class="button top-section__button" href="#what-i-do">Узнать больше</a>
+            </div>
+
+            <div class="fly-tags top-section__fly-tags">
+                <span class="fly-tags__item">{&nbsp;}</span>
+                <span class="fly-tags__item">#</span>
+                <span class="fly-tags__item">&lt;div&gt;</span>
+                <span class="fly-tags__item">&lt;/&gt;</span>
+                <span class="fly-tags__item">&lt;/&gt;</span>
+            </div>
+        </section>
+
+        <section id="what-i-do" class="section what-i-do-section">
+            <div class="what-i-do-section__container fix-container">
+                <h2 class="section__title">Что я делаю</h2>
+
+                <ul class="services what-i-do-section__services">
+                    <li class="services__item services__item_pages">Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности</li>
+                    <li class="services__item services__item_adaptiv">Адаптивная вёрстка под все браузеры и устройства</li>
+                    <li class="services__item services__item_frontend">Frontend — разработка и программирование</li>
+                    <li class="services__item services__item_coding">Исправление и доработка существующей вёрстки</li>
+                </ul>
+
+                <a id="ask-price" class="button what-i-do-section__button" href="#price">Узнать стоимость</a>
+            </div>
+        </section>
+
+        <section id="my-projects" class="section my-projects-section fix-container">
+            <h2 class="section__title">Примеры моих работ</h2>
+
+            <div class="slider my-projects-section__slider">
+                <ul class="slider__list">
+                    <li class="slider__list-item">
+                        <a href="#" class="slider__link">
+                            <figure class="slider__item">
+                                <img class="slider__image" src="img/project1.jpg" alt="Сайт психолога Веры Антоновой">
+                                <figcaption class="slider__description">Сайт магазина детской одежды</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li class="slider__list-item">
+                        <a href="#" class="slider__link">
+                            <figure class="slider__item">
+                                <img class="slider__image" src="img/project2.jpg" alt="Сайт магазина детской одежды">
+                                <figcaption class="slider__description">Сайт психолога Веры Антоновой</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+
+                    <li class="slider__list-item">
+                        <a href="#" class="slider__link">
+                            <figure class="slider__item">
+                                <img class="slider__image" src="img/project3.jpg" alt="Сайт магазина «Рыболов»">
+                                <figcaption class="slider__description">Сайт магазина «Рыболов»</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+
+                <button class="slider__button slider__button_prev" type="button" aria-label="Предыдущий слайд"></button>
+                <button class="slider__button slider__button_next" type="button" aria-label="Следующий слайд"></button>
+
+                <ul class="pagination slider__pagination">
+                    <li class="pagination__list-item">
+                        <button class="pagination__button pagination__button_active" type="button" aria-label="Слайд 1"></button>
+                    </li>
+                    <li class="pagination__list-item">
+                        <button class="pagination__button" type="button" aria-label="Слайд 2"></button>
+                    </li>
+                    <li class="pagination__list-item">
+                        <button class="pagination__button" type="button" aria-label="Слайд 3"></button>
+                    </li>
+                </ul>
+            </div>
+
+            <button id="order-project" class="button my-projects-section__button" type="button" aria-controls="popup-form">Заказать проект</button>
+        </section>
+
+        <section id="price" class="price-section">
+            <div class="price-section__container">
+                <h2 class="price-section__title visually-hidden">Стоимость работы</h2>
+
+                <p class="price-section__description">Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за 4 часа.*</p>
+
+                <p class="price-section__sub-description">
+                    <small class="price-section__sub-description_small">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в&nbsp;
+                        зависимости от сложности задач.</small>
+                </p>
+            </div>
+
+            <div class="fly-tags price-section__fly-tags">
+                <span class="fly-tags__item">{&nbsp;}</span>
+                <span class="fly-tags__item">&lt;div&gt;</span>
+                <span class="fly-tags__item">&lt;/&gt;</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container fix-container">
+            <ul class="menu menu_footer footer__menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Услуги</a>
+                </li>
+
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Портфолио</a>
+                </li>
+
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Стоимость</a>
+                </li>
+            </ul>
+
+            <ul class="contacts footer__contacts">
+                <li class="contacts__list-item">
+                    <a class="contacts__link contacts__link_phone" href="tel:+74999957755">+7&nbsp;(499)&nbsp;995-77-55</a>
+                </li>
+
+                <li class="contacts__list-item">
+                    <a class="contacts__link contacts__link_email" href="mailto:dmitry@alekseev.com">dmitry@alekseev.com</a>
+                </li>
+            </ul>
+
+            <button id="call-back-footer" class="button button_footer footer__callback-button" type="button">Заказать звонок</button>
+
+            <ul class="socials footer__socials">
+                <li class="socials__list-item">
+                    <a class="socials__link" href="#" aria-label="Ссылка на Вконтакте">
+                        <svg class="socials__icon_vk" viewBox="0 0 34 19">
+                            <path d="m31.5584982 1.28655527c.2223912-.7416123.0000002-1.28655527-1.0584372-1.28655527h-3.5c-.8899347 0-1.3002074.47075088-1.5227219.98984863 0 0-1.7798696 4.33838569-4.3012897 7.15645072-.8157426.81574267-1.1865797 1.07529155-1.631547 1.07529155-.2224529 0-.5561938-.25954888-.5561938-1.00109946v-6.93393617c0-.88993476-.2465735-1.28655527-.9882476-1.28655527h-5.5c-.556132 0-.8905943.41303906-.8905943.80449184 0 .84364187 1.2606484 1.03819551 1.3905943 3.41135488v5.15412836c0 1.13002492-.2040763 1.33490212-.6490437 1.33490212-1.1865179 0-4.07272614-4.35776695-5.78451424-9.34419156-.33546923-.96918821-.67193969-1.36068564-1.56644202-1.36068564h-3.5c-1 0-1.20001221.47075088-1.20001221.98984863 0 .92703081 1.18657969 5.52496537 5.52490365 11.60606287 2.8921954 4.1529054 6.96710872 6.4040885 10.67510852 6.4040885 2.2247752 0 2.5-.5 2.5-1.3612483v-3.1387517c0-1 .2107621-1.1995723.9152784-1.1995723.5190977 0 1.4090325.2595489 3.4855469 2.2618712 2.3730977 2.3730977 2.7643343 3.4377011 4.0991747 3.4377011h3.5c1 0 1.5-.5 1.2115578-1.486722-.3156423-.9834253-1.4486683-2.4102444-2.9520878-4.1016239-.8158044-.9640651-2.0394184-2.0022606-2.4102555-2.5214818-.5190977-.6673585-.3707752-.96406514 0-1.55729326 0 0 4.2642554-6.00696708 4.7092227-8.04632377z" fill="url(#gradient-vertical)" />
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="socials__list-item">
+                    <a class="socials__link" href="#" aria-label="Ссылка на Facebook">
+                        <svg class="socials__icon_fb" viewBox="50 0 210 310">
+                            <path d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064 c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996 V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545 C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703 c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z" fill="url(#gradient-vertical)" />
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="socials__list-item">
+                    <a class="socials__link" href="#" aria-label="Ссылка на Twitter">
+                        <svg class="socials__icon_twitter" viewBox="0 2 24 20">
+                            <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" fill="url(#gradient-vertical)" />
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="socials__list-item">
+                    <a class="socials__link" href="#" aria-label="Ссылка на Instagram">
+                        <svg class="socials__icon_instagram" viewBox="0 0 48 48">
+                            <path d="M13.86.13A17 17 0 008 1.26 11 11 0 003.8 4 12.22 12.22 0 001 8.28 18 18 0 00-.11 14.1c-.13 2.55-.13 3.38-.13 9.9s0 7.32.13 9.9A18 18 0 001 39.72 11.43 11.43 0 003.8 44 12.17 12.17 0 008 46.74a17.75 17.75 0 005.82 1.13c2.55.13 3.38.13 9.9.13s7.32 0 9.9-.13a17.82 17.82 0 005.83-1.13A11.4 11.4 0 0043.72 44a11.94 11.94 0 002.78-4.24 17.7 17.7 0 001.13-5.82c.13-2.55.13-3.38.13-9.9s0-7.32-.13-9.9a17 17 0 00-1.13-5.86A11.31 11.31 0 0043.72 4a12.13 12.13 0 00-4.23-2.78A17.82 17.82 0 0033.66.13C31.11 0 30.28 0 23.76 0s-7.31 0-9.9.13m.2 43.37a13.17 13.17 0 01-4.47-.83 7.25 7.25 0 01-2.74-1.79 7.25 7.25 0 01-1.79-2.74 13.23 13.23 0 01-.83-4.47c-.1-2.52-.13-3.28-.13-9.7s0-7.15.13-9.7a12.78 12.78 0 01.83-4.44 7.37 7.37 0 011.79-2.75A7.35 7.35 0 019.59 5.3a13.17 13.17 0 014.47-.83c2.52-.1 3.28-.13 9.7-.13s7.15 0 9.7.13a12.78 12.78 0 014.44.83 7.82 7.82 0 014.53 4.53 13.12 13.12 0 01.83 4.44c.13 2.51.13 3.27.13 9.7s0 7.15-.13 9.7a13.23 13.23 0 01-.83 4.47 7.9 7.9 0 01-4.53 4.53 13 13 0 01-4.44.83c-2.51.1-3.28.13-9.7.13s-7.15 0-9.7-.13m19.63-32.34a2.88 2.88 0 102.88-2.88 2.89 2.89 0 00-2.88 2.88M11.45 24a12.32 12.32 0 1012.31-12.35A12.33 12.33 0 0011.45 24m4.33 0a8 8 0 118 8 8 8 0 01-8-8" fill="url(#gradient-vertical)" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <p class="footer__copyright">
+            &copy; Дмитрий Алексеев, 2016 – 2018
+        </p>
+    </footer>
+
+    <div class="modal">
+        <!--Здесь будет всплывающая форма заказа обратного звонка-->
+        <form id="popup-form" class="popup-form">
+
+        </form>
+    </div>
+</body>
+
+</html>
