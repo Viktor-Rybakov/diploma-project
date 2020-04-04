@@ -1,7 +1,4 @@
 .what-i-do-section {
-  padding-top: 43px;
-  padding-bottom: 43px;
-
   background-color: $background-color-1;
 }
 
@@ -15,10 +12,10 @@
   margin-bottom: 63px;
 
   @include tablet {
-    margin-bottom: 97px;
+    margin-bottom: 92px;
   }
 
   @include desktop {
-    margin-bottom: 95px;
+    margin-bottom: 87px;
   }
 }

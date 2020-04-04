@@ -18,7 +18,7 @@
                           "frontend coding";
     grid-template-columns: repeat(2, 270px);
     grid-template-rows: repeat(2, 1fr);
-    gap: 80px 125px;
+    gap: 70px 125px;
   }
 
   @include desktop {
@@ -43,7 +43,7 @@
   background-position: 50% 0;
 
   @include tablet {
-    padding-top: 88px;
+    padding-top: 100px;
 
     font-size: 20px;
     line-height: 30px;

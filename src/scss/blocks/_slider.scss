@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
 
-  margin: 0 auto 40px;
+  margin: 0 auto 41px;
   padding: 0;
 
   list-style: none;
@@ -19,7 +19,7 @@
 
   @include min-width(1024px) {
     width: 948px; /* 2 средних слайда */
-    margin: 0 auto 101px;
+    margin: 0 auto 111px;
   }
 
   @include desktop {
@@ -48,13 +48,13 @@
   @include min-width(1024px) {
     width: 456px;
     height: 359px;
-    margin-bottom: 22px;
+    margin-bottom: 32px;
   }
 
   @include desktop {
     width: 370px;
     height: 290px;
-    margin-bottom: 34px;
+    margin-bottom: 49px;
   }
 }
 

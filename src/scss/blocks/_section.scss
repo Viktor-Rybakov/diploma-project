@@ -1,9 +1,9 @@
 .section {
-  padding-top: 50px;
+  padding-top: 43px;
   padding-bottom: 50px;
 
   @include tablet {
-    padding-top: 85px;
+    padding-top: 100px;
     padding-bottom: 105px;
   }
 }
@@ -15,6 +15,7 @@
   font-weight: 900;
   font-size: 30px;
   color: $text-color-1;
+  line-height: 35px;
 
   text-align: center;
 
