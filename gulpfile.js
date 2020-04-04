@@ -1,109 +1,93 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 
+// HTML
+const htmlbeautify = require('gulp-html-beautify');
+
+// Styles
+const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
-const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
+
+// Images
+const imageMin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+
+// JavaScript
+// const uglify = require('gulp-uglify');
+
+// Tools
+const concat = require('gulp-concat');
 const del = require('del');
 const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
-const htmlbeautify = require('gulp-html-beautify');
-const gulpImage = require('gulp-image');
+const plumber = require('gulp-plumber');
 
-const jsFiles = [
-  // './src/js/features.js',
-  // './src/js/menu.js'
-]
 
-const cssFiles = [
-  // './node_modules/normalize.css/normalize.css',
-  './src/scss/styles.scss',
-];
-
-function htmlDev(){
+function html(){
   return src('./src/*.html')
-          .pipe(htmlbeautify({
-            indentSize: 2
-          }))
-          .pipe(dest('./build'))
-          .pipe(browserSync.stream());
+    .pipe(htmlbeautify({
+      indentSize: 2
+    }))
+    .pipe(dest('./build'))
+    .pipe(browserSync.stream());
 }
 
-function htmlBuild(){
-  return src('./src/*.html')
-          .pipe(htmlbeautify({
-            indentSize: 2
-          }))
-          .pipe(dest('./build'));
+function styles(){
+  return src('./src/scss/styles.scss')
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(concat('styles.css'))
+    .pipe(autoprefixer())
+    .pipe(cleanCSS({
+      debug: true,
+      level: 2,
+    }, 
+      (details) => {
+        console.log(`${details.name}: ${details.stats.originalSize}`);
+        console.log(`${details.name}: ${details.stats.minifiedSize}`);
+    }))
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(dest('./build/css'))
+    .pipe(browserSync.stream());
 }
 
-function stylesDev(){
-  return src(cssFiles)
-          .pipe(sourcemaps.init())
-          .pipe(sass().on('error', sass.logError))
-          .pipe(concat('styles.css'))
-          .pipe(autoprefixer({
-            browsers: ['>1%']
-          }))
-          .pipe(cleanCSS({
-            level: 2
-          }))
-          .pipe(sourcemaps.write('./maps'))
-          .pipe(dest('./build/css'))
-          .pipe(browserSync.stream());
-}
+// function scripts(){
+//   return src(jsFiles)
+//     .pipe(concat('scripts.js'))
+//     // .pipe(uglify())
+//     .pipe(dest('./build/js'))
+//     .pipe(browserSync.stream());
+// }
 
-function stylesBuild(){
-  return src(cssFiles)
-          .pipe(sass().on('error', sass.logError))
-          .pipe(concat('styles.css'))
-          .pipe(autoprefixer({
-            browsers: ['>1%']
-          }))
-          .pipe(cleanCSS({
-            level: 2
-          }))
-          .pipe(dest('./build/css'));
-}
-
-function scriptsDev(){
-  return src(jsFiles)
-          .pipe(concat('scripts.js'))
-          // .pipe(uglify())
-          .pipe(dest('./build/js'))
-          .pipe(browserSync.stream());
-}
-
-function scriptsBuild(){
-  return src(jsFiles)
-          .pipe(concat('scripts.js'))
-          // .pipe(uglify())
-          .pipe(dest('./build/js'));
-}
-
-function imagesDev(){
+function images(){
   return src('./src/img/*')
-          .pipe(gulpImage())
-          .pipe(dest('./build/img'))
-          .pipe(browserSync.stream());
+    .pipe(imageMin([
+      imageMin.gifsicle({interlaced: true}),
+      imageMin.mozjpeg({quality: 75, progressive: true}),
+      imageMin.optipng({optimizationLevel: 4}),
+      imageMin.svgo({
+        plugins: [
+          {removeViewBox: true},
+          {cleanupIDs: false}
+        ]
+      })
+    ]))
+    .pipe(dest('./build/img'))
+    .pipe(browserSync.stream());
 }
 
-function imagesBuild(){
-  return src('./src/img/*')
-          .pipe(gulpImage())
-          .pipe(dest('./build/img'));
+function webpImages() {
+  return src('build/img/*.{png,jpg}')
+    .pipe(webp({quality: 95,
+                lossless: true}))
+    .pipe(dest('build/img/webp'));
 }
 
-function fontsDev(){
+function fonts(){
   return src('./src/fonts/*')
           .pipe(dest('./build/fonts'))
           .pipe(browserSync.stream());
-}
-
-function fontsBuild(){
-  return src('./src/fonts/*')
-          .pipe(dest('./build/fonts'));
 }
 
 function watching(){
@@ -113,35 +97,27 @@ function watching(){
     }
   });
 
-  watch('./src/scss/**/*.scss', stylesDev);
-  watch('./src/js/**/*.js', scriptsDev);
-  watch('./src/*.html', htmlDev);
-  watch('./src/img/*', imagesDev);
-  watch('.src/fonts/*', fontsDev);
+  watch('./src/scss/**/*.scss', styles);
+  // watch('./src/js/**/*.js', scripts);
+  watch('./src/*.html', html);
+  watch('./src/img/*', images);
+  watch('.src/fonts/*', fonts);
 }
 
 function clean() {
   return del(['build/*']);
 }
 
-
-exports.build = series(
-  clean,
-  parallel(
-    htmlBuild,
-    stylesBuild,
-    scriptsBuild,
-    imagesBuild,
-    fontsBuild)
-);
-
 exports.dev = series(
   clean,
   parallel(
-    htmlDev,
-    stylesDev,
-    // scriptsDev,
-    imagesDev,
-    fontsDev),
+    html,
+    styles,
+    fonts,
+    series (
+      images,
+      webpImages
+    )
+  ),
   watching
 );
