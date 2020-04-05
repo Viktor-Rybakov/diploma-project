@@ -1,0 +1,173 @@
+.fly-tags {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  &_top-section {
+    z-index: 2;
+  }
+
+  &_price-section {
+    z-index: 1;
+  }
+}
+
+.fly-tags__item {
+  position: absolute;
+}
+
+.fly-tags_top-section .fly-tags__item {
+  top: 50%;
+  left: 50%;
+
+  background: linear-gradient(to top right, $gradient-color-1, $gradient-color-2);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: bold;
+}
+
+.fly-tags_top-section .fly-tags__item:nth-child(1) {
+  line-height: 1.5;
+  font-size: 30px;
+  transform: translateX(-303px) translateY(-178px) rotate(30deg);
+
+  @include tablet-ipad {
+    font-size: 50px;
+    transform: translateX(-434px) translateY(-305px) rotate(30deg);
+  }
+
+  @include desktop {
+    transform: translateX(-830px) translateY(-327px) rotate(30deg);
+  }
+}
+
+.fly-tags_top-section .fly-tags__item:nth-child(2) {
+  font-size: 35px;
+  transform: translateX(-10px) translateY(12px) rotate(15deg);
+
+  @include tablet-ipad {
+    transform: translateX(-453px) translateY(182px) rotate(15deg);
+  }
+
+  @include desktop {
+    transform: translateX(-712px) translateY(-85px) rotate(15deg);
+  }
+}
+
+.fly-tags_top-section .fly-tags__item:nth-child(3) {
+  font-size: 30px;
+  transform: translateX(259px) translateY(-200px) rotate(-15deg);
+
+  @include tablet-ipad {
+    transform: translateX(375px) translateY(-300px) rotate(-15deg);
+  }
+
+  @include desktop {
+    transform: translateX(-174px) translateY(-284px) rotate(-15deg);
+  }
+}
+
+.fly-tags_top-section .fly-tags__item:nth-child(4) {
+  font-size: 30px;
+  transform: translateX(-350px) translateY(106px) rotate(-20deg);
+
+  @include tablet-ipad {
+    transform: translateX(-153px) translateY(134px) rotate(-20deg);
+  }
+
+  @include desktop {
+    font-size: 36px;
+    transform: translateX(-581px) translateY(221px) rotate(-25deg);
+  }
+}
+
+.fly-tags_top-section .fly-tags__item:nth-child(5) {
+  font-size: 36px;
+  transform: translateX(282px) translateY(94px) rotate(20deg);
+
+  @include tablet-ipad {
+    transform: translateX(356px) translateY(94px) rotate(20deg);
+  }
+
+  @include desktop {
+    transform: translateX(-10px) translateY(91px) rotate(20deg);
+  }
+}
+
+.fly-tags_top-section .fly-tags__item:nth-child(6) {
+  font-size: 30px;
+  transform: translateX(-43px) translateY(-156px) rotate(14deg);
+
+  @include tablet-ipad {
+    transform: translateX(-89px) translateY(-217px) rotate(14deg);
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.fly-tags_price-section .fly-tags__item {
+  top: 0%;
+  left: 50%;
+
+  color: $text-color-3;
+}
+
+.fly-tags_price-section .fly-tags__item:nth-child(1) {
+  font-size: 30px;
+  transform: translateX(-353px) translateY(-50px) rotate(25deg);
+
+  @include desktop {
+    font-size: 50px;
+    transform: translateX(-830px) translateY(-11px) rotate(25deg);
+  }
+}
+
+.fly-tags_price-section .fly-tags__item:nth-child(2) {
+  font-size: 25px;
+  transform: translateX(0) translateY(231px) rotate(20deg);
+
+  @include desktop {
+    font-size: 40px;
+    transform: translateX(461px) translateY(230px) rotate(20deg);
+  }
+}
+
+.fly-tags_price-section .fly-tags__item:nth-child(3) {
+  font-size: 40px;
+  transform: translateX(360px) translateY(215px) rotate(-24deg);
+
+  @include desktop {
+    transform: translateX(696px) translateY(4px) rotate(-24deg);
+  }
+}
+
+.fly-tags_price-section .fly-tags__item:nth-child(4) {
+  display: none;
+
+  @include desktop {
+    display: block;
+
+    font-size: 50px;
+    transform: translateX(805px) translateY(186px) rotate(-21deg);
+  }
+}
+
+.fly-tags_price-section .fly-tags__item:nth-child(5) {
+  display: none;
+
+  @include desktop {
+    display: block;
+
+    font-size: 50px;
+    transform: translateX(-713px) translateY(181px) rotate(14deg);
+  }
+}

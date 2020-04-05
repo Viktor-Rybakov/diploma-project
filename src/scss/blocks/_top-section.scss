@@ -1,4 +1,4 @@
-.top-section {  
+.top-section {
   background-color: $background-color-1;
 
   @include phone {
@@ -24,6 +24,8 @@
 }
 
 .top-section__container {
+  position: relative;
+
   display: grid;
   grid-template-areas:  "photo"
                         "heading"
@@ -56,6 +58,8 @@
 }
 
 .top-section__photo {
+  z-index: 1;
+
   grid-area: photo;
   justify-self: end;
 
@@ -102,6 +106,8 @@
 }
 
 .top-section__title {
+  z-index: 3;
+
   grid-area: heading;
 
   margin: 16px auto 33px;
@@ -135,6 +141,7 @@
 }
 
 .top-section__subtitle {
+  display: block;
   margin-top: 17px;
 
   font-weight: 400;
@@ -161,6 +168,8 @@
 }
 
 .top-section__button {
+  z-index: 3;
+
   grid-area: button;
 
   margin: 0 auto;
@@ -181,4 +190,8 @@
 
 .top-section__fly-tags {
   display: none;
+
+  @include tablet {
+    display: block;
+  }
 }
