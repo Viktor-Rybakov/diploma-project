@@ -81,10 +81,22 @@
   <main class="main">
     <section id="top-section" class="top-section">
       <div class="top-section__container fix-container">
-        <picture class="top-section__photo">
-          <source media="(min-width: 960px)" srcset="img/top-section__photo_tablet@1x.png">
-
-          <img class="top-section__image" src="img/top-section__photo.png" alt="Фотография Дмитрия Алексеева">
+        <picture class="top-section__picture">
+          <source type="image/webp"
+                  sizes="(min-width: 768px) 420px,
+                          210px"
+                  srcset="img/webp/photo.webp 210w,
+                          img/webp/photo-420.webp 420w,
+                          img/webp/photo-630.webp 630w,
+                          img/webp/photo-840.webp 840w">
+          <img  class="top-section__image" 
+                src="img/photo.png"
+                sizes="(min-width: 768px) 420px,
+                        210px"
+                srcset="img/photo-420.png 420w,
+                        img/photo-630.png 630w,
+                        img/photo-840.png 840w"
+                alt="Фотография Виктора Рыбакова">
         </picture>
 
         <h1 class="top-section__title">
@@ -129,16 +141,24 @@
           <li class="slider__list-item">
             <a href="#" class="slider__link">
               <figure class="slider__item">
-                <img class="slider__image" src="img/project1.jpg" alt="Сайт психолога Веры Антоновой">
-                <figcaption class="slider__description">Сайт магазина детской одежды</figcaption>
-              </figure>
-            </a>
-          </li>
+                <picture class="slider__picture">
+                  <source type="image/webp"
+                          sizes=" (min-width: 1210px) 370px,
+                                  (min-width: 1024px) 456px,
+                                  282px"
+                          srcset="img/webp/project_1-370.webp 370w,
+                                  img/webp/project_1-555.webp 555w,
+                                  img/webp/project_1-740.webp 740w">
+                  <img  class="slider__image" 
+                        src="img/project_1-370.jpg"
+                        sizes=" (min-width: 1210px) 370px,
+                                (min-width: 1024px) 456px,
+                                282px"
+                        srcset="img/project_1-555.jpg 555w,
+                                img/project_1-740.jpg 740w"
+                        alt="Сайт психолога Веры Антоновой">
+                </picture>
 
-          <li class="slider__list-item">
-            <a href="#" class="slider__link">
-              <figure class="slider__item">
-                <img class="slider__image" src="img/project2.jpg" alt="Сайт магазина детской одежды">
                 <figcaption class="slider__description">Сайт психолога Веры Антоновой</figcaption>
               </figure>
             </a>
@@ -147,7 +167,50 @@
           <li class="slider__list-item">
             <a href="#" class="slider__link">
               <figure class="slider__item">
-                <img class="slider__image" src="img/project3.jpg" alt="Сайт магазина «Рыболов»">
+                <picture class="slider__picture">
+                  <source type="image/webp"
+                          sizes=" (min-width: 1210px) 370px,
+                                  (min-width: 1024px) 456px,
+                                  282px"
+                          srcset="img/webp/project_2-370.webp 370w,
+                                  img/webp/project_2-555.webp 555w,
+                                  img/webp/project_2-740.webp 740w">
+                  <img  class="slider__image" 
+                        src="img/project_2-370.jpg"
+                        sizes=" (min-width: 1210px) 370px,
+                                (min-width: 1024px) 456px,
+                                282px"
+                        srcset="img/project_2-555.jpg 555w,
+                                img/project_2-740.jpg 740w"
+                        alt="Сайт магазина детской одежды">
+                </picture>
+
+                <figcaption class="slider__description">Сайт магазина детской одежды</figcaption>
+              </figure>
+            </a>
+          </li>
+
+          <li class="slider__list-item">
+            <a href="#" class="slider__link">
+              <figure class="slider__item">
+                <picture class="slider__picture">
+                  <source type="image/webp"
+                          sizes=" (min-width: 1210px) 370px,
+                                  (min-width: 1024px) 456px,
+                                  282px"
+                          srcset="img/webp/project_3-370.webp 370w,
+                                  img/webp/project_3-555.webp 555w,
+                                  img/webp/project_3-740.webp 740w">
+                  <img  class="slider__image" 
+                        src="img/project_3-370.jpg"
+                        sizes=" (min-width: 1210px) 370px,
+                                (min-width: 1024px) 456px,
+                                282px"
+                        srcset="img/project_3-555.jpg 555w,
+                                img/project_3-740.jpg 740w"
+                        alt="Сайт магазина «Рыболов»">
+                </picture>
+
                 <figcaption class="slider__description">Сайт магазина «Рыболов»</figcaption>
               </figure>
             </a>
