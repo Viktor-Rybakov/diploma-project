@@ -1,8 +1,5 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 
-// HTML
-const htmlbeautify = require('gulp-html-beautify');
-
 // Styles
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
@@ -14,7 +11,7 @@ const imageMin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 
 // JavaScript
-// const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify');
 
 // Tools
 const concat = require('gulp-concat');
@@ -22,12 +19,17 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 const plumber = require('gulp-plumber');
 
+const iconFiles = [
+  './src/favicon.ico',
+  './src/favicon.svg',
+  './src/mask-icon.svg',
+  './src/apple-touch-icon.png',
+  './src/google-touch-icon.png',
+  './src/manifest.json'
+];
 
 function html(){
   return src('./src/*.html')
-    .pipe(htmlbeautify({
-      indentSize: 2
-    }))
     .pipe(dest('./build'))
     .pipe(browserSync.stream());
 }
@@ -52,13 +54,13 @@ function styles(){
     .pipe(browserSync.stream());
 }
 
-// function scripts(){
-//   return src(jsFiles)
-//     .pipe(concat('scripts.js'))
-//     // .pipe(uglify())
-//     .pipe(dest('./build/js'))
-//     .pipe(browserSync.stream());
-// }
+function scripts(){
+  return src('./src/js/*.js')
+    .pipe(concat('scripts.js'))
+    .pipe(uglify())
+    .pipe(dest('./build/js'))
+    .pipe(browserSync.stream());
+}
 
 function images(){
   return src('./src/img/*')
@@ -86,8 +88,8 @@ function webpImages() {
 
 function fonts(){
   return src('./src/fonts/*')
-          .pipe(dest('./build/fonts'))
-          .pipe(browserSync.stream());
+    .pipe(dest('./build/fonts'))
+    .pipe(browserSync.stream());
 }
 
 function watching(){
@@ -98,10 +100,15 @@ function watching(){
   });
 
   watch('./src/scss/**/*.scss', styles);
-  // watch('./src/js/**/*.js', scripts);
+  watch('./src/js/**/*.js', scripts);
   watch('./src/*.html', html);
   watch('./src/img/*', images);
   watch('.src/fonts/*', fonts);
+}
+
+function icons(){
+  return src(iconFiles)
+    .pipe(dest('./build'));
 }
 
 function clean() {
@@ -112,7 +119,9 @@ exports.dev = series(
   clean,
   parallel(
     html,
+    icons,
     styles,
+    scripts,
     fonts,
     series (
       images,

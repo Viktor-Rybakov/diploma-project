@@ -12,7 +12,6 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-html-beautify": "^1.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
@@ -29,5 +28,13 @@
   ],
   "scripts": {
     "dev": "gulp dev"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Viktor-Rybakov/diploma-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Viktor-Rybakov/diploma-project/issues"
+  },
+  "homepage": "https://github.com/Viktor-Rybakov/diploma-project#readme"
 }
