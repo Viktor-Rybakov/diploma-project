@@ -1,0 +1,12 @@
+{
+  "name": "Viktor Rybakov",
+  "short_name": "Viktor Rybakov",
+  "icons": [{
+    "src": "google-touch-icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "fullscreen"
+}
