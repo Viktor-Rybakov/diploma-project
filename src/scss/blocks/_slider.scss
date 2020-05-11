@@ -84,14 +84,13 @@
   top: 119px;
 
   display: none;
+  justify-content: center;
+  align-items: center;
 
   width: 60px;
   height: 60px;
 
   background-color: #fff;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 14px 24px;
 
   border: none;
   border-radius: 50%;
@@ -100,20 +99,25 @@
   cursor: pointer;
 
   @include desktop {
-    display: block;
+    display: flex;
   }
 
   &_prev {
     left: -30px;
-
-    background-image: url(../img/slider__button_prev.png);
   }
 
   &_next {
     right: -30px;
-
-    background-image: url(../img/slider__button_next.png);
   }
+
+  &:hover .slider__button-icon > path {
+    stroke: url(#gradient-vertical);
+  }
+}
+
+.slider__button-icon {
+  width: 14px;
+  height: 24px;
 }
 
 .slider__pagination {
