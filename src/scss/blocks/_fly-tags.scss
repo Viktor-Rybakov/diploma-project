@@ -115,49 +115,73 @@
 }
 
 .fly-tags_price-section .fly-tags__item {
-  top: 0%;
-  left: 50%;
-
   color: $text-color-3;
 }
 
 .fly-tags_price-section .fly-tags__item:nth-child(1) {
-  font-size: 30px;
-  transform: translateX(-353px) translateY(-50px) rotate(25deg);
-
+  top: 23px;
+  left: 156px;
+  transform: rotate(28deg);
+  
+  font-size: 33px;
+  
   @include desktop {
+    top: 61px;
+    left: 70px;
     font-size: 50px;
-    transform: translateX(-830px) translateY(-11px) rotate(25deg);
+  }
+
+  @include min-width(1510px) {
+    top: 61px;
+    left: 129px;
+    font-size: 50px;
   }
 }
 
 .fly-tags_price-section .fly-tags__item:nth-child(2) {
+  bottom: 33px;
+  right: 453px;
+  transform: rotate(20deg);
+  
   font-size: 25px;
-  transform: translateX(0) translateY(231px) rotate(20deg);
-
+  
   @include desktop {
+    bottom: 19px;
+    right: 404px;
     font-size: 40px;
-    transform: translateX(461px) translateY(230px) rotate(20deg);
   }
 }
 
 .fly-tags_price-section .fly-tags__item:nth-child(3) {
+  bottom: 35px;
+  right: 94px;
+  transform: rotate(-24deg);
+  
   font-size: 40px;
-  transform: translateX(360px) translateY(215px) rotate(-24deg);
-
+  
   @include desktop {
-    transform: translateX(696px) translateY(4px) rotate(-24deg);
+    top: 77px;
+    bottom: auto;
+    right: 80px;
+  }
+
+  @include min-width(1510px) {
+    top: 77px;
+    right: 206px;
   }
 }
 
 .fly-tags_price-section .fly-tags__item:nth-child(4) {
   display: none;
-
+  
   @include desktop {
+    bottom: 53px;
+    right: 107px;
+    transform: rotate(-21deg);
+
     display: block;
 
     font-size: 50px;
-    transform: translateX(805px) translateY(186px) rotate(-21deg);
   }
 }
 
@@ -165,9 +189,17 @@
   display: none;
 
   @include desktop {
+    bottom: 30px;
+    left: 245px;
+    transform: rotate(14deg);
+
     display: block;
 
-    font-size: 50px;
-    transform: translateX(-713px) translateY(181px) rotate(14deg);
+    font-size: 55px;
+  }
+
+  @include min-width(1510px) {
+    bottom: 56px;
+    left: 245px;
   }
 }
