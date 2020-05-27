@@ -1,11 +1,13 @@
-.my-projects-section__slider {
-  margin: 0 auto 48px;
-
-  @include min-width(1024px) {
-    margin: 0 auto 99px;
-  }
+.my-projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.my-projects-section__button {
-  margin: 0 auto;
+.my-projects-section__slider {
+  margin-bottom: 48px;
+  
+  @include min-width(1024px) {
+    margin-bottom: 99px;
+  }
 }
