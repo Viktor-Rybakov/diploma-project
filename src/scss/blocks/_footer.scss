@@ -9,7 +9,7 @@
                         "callback-button"
                         "socials";
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(4, min-content);
 
   margin: 0 20px;
   padding-top: 46px;
@@ -20,15 +20,16 @@
                           "callback-button callback-button"
                           "socials socials";
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(3, min-content);
   }
 
   @include tablet {
     grid-template-areas:  "footer-menu contacts callback-button"
                           "footer-menu contacts socials";
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(2, min-content);
     justify-content: space-between;
+    row-gap: 49px;
 
     margin: 0 40px;
     padding-top: 106px;
@@ -66,6 +67,10 @@
   grid-area: callback-button;
 
   margin: 0 auto 49px;
+
+  @include tablet {
+    margin: 0;
+  }
 }
 
 .footer__socials {
