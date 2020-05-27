@@ -13,6 +13,7 @@
   border: none;
   
   cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
 
   @include tablet-ipad {
     min-width: 320px;
@@ -26,9 +27,13 @@
     min-height: 60px;
   }
 
-  &:focus,
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px $link-hover;
+  }
+
   &:hover {
-    background-color: lighten($button-background-color-1, 10%);
+    background-color: darken($button-background-color-1, 20%);
   }
 }
 
@@ -37,35 +42,44 @@
   height: 40px;
   min-width: auto;
   min-height: auto;
-  padding: 0; 
+  padding: 0;
 
   border: none;
+  border-radius: 50%;
   background: none;
 
-  // TODO сделать ховер
-
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    box-shadow: 0 0 0 2px $link-hover;
+  }
+  
   @include tablet {
     width: auto;
     height: auto;
     min-width: 207px;
     min-height: 45px;
     padding: 5px 25px;
-
+    
     font-size: 16px;
-
+    
     color: $button-text-color-2;
     border: 1px solid $button-background-color-1;
-
-    &:focus,
+    border-radius: initial;
+    
     &:hover {
       color: $button-text-color-1;
-      background-color: $button-background-color-1;
+      background-color: darken($button-background-color-1, 10%);
+      box-shadow: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px $link-hover;
     }
   }
 }
 
 .button_header .button__icon {
-  
   &_mobile {
     width: 26px;
     height: 26px;
@@ -77,7 +91,6 @@
 }
 
 .button_header .button__text {
-    
   &_tablet {
     display: none;
 
@@ -88,13 +101,6 @@
 }
 
 .button_footer {
-  color: $button-text-color-1;
-
-  font-size: 16px;
-
-  border: none;
-  background: none;
-  background-color: $button-background-color-1;
 
   @include tablet {
     min-width: 248px;
@@ -107,9 +113,7 @@
     background-color: $button-background-color-2;
   }
 
-  &:focus,
   &:hover {
-    background-color: lighten($button-background-color-1, 20%);
 
     @include tablet {
       color: $button-text-color-1;

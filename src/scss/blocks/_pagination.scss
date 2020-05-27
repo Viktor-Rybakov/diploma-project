@@ -27,6 +27,7 @@
   border: none;
 
   cursor: pointer;
+  transition: 0.3s;
 
   @include min-width(1024px) {
     width: 18px;
@@ -35,5 +36,10 @@
 
   &_active {
     background-color: #ff4e2e;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px $link-hover;
   }
 }

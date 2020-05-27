@@ -6,19 +6,8 @@
 }
 
 .menu__item {
-
   &:not(:last-of-type) {
     margin-right: 35px;
-  }
-}
-
-.menu__link {
-  color: $text-color-1;
-
-  &:focus,
-  &:hover {
-    color: $link-hover;
-    text-decoration: underline;
   }
 }
 
@@ -41,9 +30,7 @@
 .menu_footer .menu__link {
   color: inherit;
 
-  &:focus,
   &:hover {
     color: $link-hover;
-    text-decoration: underline;
   }
 }

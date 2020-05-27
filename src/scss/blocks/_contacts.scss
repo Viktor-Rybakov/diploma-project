@@ -23,13 +23,15 @@
 .contacts__link {
   padding-left: 32px;
 
-  color: $text-color-1;
-
+  color: inherit;
+  
   background-repeat: no-repeat;
   background-position: 0 50%;
-
+  
   @include tablet {
     padding-left: 37px;
+    
+    color: $text-color-1;
   }
 
   &_phone {
@@ -48,11 +50,5 @@
     @include tablet {
       background-size: 23px auto;
     }
-  }
-
-  &:focus,
-  &:hover {
-    color: $link-hover;
-    text-decoration: underline;
   }
 }
