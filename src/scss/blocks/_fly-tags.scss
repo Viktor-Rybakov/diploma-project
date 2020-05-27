@@ -5,15 +5,20 @@
   left: 0;
   right: 0;
 
-  width: 100%;
+  max-width: 1920px;
   height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 
   &_top-section {
-    z-index: 2;
-  }
+    bottom: auto;
+    height: 390px;
 
-  &_price-section {
-    z-index: 1;
+    @include phone {
+      bottom: 0;
+      height: 100%;
+    }
   }
 }
 
@@ -21,98 +26,232 @@
   position: absolute;
 }
 
-.fly-tags_top-section .fly-tags__item {
-  top: 50%;
-  left: 50%;
+/*----------------- Top Section -----------------*/
 
+.fly-tags_top-section .fly-tags__item { 
+  bottom: 0;
+  right: 100px;
+  opacity: 0;
+  
   background: linear-gradient(to top right, $gradient-color-1, $gradient-color-2);
-
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-
+  
   font-weight: bold;
+
+  animation-fill-mode: forwards;
+  will-change: transform;
+
+  @include min-width(400px) {
+    right: 120px;
+  }
+  
+  @include min-width(500px) {
+    right: 140px;
+  }
+
+  @include phone {
+    right: 70px;
+  }
+
+  @include tablet {
+    right: 120px;
+  }
+
+  @include min-width(1510px) {
+    right: 30px;
+  }
 }
 
 .fly-tags_top-section .fly-tags__item:nth-child(1) {
   line-height: 1.5;
-  font-size: 30px;
-  transform: translateX(-303px) translateY(-178px) rotate(30deg);
-
-  @include tablet-ipad {
-    font-size: 50px;
-    transform: translateX(-434px) translateY(-305px) rotate(30deg);
+  font-size: 25px;
+  
+  animation-name: fly-tag-1;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  
+  @include min-width(400px) {
+    animation-name: fly-tag-1_400;
   }
-
+  @include min-width(480px) {
+    animation-name: fly-tag-1_480;
+  }
+  @include phone {
+    animation-name: fly-tag-1_phone;
+  }
+  @include tablet {
+    font-size: 45px;
+    animation-name: fly-tag-1_tablet;
+  }
+  @include tablet-ipad {
+    animation-name: fly-tag-1_tablet-ipad;
+  }
+  @include min-width(1024px) {
+    animation-name: fly-tag-1_1024;
+  }
   @include desktop {
-    transform: translateX(-830px) translateY(-327px) rotate(30deg);
+    animation-name: fly-tag-1_desktop;
+  }
+  @include min-width(1510px) {
+    animation-name: fly-tag-1_1510;
+  }
+  @include min-width(1690px) {
+    animation-name: fly-tag-1_1690;
+  }
+  @include min-width(1920px) {
+    animation-name: fly-tag-1_1920;
   }
 }
 
 .fly-tags_top-section .fly-tags__item:nth-child(2) {
-  font-size: 35px;
-  transform: translateX(-10px) translateY(12px) rotate(15deg);
+  font-size: 30px;
 
-  @include tablet-ipad {
-    transform: translateX(-453px) translateY(182px) rotate(15deg);
+  animation-name: fly-tag-2;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  
+  @include min-width(400px) {
+    animation-name: fly-tag-2_400;
   }
-
+  @include min-width(480px) {
+    animation-name: fly-tag-2_480;
+  }
+  @include phone {
+    animation-name: fly-tag-2_phone;
+  }
+  @include tablet {
+    font-size: 53px;
+    animation-name: fly-tag-2_tablet;
+  }
+  @include tablet-ipad {
+    animation-name: fly-tag-2_tablet-ipad;
+  }
+  @include min-width(1024px) {
+    animation-name: fly-tag-2_1024;
+  }
   @include desktop {
-    transform: translateX(-712px) translateY(-85px) rotate(15deg);
+    animation-name: fly-tag-2_desktop;
+  }
+  @include min-width(1510px) {
+    animation-name: fly-tag-2_1510;
+  }
+  @include min-width(1690px) {
+    animation-name: fly-tag-2_1690;
+  }
+  @include min-width(1920px) {
+    animation-name: fly-tag-2_1920;
   }
 }
 
 .fly-tags_top-section .fly-tags__item:nth-child(3) {
-  font-size: 30px;
-  transform: translateX(259px) translateY(-200px) rotate(-15deg);
-
-  @include tablet-ipad {
-    transform: translateX(375px) translateY(-300px) rotate(-15deg);
+  font-size: 15px;
+  animation-name: fly-tag-3;
+  animation-duration: 0.5s;
+  animation-delay: 1.7s;
+  
+  @include min-width(400px) {
+    animation-name: fly-tag-3_400;
   }
-
+  @include min-width(480px) {
+    animation-name: fly-tag-3_480;
+  }
+  @include phone {
+    animation-name: fly-tag-3_phone;
+  }
+  @include tablet {
+    font-size: 30px;
+    animation-name: fly-tag-3_tablet;
+  }
+  @include tablet-ipad {
+    animation-name: fly-tag-3_tablet-ipad;
+  }
   @include desktop {
-    transform: translateX(-174px) translateY(-284px) rotate(-15deg);
+    animation-name: fly-tag-3_desktop;
+  }
+  @include min-width(1510px) {
+    animation-name: fly-tag-3_1510;
   }
 }
 
 .fly-tags_top-section .fly-tags__item:nth-child(4) {
-  font-size: 30px;
-  transform: translateX(-350px) translateY(106px) rotate(-20deg);
-
-  @include tablet-ipad {
-    transform: translateX(-153px) translateY(134px) rotate(-20deg);
+  font-size: 20px;
+  animation-name: fly-tag-4;
+  animation-duration: 0.7s;
+  animation-delay: .8s;
+  
+  @include min-width(400px) {
+    animation-name: fly-tag-4_400;
   }
-
+  @include min-width(480px) {
+    animation-name: fly-tag-4_480;
+  }
+  @include phone {
+    animation-name: fly-tag-4_phone;
+  }
+  @include tablet {
+    font-size: 38px;
+    animation-name: fly-tag-4_tablet;
+  }
+  @include tablet-ipad {
+    animation-name: fly-tag-4_tablet-ipad;
+  }
   @include desktop {
-    font-size: 36px;
-    transform: translateX(-581px) translateY(221px) rotate(-25deg);
+    animation-name: fly-tag-4_desktop;
+  }
+  @include min-width(1510px) {
+    animation-name: fly-tag-4_1510;
+  }
+  @include min-width(1690px) {
+    animation-name: fly-tag-4_1690;
   }
 }
 
 .fly-tags_top-section .fly-tags__item:nth-child(5) {
-  font-size: 36px;
-  transform: translateX(282px) translateY(94px) rotate(20deg);
+  display: none;
 
   @include tablet-ipad {
-    transform: translateX(356px) translateY(94px) rotate(20deg);
-  }
+    display: block;
 
+    font-size: 36px;
+
+    animation-name: fly-tag-5_tablet-ipad;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: jump-none, cubic-bezier(0,.95,1,.18);
+  }
+  
   @include desktop {
-    transform: translateX(-10px) translateY(91px) rotate(20deg);
+    animation-name: fly-tag-5_desktop;
+  }
+  @include min-width(1510px) {
+    animation-name: fly-tag-5_1510;
+  }
+  @include min-width(1920px) {
+    animation-name: fly-tag-5_1920;
   }
 }
 
 .fly-tags_top-section .fly-tags__item:nth-child(6) {
-  font-size: 30px;
-  transform: translateX(-43px) translateY(-156px) rotate(14deg);
-
+  display: none;
+  
   @include tablet-ipad {
-    transform: translateX(-89px) translateY(-217px) rotate(14deg);
+    display: block;
+
+    font-size: 45px;
+    
+    animation-name: fly-tag-6_tablet-ipad;
+    animation-duration: 0.7s;
+    animation-delay: 1s;
   }
 
   @include desktop {
     display: none;
   }
 }
+
+
+/*----------------- Price Section -----------------*/
 
 .fly-tags_price-section .fly-tags__item {
   color: $text-color-3;
