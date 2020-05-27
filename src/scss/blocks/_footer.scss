@@ -29,17 +29,17 @@
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(2, min-content);
     justify-content: space-between;
-    row-gap: 49px;
+    row-gap: 28px;
 
     margin: 0 40px;
     padding-top: 106px;
-    padding-bottom: 55px;
+    padding-bottom: 73px;
   }
 
   @include desktop {
     margin: 0 auto;
     padding-top: 84px;
-    padding-bottom: 52px;
+    padding-bottom: 74px;
   }
 }
 
