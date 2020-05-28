@@ -17,6 +17,7 @@ body {
   font-size: 100%;
   line-height: 1;
   color: $text-color-2;
+  overflow-anchor: none;
 }
 
 body.modal-active {
