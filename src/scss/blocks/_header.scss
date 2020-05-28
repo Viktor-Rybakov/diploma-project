@@ -8,6 +8,8 @@
 
   background-color: $background-color-2;
 
+  scroll-snap-align: start;
+
   @include tablet {
     padding-top: 30px;
     padding-bottom: 30px;

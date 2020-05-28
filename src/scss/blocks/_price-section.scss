@@ -3,6 +3,8 @@
   padding-bottom: 45px;
   
   background: linear-gradient(to top right, $gradient-color-1, $gradient-color-2);
+
+  scroll-snap-align: start;
   
   @include tablet-ipad {
     position: relative;
