@@ -8,8 +8,16 @@
   padding: 0;
 
   border: none;
+  border-radius: 2px;
   background: none;
   cursor: pointer;
+
+  transition: box-shadow 0.3s;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px $link-hover;
+  }
 
   @include tablet {
     width: 45px;
