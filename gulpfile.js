@@ -57,7 +57,7 @@ function styles(){
 function scripts(){
   return src('./src/js/*.js')
     .pipe(concat('scripts.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(dest('./build/js'))
     .pipe(browserSync.stream());
 }
