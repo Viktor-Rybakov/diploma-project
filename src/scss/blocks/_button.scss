@@ -90,6 +90,11 @@
   }
 }
 
+.button_header .button__icon-symbol {
+  fill: url('#gradient-vertical');
+  stroke: url('#gradient-vertical');
+}
+
 .button_header .button__text {
   &_tablet {
     display: none;

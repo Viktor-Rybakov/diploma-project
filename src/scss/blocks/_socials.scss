@@ -25,9 +25,12 @@
 .socials__icon {
   height: 32px;
   width: 32px;
-  fill: $text-color-2;
+}
 
-  &:hover {
-    fill: url('#gradient-vertical');
-  }
+.socials__icon-symbol {
+  fill: $text-color-2;
+}
+
+.socials__link:hover .socials__icon-symbol {
+  fill: url('#gradient-vertical');
 }

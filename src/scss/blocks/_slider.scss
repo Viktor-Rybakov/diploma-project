@@ -89,6 +89,7 @@
 
   width: 60px;
   height: 60px;
+  padding: 0;
 
   background-color: #fff;
 
@@ -115,15 +116,19 @@
     outline: none;
     box-shadow: 0 0 20px transparent, 0 0 0 2px $link-hover;
   }
-
-  &:hover .slider__button-icon > path {
-    stroke: url(#gradient-vertical);
-  }
 }
 
 .slider__button-icon {
   width: 14px;
   height: 24px;
+}
+
+.slider__button-icon-symbol {
+  stroke: #000;
+}
+
+.slider__button:hover .slider__button-icon-symbol {
+  stroke: url('#gradient-vertical');
 }
 
 .slider__pagination {
