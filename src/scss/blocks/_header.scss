@@ -1,6 +1,10 @@
 .header {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  column-gap: 30px;
+
   align-items: center;
   
   padding-top: 19px;
@@ -10,41 +14,99 @@
 
   scroll-snap-align: start;
 
+  @include phone {
+    padding-right: 13px;
+  }
+
   @include tablet {
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-right: 40px;
+  }
+  
+  @include min-width(1025px) {
+    grid-template-columns: min-content 1fr min-content;
+
+    padding-right: 0;
   }
 
   @include min-max-width(1025px, 1210px) {
     margin-right: 20px;
     margin-left: 20px;
   }
+
+  &_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+
+    width: 100%;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+    scroll-snap-align: none;
+  }
 }
 
 .header__phone {
   display: block;
 
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  justify-self: center;
+  z-index: 10;
+
   font-weight: 700;
   font-size: 18px;
 
   @include phone {
-    margin-right: 30px;
-    margin-left: auto;
+    grid-column: initial;
+    grid-row: initial;
+    justify-self: end;
   }
 
   @include tablet {
     font-size: 25px;
   }
+
+  @include min-width(1025px) {
+    z-index: initial;
+  }
 }
 
 .header__call-back-button {
+  grid-column: span 1 / -1;
+  grid-row: 1 / span 1;
+  z-index: 10;
+
   margin-right: 13px;
 
-  @include tablet {
-    margin-right: 40px;
+  @include phone {
+    grid-column: initial;
+    grid-row: initial;
+
+    margin-right: 0;
   }
 
   @include min-width(1025px) {
-    margin-right: 0;
+    z-index: initial;
+  }
+}
+
+.header__navigation {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  @include min-width(1025px) {
+    position: static;
+    z-index: initial;
+    left: auto;
+    right: auto;
+    top: auto;
+    width: auto;
   }
 }

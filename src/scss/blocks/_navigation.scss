@@ -1,4 +1,28 @@
+.navigation {
+  display: grid;
+  row-gap: 20px;
+
+  padding-top: 19px;
+
+  background-color: $background-color-2;
+
+  @include tablet {
+    row-gap: 30px;
+
+    padding-top: 30px;
+  }
+
+  @include min-width(1025px) {
+    display: block;
+
+    padding-top: 0;
+
+    background-color: transparent;
+  }
+}
+
 .navigation__menu-button{
+  justify-self: start;
   margin-left: 12px;
 
   @include tablet {
@@ -7,15 +31,5 @@
 
   @include min-width(1025px) {
     display: none;
-  }
-}
-
-.navigation__menu {
-  display: none;
-
-  @include min-width(1025px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 }
