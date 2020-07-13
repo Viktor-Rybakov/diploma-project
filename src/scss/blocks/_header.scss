@@ -1,5 +1,7 @@
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   display: grid;
   grid-template-columns: 1fr min-content;
@@ -25,6 +27,8 @@
   }
   
   @include min-width(1025px) {
+    position: relative;
+
     grid-template-columns: min-content 1fr min-content;
 
     padding-right: 0;
@@ -33,18 +37,6 @@
   @include min-max-width(1025px, 1210px) {
     margin-right: 20px;
     margin-left: 20px;
-  }
-
-  &_fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
-
-    width: 100%;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
-    scroll-snap-align: none;
   }
 }
 
