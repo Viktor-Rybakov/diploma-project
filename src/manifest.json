@@ -2,7 +2,7 @@
   "name": "Viktor Rybakov",
   "short_name": "Viktor Rybakov",
   "icons": [{
-    "src": "google-touch-icon.png",
+    "src": "img/favicon/google-touch-icon.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
