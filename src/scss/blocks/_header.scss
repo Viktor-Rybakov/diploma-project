@@ -6,11 +6,10 @@
   display: grid;
   grid-template-columns: 1fr min-content;
   column-gap: 30px;
-
   align-items: center;
   
-  padding-top: 19px;
-  padding-bottom: 19px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   background-color: $background-color-2;
 
@@ -28,6 +27,7 @@
   
   @include min-width(1025px) {
     position: relative;
+    z-index: initial;
 
     grid-template-columns: min-content 1fr min-content;
 
