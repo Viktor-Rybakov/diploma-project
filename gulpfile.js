@@ -21,10 +21,10 @@ const plumber = require('gulp-plumber');
 
 const iconFiles = [
   './src/favicon.ico',
-  './src/favicon.svg',
-  './src/mask-icon.svg',
-  './src/apple-touch-icon.png',
-  './src/google-touch-icon.png',
+  // './src/favicon.svg',
+  // './src/mask-icon.svg',
+  // './src/apple-touch-icon.png',
+  // './src/google-touch-icon.png',
   './src/manifest.json'
 ];
 
