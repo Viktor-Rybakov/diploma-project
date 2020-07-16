@@ -35,12 +35,12 @@
     <nav id="navigation" class="navigation header__navigation">
       <button class="menu-button js-menu-button navigation__menu-button" type="button" aria-label="Открыть меню" aria-controls="menu" aria-expanded="false">
         <svg class="menu-button__icon" width="24" height="18" aria-hidden="true">
-          <use class="menu-button__icon-symbol menu-button__icon-symbol_menu" href="img/sprite.svg#menu-button_menu"></use>
-          <use class="menu-button__icon-symbol menu-button__icon-symbol_close" href="img/sprite.svg#menu-button_close"></use>
+          <use class="menu-button__icon-symbol menu-button__icon-symbol--menu" href="img/sprite.svg#menu-button--menu"></use>
+          <use class="menu-button__icon-symbol menu-button__icon-symbol--close" href="img/sprite.svg#menu-button--close"></use>
         </svg>
       </button>
 
-      <ul id="menu" class="menu menu_header js-menu navigation__menu">
+      <ul id="menu" class="menu menu--header js-menu navigation__menu">
         <li class="menu__item">
           <a class="link menu__link" href="#what-i-do">Услуги</a>
         </li>
@@ -57,11 +57,11 @@
 
     <a class="link header__phone" href="tel:+79215522700">+7&nbsp;(921)&nbsp;552&#8209;27&#8209;00</a>
 
-    <button id="header-call-back" class="button button_header header__call-back-button" type="button" aria-label="Заказать звонок" aria-controls="popup-form">
-      <svg class="button__icon button__icon_mobile" width="40" height="40" aria-hidden="true">
+    <button id="header-call-back" class="button button--header header__call-back-button" type="button" aria-label="Заказать звонок" aria-controls="popup-form">
+      <svg class="button__icon button__icon--mobile" width="40" height="40" aria-hidden="true">
         <use class="button__icon-symbol" href="img/sprite.svg#call-back-button"></use>
       </svg>
-      <span class="button__text button__text_tablet">Заказать звонок</span>
+      <span class="button__text button__text--tablet">Заказать звонок</span>
     </button>
   </header>
 
@@ -95,7 +95,7 @@
 
         <a id="learn-more" class="button top-section__button" href="#what-i-do">Узнать больше</a>
 
-        <div class="fly-tags fly-tags_top-section top-section__fly-tags" aria-hidden="true">
+        <div class="fly-tags fly-tags--top-section top-section__fly-tags" aria-hidden="true">
           <span class="fly-tags__item">{&nbsp;}</span>
           <span class="fly-tags__item">#</span>
           <span class="fly-tags__item">&lt;div&gt;</span>
@@ -111,10 +111,10 @@
         <h2 class="section__title">Что я делаю</h2>
 
         <ul class="services what-i-do-section__services">
-          <li class="services__item services__item_pages">Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности</li>
-          <li class="services__item services__item_adaptiv">Адаптивная вёрстка под все браузеры и устройства</li>
-          <li class="services__item services__item_frontend">Frontend — разработка и программирование</li>
-          <li class="services__item services__item_coding">Исправление и доработка существующей вёрстки</li>
+          <li class="services__item services__item--pages">Вёрстка лендинг-страниц и&nbsp;сайтов любой сложности</li>
+          <li class="services__item services__item--adaptiv">Адаптивная вёрстка под все браузеры и устройства</li>
+          <li class="services__item services__item--frontend">Frontend — разработка и программирование</li>
+          <li class="services__item services__item--coding">Исправление и доработка существующей вёрстки</li>
         </ul>
 
         <a id="ask-price" class="button what-i-do-section__button" href="#price">Узнать стоимость</a>
@@ -205,21 +205,21 @@
           </li>
         </ul>
 
-        <button class="slider__button slider__button_prev" type="button" aria-label="Предыдущий слайд">
+        <button class="slider__button slider__button--prev" type="button" aria-label="Предыдущий слайд">
           <svg class="slider__button-icon" width="14" height="24" aria-hidden="true">
-            <use class="slider__button-icon-symbol" href="img/sprite.svg#slider-button_prev"></use>
+            <use class="slider__button-icon-symbol" href="img/sprite.svg#slider-button--prev"></use>
           </svg>
         </button>
         
-        <button class="slider__button slider__button_next" type="button" aria-label="Следующий слайд">
+        <button class="slider__button slider__button--next" type="button" aria-label="Следующий слайд">
           <svg class="slider__button-icon" width="14" height="24" aria-hidden="true">
-            <use class="slider__button-icon-symbol" href="img/sprite.svg#slider-button_next"></use>
+            <use class="slider__button-icon-symbol" href="img/sprite.svg#slider-button--next"></use>
           </svg>
         </button>
 
         <ul class="pagination slider__pagination">
           <li class="pagination__list-item">
-            <button class="pagination__button pagination__button_active" type="button" aria-label="Слайд 1"></button>
+            <button class="pagination__button pagination__button--active" type="button" aria-label="Слайд 1"></button>
           </li>
           <li class="pagination__list-item">
             <button class="pagination__button" type="button" aria-label="Слайд 2"></button>
@@ -240,12 +240,12 @@
         <p class="price-section__description">Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за 4 часа.*</p>
 
         <p class="price-section__sub-description">
-          <small class="price-section__sub-description_small">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в&nbsp;
+          <small class="price-section__sub-description--small">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в&nbsp;
             зависимости от сложности задач.</small>
         </p>
       </div>
       
-      <div class="fly-tags fly-tags_price-section price-section__fly-tags" aria-hidden="true">
+      <div class="fly-tags fly-tags--price-section price-section__fly-tags" aria-hidden="true">
         <span class="fly-tags__item">{&nbsp;}</span>
         <span class="fly-tags__item">&lt;div&gt;</span>
         <span class="fly-tags__item">&lt;/&gt;</span>
@@ -257,7 +257,7 @@
 
   <footer class="footer" role="contentinfo">
     <div class="footer__container fix-container">
-      <ul class="menu menu_footer footer__menu">
+      <ul class="menu menu--footer footer__menu">
         <li class="menu__item">
           <a class="link menu__link" href="#what-i-do">Услуги</a>
         </li>
@@ -273,21 +273,21 @@
 
       <ul class="contacts footer__contacts">
         <li class="contacts__list-item">
-          <a class="link contacts__link contacts__link_phone" href="tel:+79215522700">+7&nbsp;(921)&nbsp;552&#8209;27&#8209;00</a>
+          <a class="link contacts__link contacts__link--phone" href="tel:+79215522700">+7&nbsp;(921)&nbsp;552&#8209;27&#8209;00</a>
         </li>
 
         <li class="contacts__list-item">
-          <a class="link contacts__link contacts__link_email" href="mailto:info@rybakov.pro">info@rybakov.pro</a>
+          <a class="link contacts__link contacts__link--email" href="mailto:info@rybakov.pro">info@rybakov.pro</a>
         </li>
       </ul>
 
-      <button id="call-back-footer" class="button button_footer footer__callback-button" type="button">Заказать звонок</button>
+      <button id="call-back-footer" class="button button--footer footer__callback-button" type="button">Заказать звонок</button>
 
       <ul class="socials footer__socials">
         <li class="socials__list-item">
           <a class="link socials__link" href="https://t.me/viktor_rybakov" aria-label="Ссылка на Telegram" target="_blank" rel="noopener noreferrer nofollow">
             <svg class="socials__icon" width="32" height="32" aria-hidden="true">
-              <use class="socials__icon-symbol" href="img/sprite.svg#socials_telegram"></use>
+              <use class="socials__icon-symbol" href="img/sprite.svg#socials--telegram"></use>
             </svg>
           </a>
         </li>
@@ -295,7 +295,7 @@
         <li class="socials__list-item">
           <a class="link socials__link" href="https://github.com/Viktor-Rybakov" aria-label="Ссылка на Github" target="_blank" rel="noopener noreferrer nofollow">
             <svg class="socials__icon" width="32" height="32" aria-hidden="true">
-              <use class="socials__icon-symbol" href="img/sprite.svg#socials_github"></use>
+              <use class="socials__icon-symbol" href="img/sprite.svg#socials--github"></use>
             </svg>
           </a>
         </li>
@@ -303,7 +303,7 @@
         <li class="socials__list-item">
           <a class="link socials__link" href="https://www.linkedin.com/in/viktor-rybakov/" aria-label="Ссылка на LinkedIn" target="_blank" rel="noopener noreferrer nofollow">
             <svg class="socials__icon" width="32" height="32" aria-hidden="true">
-              <use class="socials__icon-symbol" href="img/sprite.svg#socials_linkedin"></use>
+              <use class="socials__icon-symbol" href="img/sprite.svg#socials--linkedin"></use>
             </svg>
           </a>
         </li>
@@ -311,7 +311,7 @@
         <li class="socials__list-item">
           <a class="link socials__link" href="https://www.instagram.com/rybakov.pro/" aria-label="Ссылка на Instagram" target="_blank" rel="noopener noreferrer nofollow">
             <svg class="socials__icon" width="32" height="32" aria-hidden="true">
-              <use class="socials__icon-symbol" href="img/sprite.svg#socials_instagram"></use>
+              <use class="socials__icon-symbol" href="img/sprite.svg#socials--instagram"></use>
             </svg>
           </a>
         </li>

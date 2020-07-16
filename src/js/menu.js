@@ -33,15 +33,15 @@ window.addEventListener('resize', () => {
 });
 
 function openMenu() {
-  MENU.classList.add('menu_open');
+  MENU.classList.add('menu--open');
   MENU_BUTTON.setAttribute('aria-expanded', 'true');
   MENU_BUTTON.setAttribute('aria-label', 'Закрыть меню');
-  MENU_BUTTON.classList.add('menu-button_open');
+  MENU_BUTTON.classList.add('menu-button--open');
 }
 
 function closeMenu() {
-  MENU.classList.remove('menu_open');
+  MENU.classList.remove('menu--open');
   MENU_BUTTON.setAttribute('aria-expanded', 'false');
   MENU_BUTTON.setAttribute('aria-label', 'Открыть меню');
-  MENU_BUTTON.classList.remove('menu-button_open');
+  MENU_BUTTON.classList.remove('menu-button--open');
 }

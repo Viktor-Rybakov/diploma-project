@@ -11,7 +11,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  &_top-section {
+  &--top-section {
     bottom: auto;
     height: 390px;
 
@@ -28,7 +28,7 @@
 
 /*----------------- Top Section -----------------*/
 
-.fly-tags_top-section .fly-tags__item { 
+.fly-tags--top-section .fly-tags__item { 
   bottom: 0;
   right: 100px;
   opacity: 0;
@@ -63,7 +63,7 @@
   }
 }
 
-.fly-tags_top-section .fly-tags__item:nth-child(1) {
+.fly-tags--top-section .fly-tags__item:nth-child(1) {
   line-height: 1.5;
   font-size: 25px;
   
@@ -72,39 +72,39 @@
   animation-delay: 1s;
   
   @include min-width(400px) {
-    animation-name: fly-tag-1_400;
+    animation-name: fly-tag-1--400;
   }
   @include min-width(480px) {
-    animation-name: fly-tag-1_480;
+    animation-name: fly-tag-1--480;
   }
   @include phone {
-    animation-name: fly-tag-1_phone;
+    animation-name: fly-tag-1--phone;
   }
   @include tablet {
     font-size: 45px;
-    animation-name: fly-tag-1_tablet;
+    animation-name: fly-tag-1--tablet;
   }
   @include tablet-ipad {
-    animation-name: fly-tag-1_tablet-ipad;
+    animation-name: fly-tag-1--tablet-ipad;
   }
   @include min-width(1024px) {
-    animation-name: fly-tag-1_1024;
+    animation-name: fly-tag-1--1024;
   }
   @include desktop {
-    animation-name: fly-tag-1_desktop;
+    animation-name: fly-tag-1--desktop;
   }
   @include min-width(1510px) {
-    animation-name: fly-tag-1_1510;
+    animation-name: fly-tag-1--1510;
   }
   @include min-width(1690px) {
-    animation-name: fly-tag-1_1690;
+    animation-name: fly-tag-1--1690;
   }
   @include min-width(1920px) {
-    animation-name: fly-tag-1_1920;
+    animation-name: fly-tag-1--1920;
   }
 }
 
-.fly-tags_top-section .fly-tags__item:nth-child(2) {
+.fly-tags--top-section .fly-tags__item:nth-child(2) {
   font-size: 30px;
 
   animation-name: fly-tag-2;
@@ -112,102 +112,102 @@
   animation-delay: 1.5s;
   
   @include min-width(400px) {
-    animation-name: fly-tag-2_400;
+    animation-name: fly-tag-2--400;
   }
   @include min-width(480px) {
-    animation-name: fly-tag-2_480;
+    animation-name: fly-tag-2--480;
   }
   @include phone {
-    animation-name: fly-tag-2_phone;
+    animation-name: fly-tag-2--phone;
   }
   @include tablet {
     font-size: 53px;
-    animation-name: fly-tag-2_tablet;
+    animation-name: fly-tag-2--tablet;
   }
   @include tablet-ipad {
-    animation-name: fly-tag-2_tablet-ipad;
+    animation-name: fly-tag-2--tablet-ipad;
   }
   @include min-width(1024px) {
-    animation-name: fly-tag-2_1024;
+    animation-name: fly-tag-2--1024;
   }
   @include desktop {
-    animation-name: fly-tag-2_desktop;
+    animation-name: fly-tag-2--desktop;
   }
   @include min-width(1510px) {
-    animation-name: fly-tag-2_1510;
+    animation-name: fly-tag-2--1510;
   }
   @include min-width(1690px) {
-    animation-name: fly-tag-2_1690;
+    animation-name: fly-tag-2--1690;
   }
   @include min-width(1920px) {
-    animation-name: fly-tag-2_1920;
+    animation-name: fly-tag-2--1920;
   }
 }
 
-.fly-tags_top-section .fly-tags__item:nth-child(3) {
+.fly-tags--top-section .fly-tags__item:nth-child(3) {
   font-size: 15px;
   animation-name: fly-tag-3;
   animation-duration: 0.5s;
   animation-delay: 1.7s;
   
   @include min-width(400px) {
-    animation-name: fly-tag-3_400;
+    animation-name: fly-tag-3--400;
   }
   @include min-width(480px) {
-    animation-name: fly-tag-3_480;
+    animation-name: fly-tag-3--480;
   }
   @include phone {
-    animation-name: fly-tag-3_phone;
+    animation-name: fly-tag-3--phone;
   }
   @include tablet {
     font-size: 30px;
-    animation-name: fly-tag-3_tablet;
+    animation-name: fly-tag-3--tablet;
   }
   @include tablet-ipad {
-    animation-name: fly-tag-3_tablet-ipad;
+    animation-name: fly-tag-3--tablet-ipad;
   }
   @include desktop {
-    animation-name: fly-tag-3_desktop;
+    animation-name: fly-tag-3--desktop;
   }
   @include min-width(1510px) {
-    animation-name: fly-tag-3_1510;
+    animation-name: fly-tag-3--1510;
   }
 }
 
-.fly-tags_top-section .fly-tags__item:nth-child(4) {
+.fly-tags--top-section .fly-tags__item:nth-child(4) {
   font-size: 20px;
   animation-name: fly-tag-4;
   animation-duration: 0.7s;
   animation-delay: .8s;
   
   @include min-width(400px) {
-    animation-name: fly-tag-4_400;
+    animation-name: fly-tag-4--400;
   }
   @include min-width(480px) {
-    animation-name: fly-tag-4_480;
+    animation-name: fly-tag-4--480;
   }
   @include phone {
-    animation-name: fly-tag-4_phone;
+    animation-name: fly-tag-4--phone;
   }
   @include tablet {
     font-size: 38px;
-    animation-name: fly-tag-4_tablet;
+    animation-name: fly-tag-4--tablet;
   }
   @include tablet-ipad {
-    animation-name: fly-tag-4_tablet-ipad;
+    animation-name: fly-tag-4--tablet-ipad;
   }
   @include desktop {
-    animation-name: fly-tag-4_desktop;
+    animation-name: fly-tag-4--desktop;
   }
   @include min-width(1510px) {
-    animation-name: fly-tag-4_1510;
+    animation-name: fly-tag-4--1510;
   }
   @include min-width(1690px) {
-    animation-name: fly-tag-4_1690;
+    animation-name: fly-tag-4--1690;
   }
 }
 
-.fly-tags_top-section .fly-tags__item:nth-child(5) {
+.fly-tags--top-section .fly-tags__item:nth-child(5) {
   display: none;
 
   @include tablet-ipad {
@@ -215,24 +215,24 @@
 
     font-size: 36px;
 
-    animation-name: fly-tag-5_tablet-ipad;
+    animation-name: fly-tag-5--tablet-ipad;
     animation-duration: 2s;
     animation-delay: 1s;
     animation-timing-function: jump-none, cubic-bezier(0,.95,1,.18);
   }
   
   @include desktop {
-    animation-name: fly-tag-5_desktop;
+    animation-name: fly-tag-5--desktop;
   }
   @include min-width(1510px) {
-    animation-name: fly-tag-5_1510;
+    animation-name: fly-tag-5--1510;
   }
   @include min-width(1920px) {
-    animation-name: fly-tag-5_1920;
+    animation-name: fly-tag-5--1920;
   }
 }
 
-.fly-tags_top-section .fly-tags__item:nth-child(6) {
+.fly-tags--top-section .fly-tags__item:nth-child(6) {
   display: none;
   
   @include tablet-ipad {
@@ -240,7 +240,7 @@
 
     font-size: 45px;
     
-    animation-name: fly-tag-6_tablet-ipad;
+    animation-name: fly-tag-6--tablet-ipad;
     animation-duration: 0.7s;
     animation-delay: 1s;
   }
@@ -253,11 +253,11 @@
 
 /*----------------- Price Section -----------------*/
 
-.fly-tags_price-section .fly-tags__item {
+.fly-tags--price-section .fly-tags__item {
   color: $text-color-3;
 }
 
-.fly-tags_price-section .fly-tags__item:nth-child(1) {
+.fly-tags--price-section .fly-tags__item:nth-child(1) {
   top: 23px;
   left: 156px;
   transform: rotate(28deg);
@@ -277,7 +277,7 @@
   }
 }
 
-.fly-tags_price-section .fly-tags__item:nth-child(2) {
+.fly-tags--price-section .fly-tags__item:nth-child(2) {
   bottom: 33px;
   right: 453px;
   transform: rotate(20deg);
@@ -291,7 +291,7 @@
   }
 }
 
-.fly-tags_price-section .fly-tags__item:nth-child(3) {
+.fly-tags--price-section .fly-tags__item:nth-child(3) {
   bottom: 35px;
   right: 94px;
   transform: rotate(-24deg);
@@ -310,7 +310,7 @@
   }
 }
 
-.fly-tags_price-section .fly-tags__item:nth-child(4) {
+.fly-tags--price-section .fly-tags__item:nth-child(4) {
   display: none;
   
   @include desktop {
@@ -324,7 +324,7 @@
   }
 }
 
-.fly-tags_price-section .fly-tags__item:nth-child(5) {
+.fly-tags--price-section .fly-tags__item:nth-child(5) {
   display: none;
 
   @include desktop {

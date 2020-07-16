@@ -44,7 +44,7 @@
 
 /*----- 400px -----*/
 
-@keyframes fly-tag-1_400 {
+@keyframes fly-tag-1--400 {
   from {
     transform: translate(0, 0) rotate(-3600deg);
     opacity: 0;
@@ -54,7 +54,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-2_400 {
+@keyframes fly-tag-2--400 {
   from {
     transform: translate(0, 0) rotate(900deg);
     opacity: 0;
@@ -64,7 +64,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-3_400 {
+@keyframes fly-tag-3--400 {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;
@@ -74,7 +74,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-4_400 {
+@keyframes fly-tag-4--400 {
   from {
     transform: translate(0, 0) rotate(-1900deg);
     opacity: 0;
@@ -88,7 +88,7 @@
 
 /*----- 480px -----*/
 
-@keyframes fly-tag-1_480 {
+@keyframes fly-tag-1--480 {
   from {
     transform: translate(0, 0) rotate(-3600deg);
     opacity: 0;
@@ -98,7 +98,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-2_480 {
+@keyframes fly-tag-2--480 {
   from {
     transform: translate(0, 0) rotate(900deg);
     opacity: 0;
@@ -108,7 +108,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-3_480 {
+@keyframes fly-tag-3--480 {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;
@@ -118,7 +118,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-4_480 {
+@keyframes fly-tag-4--480 {
   from {
     transform: translate(0, 0) rotate(-1900deg);
     opacity: 0;
@@ -132,7 +132,7 @@
 
 /*----- phone -----*/
 
-@keyframes fly-tag-1_phone {
+@keyframes fly-tag-1--phone {
   from {
     transform: translate(0, 0) rotate(-3600deg);
     opacity: 0;
@@ -142,7 +142,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-2_phone {
+@keyframes fly-tag-2--phone {
   from {
     transform: translate(0, 0) rotate(900deg);
     opacity: 0;
@@ -152,7 +152,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-3_phone {
+@keyframes fly-tag-3--phone {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;
@@ -162,7 +162,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-4_phone {
+@keyframes fly-tag-4--phone {
   from {
     transform: translate(0, 0) rotate(-1900deg);
     opacity: 0;
@@ -176,7 +176,7 @@
 
 /*----- tablet -----*/
 
-@keyframes fly-tag-1_tablet {
+@keyframes fly-tag-1--tablet {
   from {
     transform: translate(0, 0) rotate(-3600deg);
     opacity: 0;
@@ -186,7 +186,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-2_tablet {
+@keyframes fly-tag-2--tablet {
   from {
     transform: translate(0, 0) rotate(900deg);
     opacity: 0;
@@ -196,7 +196,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-3_tablet {
+@keyframes fly-tag-3--tablet {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;
@@ -206,7 +206,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-4_tablet {
+@keyframes fly-tag-4--tablet {
   from {
     transform: translate(0, 0) rotate(-1900deg);
     opacity: 0;
@@ -220,7 +220,7 @@
 
 /*----- tablet-ipad -----*/
 
-@keyframes fly-tag-1_tablet-ipad {
+@keyframes fly-tag-1--tablet-ipad {
   from {
     transform: translate(0, 0) rotate(-3600deg);
     opacity: 0;
@@ -230,7 +230,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-2_tablet-ipad {
+@keyframes fly-tag-2--tablet-ipad {
   from {
     transform: translate(0, 0) rotate(900deg);
     opacity: 0;
@@ -240,7 +240,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-3_tablet-ipad {
+@keyframes fly-tag-3--tablet-ipad {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;
@@ -250,7 +250,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-4_tablet-ipad {
+@keyframes fly-tag-4--tablet-ipad {
   from {
     transform: translate(0, 0) rotate(-1900deg);
     opacity: 0;
@@ -260,7 +260,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-5_tablet-ipad {
+@keyframes fly-tag-5--tablet-ipad {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;
@@ -274,7 +274,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-6_tablet-ipad {
+@keyframes fly-tag-6--tablet-ipad {
   from {
     transform: translate(0, 0) rotate(-2000deg);
     opacity: 0;
@@ -288,7 +288,7 @@
 
 /*----- 1024 -----*/
 
-@keyframes fly-tag-1_1024 {
+@keyframes fly-tag-1--1024 {
   from {
     transform: translate(0, 0) rotate(-3600deg);
     opacity: 0;
@@ -298,7 +298,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-2_1024 {
+@keyframes fly-tag-2--1024 {
   from {
     transform: translate(0, 0) rotate(900deg);
     opacity: 0;
@@ -312,7 +312,7 @@
 
 /*----- Desktop -----*/
 
-@keyframes fly-tag-1_desktop {
+@keyframes fly-tag-1--desktop {
   from {
     transform: translate(0, 0) rotate(-3600deg);
     opacity: 0;
@@ -322,7 +322,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-2_desktop {
+@keyframes fly-tag-2--desktop {
   from {
     transform: translate(0, 0) rotate(900deg);
     opacity: 0;
@@ -332,7 +332,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-3_desktop {
+@keyframes fly-tag-3--desktop {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;
@@ -342,7 +342,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-4_desktop {
+@keyframes fly-tag-4--desktop {
   from {
     transform: translate(0, 0) rotate(-1900deg);
     opacity: 0;
@@ -352,7 +352,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-5_desktop {
+@keyframes fly-tag-5--desktop {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;
@@ -366,7 +366,7 @@
 
 /*----- 1510 -----*/
 
-@keyframes fly-tag-1_1510 {
+@keyframes fly-tag-1--1510 {
   from {
     transform: translate(0, 0) rotate(-3600deg);
     opacity: 0;
@@ -376,7 +376,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-2_1510 {
+@keyframes fly-tag-2--1510 {
   from {
     transform: translate(0, 0) rotate(2900deg);
     opacity: 0;
@@ -386,7 +386,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-3_1510 {
+@keyframes fly-tag-3--1510 {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;
@@ -396,7 +396,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-4_1510 {
+@keyframes fly-tag-4--1510 {
   from {
     transform: translate(0, 0) rotate(-1900deg);
     opacity: 0;
@@ -406,7 +406,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-5_1510 {
+@keyframes fly-tag-5--1510 {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;
@@ -420,7 +420,7 @@
 
 /*----- 1690 -----*/
 
-@keyframes fly-tag-1_1690 {
+@keyframes fly-tag-1--1690 {
   from {
     transform: translate(0, 0) rotate(-3600deg);
     opacity: 0;
@@ -430,7 +430,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-2_1690 {
+@keyframes fly-tag-2--1690 {
   from {
     transform: translate(0, 0) rotate(2900deg);
     opacity: 0;
@@ -440,7 +440,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-4_1690 {
+@keyframes fly-tag-4--1690 {
   from {
     transform: translate(0, 0) rotate(-1900deg);
     opacity: 0;
@@ -454,7 +454,7 @@
 
 /*----- 1920 -----*/
 
-@keyframes fly-tag-1_1920 {
+@keyframes fly-tag-1--1920 {
   from {
     transform: translate(0, 0) rotate(-3600deg);
     opacity: 0;
@@ -464,7 +464,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-2_1920 {
+@keyframes fly-tag-2--1920 {
   from {
     transform: translate(0, 0) rotate(2900deg);
     opacity: 0;
@@ -474,7 +474,7 @@
     opacity: 1;
   }
 }
-@keyframes fly-tag-5_1920 {
+@keyframes fly-tag-5--1920 {
   from {
     transform: translate(0, 0) rotate(1900deg);
     opacity: 0;

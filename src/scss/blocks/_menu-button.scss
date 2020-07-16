@@ -39,12 +39,12 @@
   stroke: url('#gradient-vertical');
 }
 
-.menu-button_open .menu-button__icon-symbol_close,
-.menu-button__icon-symbol_menu {
+.menu-button--open .menu-button__icon-symbol--close,
+.menu-button__icon-symbol--menu {
   display: block;
 }
 
-.menu-button_open .menu-button__icon-symbol_menu,
-.menu-button__icon-symbol_close {
+.menu-button--open .menu-button__icon-symbol--menu,
+.menu-button__icon-symbol--close {
   display: none;
 }
