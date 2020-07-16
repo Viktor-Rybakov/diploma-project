@@ -1,10 +1,14 @@
 .navigation {
   display: grid;
+  grid-template-rows: min-content 1fr;
   row-gap: 20px;
 
-  padding-top: 19px;
+  height: 100vh;
+  padding-top: 20px;
+  
+  background-color: transparent;
 
-  background-color: $background-color-2;
+  pointer-events: none;
 
   @include tablet {
     row-gap: 30px;
@@ -14,16 +18,19 @@
 
   @include min-width(1025px) {
     display: block;
+    height: auto;
 
     padding-top: 0;
 
-    background-color: transparent;
+    pointer-events: initial;
   }
 }
 
 .navigation__menu-button{
   justify-self: start;
   margin-left: 12px;
+
+  pointer-events: initial;
 
   @include tablet {
     margin-left: 40px;

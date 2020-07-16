@@ -5,33 +5,46 @@
   list-style: none;
 }
 
-.menu_header {
-  display: none;
+.menu--header {
+  display: flex;
   flex-direction: column;
-  align-items: center;
-
-  padding-bottom: 19px;
-  box-shadow: 0 50vh 0 50vh rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  width: 300px;
+  padding: 30px;
+  visibility: hidden;
+  
+  background-color: $background-color-2;
+  transform: translateX(-100%);
+  transition-property: transform, visibility;
+  transition-duration: 0.3s;
+  transition-delay: 0.2s;
+  will-change: transform;
+  pointer-events: initial;
 
   @include min-width(1025px) {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: auto;
+    padding: 0;
+    visibility: initial;
 
-    padding-bottom: 0;
-    box-shadow: none;
+    background-color: initial;
+    transform: none;
   }
 }
 
-.menu_header.menu_open {
-  display: flex;
+.menu--header.menu--open {
   z-index: 1;
+  visibility: initial;
+
+  box-shadow: 0 100vw 0 100vw rgba(0, 0, 0, 0.3);
+  transform: translateX(0);
 }
 
-.menu_header .menu__item {
+.menu--header .menu__item {
   &:not(:last-of-type) {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 
     @include min-width(1025px) {
       margin-bottom: 0;
@@ -40,7 +53,7 @@
   }
 }
 
-.menu_footer .menu__item {
+.menu--footer .menu__item {
 
   @include tablet {
     font-size: 18px;
@@ -56,7 +69,7 @@
   }
 }
 
-.menu_footer .menu__link {
+.menu--footer .menu__link {
   color: inherit;
 
   &:hover {
