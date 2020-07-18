@@ -1,40 +1,23 @@
 {
-  "name": "diploma-project",
-  "version": "1.0.0",
-  "description": "Skillbox diploma project",
-  "main": "index.js",
-  "author": "Viktor Rybakov",
-  "license": "MIT",
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
-  },
-  "dependencies": {
-    "gulp-webp": "^4.0.1"
+  "private": true,
+  "scripts": {
+    "start": "gulp"
   },
   "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
+    "last 2 version",
+    "not dead",
+    "not ie <= 11",
+    "iOS >= 12"
   ],
-  "scripts": {
-    "dev": "gulp dev"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Viktor-Rybakov/diploma-project.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Viktor-Rybakov/diploma-project/issues"
-  },
-  "homepage": "https://github.com/Viktor-Rybakov/diploma-project#readme"
+  "devDependencies": {
+    "browser-sync": "^2.26.9",
+    "del": "^5.1.0",
+    "autoprefixer": "^9.8.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-postcss": "^8.0.0",
+    "postcss-csso": "^4.0.0",
+    "pixel-glass": "^1.0.13"
+  }
 }

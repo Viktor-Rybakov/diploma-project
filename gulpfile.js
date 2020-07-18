@@ -1,132 +1,109 @@
-const { src, dest, watch, series, parallel } = require('gulp');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const htmlmin = require('gulp-htmlmin');
+const del = require('del');
+const sync = require('browser-sync').create();
+
+// HTML
+
+const html = () => {
+  return gulp.src('src/*.html')
+    .pipe(htmlmin({
+      removeComments: true,
+      collapseWhitespace: true,
+    }))
+    .pipe(gulp.dest('build'))
+    .pipe(sync.stream());
+};
+
+exports.html = html;
 
 // Styles
-const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
 
-// Images
-const imageMin = require('gulp-imagemin');
-const webp = require('gulp-webp');
-
-// JavaScript
-const uglify = require('gulp-uglify');
-
-// Tools
-const concat = require('gulp-concat');
-const del = require('del');
-const browserSync = require('browser-sync').create();
-const plumber = require('gulp-plumber');
-
-const iconFiles = [
-  './src/favicon.ico',
-  // './src/favicon.svg',
-  // './src/mask-icon.svg',
-  // './src/apple-touch-icon.png',
-  // './src/google-touch-icon.png',
-  './src/manifest.json'
-];
-
-function html(){
-  return src('./src/*.html')
-    .pipe(dest('./build'))
-    .pipe(browserSync.stream());
-}
-
-function styles(){
-  return src('./src/scss/styles.scss')
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
+const styles = () => {
+  return gulp.src('src/styles/index.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(concat('styles.css'))
-    .pipe(autoprefixer())
-    .pipe(cleanCSS({
-      debug: true,
-      level: 2,
-    }, 
-      (details) => {
-        console.log(`${details.name}: ${details.stats.originalSize}`);
-        console.log(`${details.name}: ${details.stats.minifiedSize}`);
-    }))
-    .pipe(sourcemaps.write('./maps'))
-    .pipe(dest('./build/css'))
-    .pipe(browserSync.stream());
-}
-
-function scripts(){
-  return src('./src/js/*.js')
-    .pipe(concat('scripts.js'))
-    // .pipe(uglify())
-    .pipe(dest('./build/js'))
-    .pipe(browserSync.stream());
-}
-
-function images(){
-  return src('./src/img/*')
-    .pipe(imageMin([
-      imageMin.gifsicle({interlaced: true}),
-      imageMin.mozjpeg({quality: 75, progressive: true}),
-      imageMin.optipng({optimizationLevel: 4}),
-      imageMin.svgo({
-        plugins: [
-          {removeViewBox: true},
-          {cleanupIDs: false}
-        ]
-      })
+    .pipe(postcss([
+      require('autoprefixer'),
+      require('postcss-csso'),
     ]))
-    .pipe(dest('./build/img'))
-    .pipe(browserSync.stream());
-}
+    .pipe(gulp.dest('build/css'))
+    .pipe(sync.stream());
+};
 
-function webpImages() {
-  return src('build/img/*.{png,jpg}')
-    .pipe(webp({quality: 95,
-                lossless: true}))
-    .pipe(dest('build/img/webp'));
-}
+exports.styles = styles;
 
-function fonts(){
-  return src('./src/fonts/*')
-    .pipe(dest('./build/fonts'))
-    .pipe(browserSync.stream());
-}
+//Scripts
 
-function watching(){
-  browserSync.init({
+const scripts = () => {
+  return gulp.src('src/js/*.js')
+    .pipe(gulp.dest('build/js'))
+    .pipe(sync.stream());
+};
+
+
+// Copy
+
+const copy = () => {
+  return gulp.src([
+    'src/fonts/**/*',
+    'src/images/**/*',
+    'src/favicon.ico',
+    'src/manifest.json'
+  ], {
+    base: 'src'
+  })
+  .pipe(gulp.dest('build'))
+  .pipe(sync.stream({
+    once: true
+  }));
+};
+
+exports.copy = copy;
+
+const server = () => {
+  sync.init({
+    ui: false,
+    notify: false,
     server: {
-        baseDir: "build/"
-    }
+      baseDir: 'build'
+      }
   });
+};
 
-  watch('./src/scss/**/*.scss', styles);
-  watch('./src/js/**/*.js', scripts);
-  watch('./src/*.html', html);
-  watch('./src/img/*', images);
-  watch('.src/fonts/*', fonts);
-}
+exports.server = server;
 
-function icons(){
-  return src(iconFiles)
-    .pipe(dest('./build'));
-}
+// Watch
 
-function clean() {
+const watch = () => {
+  gulp.watch('src/*.html', gulp.series(html));
+  gulp.watch('src/styles/**/*.scss', gulp.series(styles));
+  gulp.watch('src/scripts/**/*.js', gulp.series(scripts));
+  gulp.watch([
+    'src/fonts/**/*',
+    'src/images/**/*',
+  ], gulp.series(copy));
+};
+
+exports.watch = watch;
+
+const clean = () => {
   return del(['build/*']);
-}
+};
 
-exports.dev = series(
+exports.clean = clean;
+
+exports.default = gulp.series(
   clean,
-  parallel(
-    html,
-    icons,
-    styles,
-    scripts,
-    fonts,
-    series (
-      images,
-      webpImages
-    )
+  gulp.parallel(
+      html,
+      styles,
+      scripts,
+      copy,
   ),
-  watching
+  gulp.parallel(
+      watch,
+      server,
+  ),
 );
