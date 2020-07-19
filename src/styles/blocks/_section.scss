@@ -1,0 +1,34 @@
+.section {
+  padding-top: 43px;
+  padding-bottom: 50px;
+
+  scroll-snap-align: start;
+
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 105px;
+  }
+}
+
+.section__title {
+  margin: 0 auto 45px;
+  padding: 0 20px;
+
+  font-weight: 900;
+  font-size: 30px;
+  color: $text-color-1;
+  line-height: 35px;
+
+  text-align: center;
+
+  @include tablet {
+    margin: 0 auto 95px;
+
+    font-weight: 700;
+    font-size: 54px;
+  }
+
+  @include desktop {
+    margin: 0 auto 100px;
+  }
+}

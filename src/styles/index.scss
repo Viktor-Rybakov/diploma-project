@@ -1,0 +1,29 @@
+@import "variables";
+@import "media-query";
+
+@import "normalize";
+@import "global";
+@import "fonts";
+@import "visually-hidden";
+
+@import "blocks/fix-container";
+@import "blocks/link";
+@import "blocks/modal";
+@import "blocks/menu-button";
+@import "blocks/menu";
+@import "blocks/navigation";
+@import "blocks/button";
+@import "blocks/animations";
+@import "blocks/fly-tags";
+@import "blocks/services";
+@import "blocks/pagination";
+@import "blocks/slider";
+@import "blocks/contacts";
+@import "blocks/socials";
+@import "blocks/section";
+@import "blocks/header";
+@import "blocks/top-section";
+@import "blocks/what-i-do-section";
+@import "blocks/my-projects-section";
+@import "blocks/price-section";
+@import "blocks/footer";

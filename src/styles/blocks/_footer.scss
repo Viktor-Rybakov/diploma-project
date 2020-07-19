@@ -1,0 +1,109 @@
+.footer {
+  background-color: $background-color-1;
+
+  scroll-snap-align: end;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-areas:  "footer-menu"
+                        "contacts"
+                        "callback-button"
+                        "socials";
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, min-content);
+
+  margin: 0 20px;
+  padding-top: 46px;
+  padding-bottom: 50px;
+
+  @include min-width(480px) {
+    grid-template-areas:  "footer-menu contacts"
+                          "callback-button callback-button"
+                          "socials socials";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, min-content);
+  }
+
+  @include tablet {
+    grid-template-areas:  "footer-menu contacts callback-button"
+                          "footer-menu contacts socials";
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(2, min-content);
+    justify-content: space-between;
+    row-gap: 28px;
+
+    margin: 0 40px;
+    padding-top: 106px;
+    padding-bottom: 73px;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    padding-top: 84px;
+    padding-bottom: 74px;
+  }
+}
+
+.footer__menu {
+  grid-area: footer-menu;
+
+  margin-bottom: 50px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.footer__contacts {
+  grid-area: contacts;
+
+  margin: 0 0 30px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.footer__callback-button {
+  grid-area: callback-button;
+
+  margin: 0 auto 49px;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
+.footer__socials {
+  grid-area: socials;
+
+  margin: 0;
+
+  @include min-width(480px) {
+    justify-self: center;
+  }
+
+  @include tablet {
+    justify-self: initial;
+  }
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 19px 0;
+
+  background-color: $background-color-3;
+  font-size: 12px;
+  color: $text-color-3;
+
+  @include tablet {
+    padding: 30px 0;
+
+    font-size: 16px;
+  }
+}

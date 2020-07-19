@@ -1,0 +1,129 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 280px;
+  min-height: 55px;
+  padding: 5px 25px;
+
+  color: $button-text-color-1;
+
+  background-color: $button-background-color-1;
+  border: none;
+  
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+
+  @include tablet-ipad {
+    min-width: 320px;
+    min-height: 68px;
+
+    font-size: 18px;
+  }
+
+  @include desktop {
+    min-width: 270px;
+    min-height: 60px;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px $link-hover;
+  }
+
+  &:hover {
+    background-color: darken($button-background-color-1, 20%);
+  }
+}
+
+.button--header {
+  width: 40px;
+  height: 40px;
+  min-width: auto;
+  min-height: auto;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+  background: none;
+
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    box-shadow: 0 0 0 2px $link-hover;
+  }
+  
+  @include tablet {
+    width: auto;
+    height: auto;
+    min-width: 207px;
+    min-height: 45px;
+    padding: 5px 25px;
+    
+    font-size: 16px;
+    
+    color: $button-text-color-2;
+    border: 1px solid $button-background-color-1;
+    border-radius: initial;
+    
+    &:hover {
+      color: $button-text-color-1;
+      background-color: darken($button-background-color-1, 10%);
+      box-shadow: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px #fff, 0 0 0 4px $link-hover;
+    }
+  }
+}
+
+.button--header .button__icon {
+  &--mobile {
+    width: 26px;
+    height: 26px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.button--header .button__icon-symbol {
+  fill: url('#gradient-vertical');
+  stroke: url('#gradient-vertical');
+}
+
+.button--header .button__text {
+  &--tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
+
+.button--footer {
+
+  @include tablet {
+    min-width: 248px;
+    min-height: 45px;
+    margin: 0 0 24px;
+
+    color: $button-text-color-2;
+
+    border: 1px solid $button-background-color-1;
+    background-color: $button-background-color-2;
+  }
+
+  &:hover {
+
+    @include tablet {
+      color: $button-text-color-1;
+
+      background-color: $button-background-color-1;
+    }
+  }
+}

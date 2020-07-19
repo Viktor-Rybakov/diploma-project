@@ -1,0 +1,104 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  column-gap: 30px;
+  align-items: center;
+  
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: $background-color-2;
+
+  scroll-snap-align: start;
+
+  @include phone {
+    padding-right: 13px;
+  }
+
+  @include tablet {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 40px;
+  }
+  
+  @include min-width(1025px) {
+    position: relative;
+    z-index: initial;
+
+    grid-template-columns: min-content 1fr min-content;
+
+    padding-right: 0;
+  }
+
+  @include min-max-width(1025px, 1210px) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+.header__phone {
+  display: block;
+
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  justify-self: center;
+  z-index: 10;
+
+  font-weight: 700;
+  font-size: 18px;
+
+  @include phone {
+    grid-column: initial;
+    grid-row: initial;
+    justify-self: end;
+  }
+
+  @include tablet {
+    font-size: 25px;
+  }
+
+  @include min-width(1025px) {
+    z-index: initial;
+  }
+}
+
+.header__call-back-button {
+  grid-column: span 1 / -1;
+  grid-row: 1 / span 1;
+  z-index: 10;
+
+  margin-right: 13px;
+
+  @include phone {
+    grid-column: initial;
+    grid-row: initial;
+
+    margin-right: 0;
+  }
+
+  @include min-width(1025px) {
+    z-index: initial;
+  }
+}
+
+.header__navigation {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  @include min-width(1025px) {
+    position: static;
+    z-index: initial;
+    left: auto;
+    right: auto;
+    top: auto;
+    width: auto;
+  }
+}

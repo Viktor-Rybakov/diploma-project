@@ -1,0 +1,14 @@
+.link {
+  color: $text-color-1;
+  border-radius: 2px;
+  transition: box-shadow 0.3s;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $link-hover;
+  }
+  
+  &:hover {
+    color: $link-hover;
+  }
+}

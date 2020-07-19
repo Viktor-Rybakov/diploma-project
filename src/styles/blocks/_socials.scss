@@ -1,0 +1,36 @@
+.socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.socials__list-item {
+
+  &:not(:last-of-type) {
+    margin-right: 25px;
+  }
+}
+
+.socials__link {
+  display: block;
+  flex-shrink: 0;
+
+  font-size: 0;
+}
+
+.socials__icon {
+  height: 32px;
+  width: 32px;
+}
+
+.socials__icon-symbol {
+  fill: $text-color-2;
+}
+
+.socials__link:hover .socials__icon-symbol {
+  fill: url('#gradient-vertical');
+}

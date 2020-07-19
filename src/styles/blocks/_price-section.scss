@@ -1,0 +1,71 @@
+.price-section {
+  padding-top: 41px;
+  padding-bottom: 45px;
+  
+  background: linear-gradient(to top right, $gradient-color-1, $gradient-color-2);
+
+  scroll-snap-align: start;
+  
+  @include tablet-ipad {
+    position: relative;
+
+    padding-top: 72px;
+    padding-bottom: 81px;
+  }
+}
+
+.price-section__container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 946px;
+  margin: 0 20px;
+
+  @include min-width(986px) {
+    margin: 0 auto;
+  }
+}
+
+.price-section__description {
+  margin: 0 0 30px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  color: $text-color-3;
+
+  @include tablet {
+    font-size: 45px;
+    line-height: 60px;
+  }
+}
+
+.price-section__sub-description {
+  max-width: 760px;
+  margin: 0;
+  padding: 0 0 0 10px;
+
+  color: $text-color-3;
+
+  text-indent: -10px;
+
+  &--small {
+    font-size: 15px;
+    line-height: 30px;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+}
+
+.price-section__fly-tags {
+  z-index: 1;
+  
+  display: none;
+
+  @include tablet-ipad {
+    display: block;
+  }
+}
