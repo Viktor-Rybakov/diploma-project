@@ -10,14 +10,13 @@
     "iOS >= 12"
   ],
   "devDependencies": {
-    "browser-sync": "^2.26.9",
-    "del": "^5.1.0",
     "autoprefixer": "^9.8.0",
+    "browser-sync": "^2.26.9",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^8.0.0",
-    "postcss-csso": "^4.0.0",
-    "pixel-glass": "^1.0.13"
+    "gulp-sass": "^4.1.0",
+    "pixel-glass": "^1.0.13",
+    "postcss-csso": "^4.0.0"
   }
 }

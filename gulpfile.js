@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const htmlmin = require('gulp-htmlmin');
-const del = require('del');
 const sync = require('browser-sync').create();
 
 // HTML
@@ -48,7 +47,7 @@ const scripts = () => {
 const copy = () => {
   return gulp.src([
     'src/fonts/**/*',
-    'src/images/**/*',
+    'src/img/**/*',
     'src/favicon.ico',
     'src/manifest.json'
   ], {
@@ -88,14 +87,7 @@ const watch = () => {
 
 exports.watch = watch;
 
-const clean = () => {
-  return del(['build/*']);
-};
-
-exports.clean = clean;
-
 exports.default = gulp.series(
-  clean,
   gulp.parallel(
       html,
       styles,
