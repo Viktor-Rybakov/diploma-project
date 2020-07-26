@@ -1,0 +1,33 @@
+body {
+  --primary-background-color: #fbfbfb;
+  --secondary-backgound-color: #fff;
+  --dark-background-color: #31293c;
+
+  --primary-text-color: #1f1f24;
+  --secondary-text-color: #8993ad;
+  --accent-text-color: #fff;
+
+  --primary-button-color: #ff4e2e;
+  --secondary-button-color: #f53f4f;
+  --accent-button-color:  #fff;
+  --hover-button-color: #c71e00;
+  --focus-button-color: #fc557c;
+
+  --hover-link-color: #fc557c;
+  --focus-link-color: #fc557c;
+
+  --gradient-color-1: #ff8f5a;
+  --gradient-color-2: #ff2f96;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --primary-background-color: #232B32;
+    --secondary-backgound-color: #152028;
+    --dark-background-color: #31293c;
+
+    --primary-text-color: #fbfbfb;
+    --secondary-text-color: #8993ad;
+    --accent-text-color: #fff;
+  }
+}

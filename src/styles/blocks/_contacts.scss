@@ -31,7 +31,7 @@
   @include tablet {
     padding-left: 37px;
     
-    color: $text-color-1;
+    color: var(--primary-text-color);
   }
 
   &--phone {

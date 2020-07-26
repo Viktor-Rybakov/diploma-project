@@ -35,7 +35,7 @@
   right: 100px;
   opacity: 0;
   
-  background: linear-gradient(to top right, $gradient-color-1, $gradient-color-2);
+  background: linear-gradient(to top right, var(--gradient-color-1), var(--gradient-color-2));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   
@@ -255,7 +255,7 @@
 /*----------------- Price Section -----------------*/
 
 .fly-tags--price-section .fly-tags__item {
-  color: $text-color-3;
+  color: var(--accent-text-color);
 }
 
 .fly-tags--price-section .fly-tags__item:nth-child(1) {

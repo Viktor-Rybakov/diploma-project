@@ -2,7 +2,7 @@
   padding-top: 41px;
   padding-bottom: 45px;
   
-  background: linear-gradient(to top right, $gradient-color-1, $gradient-color-2);
+  background: linear-gradient(to top right, var(--gradient-color-1), var(--gradient-color-2));
 
   scroll-snap-align: start;
   
@@ -33,7 +33,7 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 40px;
-  color: $text-color-3;
+  color: var(--accent-text-color);
 
   @include tablet {
     font-size: 45px;
@@ -46,7 +46,7 @@
   margin: 0;
   padding: 0 0 0 10px;
 
-  color: $text-color-3;
+  color: var(--accent-text-color);
 
   text-indent: -10px;
 

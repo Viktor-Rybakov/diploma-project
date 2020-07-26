@@ -1,4 +1,9 @@
 .button {
+  --text-color: var(--accent-button-color);
+  --background-color: var(--primary-button-color);
+  --focus-color: var(--focus-button-color);
+  --hover-color: var(--hover-button-color);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,9 +12,9 @@
   min-height: 55px;
   padding: 5px 25px;
 
-  color: $button-text-color-1;
+  color: var(--text-color);
 
-  background-color: $button-background-color-1;
+  background-color: var(--background-color);
   border: none;
   
   cursor: pointer;
@@ -29,13 +34,15 @@
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px $link-hover;
+    box-shadow: 0 0 0 2px var(--text-color), 0 0 0 4px var(--focus-color);
   }
 
   &:hover {
-    background-color: darken($button-background-color-1, 20%);
+    background-color: var(--hover-color);
   }
 }
+
+/*----- Header ------*/
 
 .button--header {
   width: 40px;
@@ -51,10 +58,13 @@
   &:focus,
   &:hover {
     background-color: transparent;
-    box-shadow: 0 0 0 2px $link-hover;
+    box-shadow: 0 0 0 2px var(--focus-color);
   }
   
   @include tablet {
+    --text-color: var(--secondary-button-color);
+    --border-color: var(--primary-button-color);
+
     width: auto;
     height: auto;
     min-width: 207px;
@@ -63,18 +73,21 @@
     
     font-size: 16px;
     
-    color: $button-text-color-2;
-    border: 1px solid $button-background-color-1;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
     border-radius: initial;
     
     &:hover {
-      color: $button-text-color-1;
-      background-color: darken($button-background-color-1, 10%);
+      --text-color: var(--accent-button-color);
+      --background-color: var(--primary-button-color);
+
+      color: var(--text-color);
+      background-color: var(--background-color);
       box-shadow: none;
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px #fff, 0 0 0 4px $link-hover;
+      box-shadow: 0 0 0 2px var(--primary-background-color), 0 0 0 4px var(--focus-color);
     }
   }
 }
@@ -105,25 +118,40 @@
   }
 }
 
+/*----- Footer -----*/
+
 .button--footer {
 
   @include tablet {
+    --text-color: var(--secondary-button-color);
+    --border-color: var(--primary-button-color);
+
     min-width: 248px;
     min-height: 45px;
     margin: 0 0 24px;
 
-    color: $button-text-color-2;
+    color: var(--text-color);
 
-    border: 1px solid $button-background-color-1;
-    background-color: $button-background-color-2;
+    border: 1px solid var(--border-color);
+    background: none;
+  }
+
+  &:focus {
+
+    @include tablet {
+      box-shadow: 0 0 0 2px var(--secondary-backgound-color),0 0 0 4px var(--focus-color);
+    }
   }
 
   &:hover {
 
     @include tablet {
-      color: $button-text-color-1;
+      --text-color: var(--accent-button-color);
+      --background-color: var(--primary-button-color);
 
-      background-color: $button-background-color-1;
+      color: var(--text-color);
+
+      background-color: var(--background-color);
     }
   }
 }

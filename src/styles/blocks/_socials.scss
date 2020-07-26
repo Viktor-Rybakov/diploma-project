@@ -28,7 +28,7 @@
 }
 
 .socials__icon-symbol {
-  fill: $text-color-2;
+  fill: var(--secondary-text-color);
 }
 
 .socials__link:hover .socials__icon-symbol {

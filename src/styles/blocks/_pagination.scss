@@ -35,11 +35,12 @@
   }
 
   &--active {
-    background-color: #ff4e2e;
+    background-color: var(--primary-button-color);
   }
 
-  &:focus {
+  &:focus,
+  &:hover {
     outline: none;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px $link-hover;
+    box-shadow: 0 0 0 2px var(--secondary-backgound-color), 0 0 0 4px var(--focus-button-color);
   }
 }
