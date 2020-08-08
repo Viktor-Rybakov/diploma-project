@@ -78,10 +78,12 @@ exports.server = server;
 const watch = () => {
   gulp.watch('src/*.html', gulp.series(html));
   gulp.watch('src/styles/**/*.scss', gulp.series(styles));
-  gulp.watch('src/scripts/**/*.js', gulp.series(scripts));
+  gulp.watch('src/js/**/*.js', gulp.series(scripts));
   gulp.watch([
     'src/fonts/**/*',
-    'src/images/**/*',
+    'src/img/**/*',
+    'src/favicon.ico',
+    'src/manifest.json'
   ], gulp.series(copy));
 };
 
