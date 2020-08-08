@@ -11,7 +11,7 @@
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  padding: 60px 0 20px;
+  padding: 20px 0;
 
   background-color: var(--primary-background-color);
 
@@ -51,14 +51,15 @@
 .order-dialog__title {
   margin: 0;
   margin-bottom: 36px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
 
   font-size: 24px;
+  line-height: 1.25;
   color: var(--primary-text-color);
   text-align: center;
 
-  @include phone {
+  @include min-width(1024px) {
     font-size: 36px;
   }
 }
