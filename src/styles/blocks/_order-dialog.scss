@@ -1,0 +1,93 @@
+.order-dialog {
+  position: absolute;
+  z-index: 110;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 60px 0 20px;
+
+  background-color: var(--primary-background-color);
+
+  @include phone {
+    left: 50%;
+    right: initial;
+    top: 50%;
+    bottom: initial;
+    transform: translate(-50%, -50%);
+
+    max-height: 80%;
+    height: auto;
+    width: 70%;
+
+    border-radius: 10px;
+  }
+
+  @include min-width(1024px) {
+    max-width: 50%;
+    width: auto;
+  }
+
+  &.closed {
+    display: none;
+  }
+}
+
+.order-dialog__container {
+  overflow-y: auto;
+  overscroll-behavior: none;
+}
+
+.order-dialog__form {
+  flex-grow: 1;
+}
+
+.order-dialog__title {
+  margin: 0;
+  margin-bottom: 36px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  font-size: 24px;
+  color: var(--primary-text-color);
+  text-align: center;
+
+  @include phone {
+    font-size: 36px;
+  }
+}
+
+.order-dialog__close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline-color: var(--focus-button-color);
+  }
+}
+
+.order-dialog__close-button-icon-symbol {
+  stroke: var(--primary-text-color);
+}
+
+.order-dialog__close-button:hover .order-dialog__close-button-icon-symbol {
+  stroke: var(--hover-link-color);
+}
