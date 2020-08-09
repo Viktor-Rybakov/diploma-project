@@ -2,18 +2,25 @@
   position: relative;
 }
 
+.slider__wrapper {
+  width: 100%;
+
+  overflow: hidden;
+}
+
 .slider__list {
   display: flex;
-  justify-content: center;
-
+  justify-content: flex-start;
+  width: 282px;
   margin: 0 auto 41px;
   padding: 0;
 
   list-style: none;
 
-  @include min-width(620px) {
-    justify-content: space-between;
+  transition: 0.2s;
+  will-change: transform;
 
+  @include min-width(620px) {
     width: 580px; /* 2 маленьких слайда */
   }
 
@@ -29,7 +36,15 @@
 }
 
 .slider__list-item {
-  display: none;
+  margin-right: 16px;
+
+  @include min-width(1024px) {
+    margin-right: 36px;
+  }
+
+  @include desktop {
+    margin-right: 30px;
+  }
 }
 
 .slider__item {
@@ -136,23 +151,5 @@
 
   @include desktop {
     display: none;
-  }
-}
-
-
-// todo: Вот это всё временно, пока не напишем нормальный слайдер
-.slider__list-item:nth-of-type(1) {
-  display: block;
-}
-
-@include min-width(620px) {
-  .slider__list-item:nth-of-type(2) {
-    display: block;
-  }
-}
-
-@include min-width(1210px) {
-  .slider__list-item:nth-of-type(3) {
-    display: block;
   }
 }
