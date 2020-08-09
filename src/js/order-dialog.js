@@ -20,6 +20,15 @@ CLOSE_BUTTON.addEventListener('click', () => {
     toggleFixBodyScroll();
 })
 
+BODY.addEventListener('keydown', (event) => {
+    let keyCode = event.key;
+    if (keyCode === 'Escape' && !ORDER_DIALOG.classList.contains('closed')) {
+        toggleOrderDialog();
+        toggleOverlay();
+        toggleFixBodyScroll();
+    }
+});
+
 function toggleOrderDialog() {
     ORDER_DIALOG.classList.toggle('closed');
 }
