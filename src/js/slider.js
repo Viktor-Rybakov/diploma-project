@@ -4,12 +4,16 @@ let slider = document.querySelector('.js-slider');
 let sliderList = slider.querySelector('.js-slider__list');
 const SLIDER_BUTTON_NEXT = slider.querySelector('.js-slider__next');
 const SLIDER_BUTTON_PREV = slider.querySelector('.js-slider__prev');
-
+let paginationButtons = slider.querySelectorAll('.js-pagination-button');
+let slidesAmount = sliderList.childNodes.length;
+let currentSlide = 0;
 let direction;
 let touchStartPageX;
 let clickPrev = moveRight;
 let clickNext = moveLeft;
 let slideWidth = sliderList.children[1].getBoundingClientRect().left - sliderList.children[0].getBoundingClientRect().left;
+
+setCurrentButton();
 
 window.addEventListener('resize', function(){
   slideWidth = sliderList.children[1].getBoundingClientRect().left - sliderList.children[0].getBoundingClientRect().left;
@@ -59,6 +63,9 @@ function moveRight() {
     }, 50);
 
     sliderList = slider.querySelector('.js-slider__list');
+
+    setCurrentSlide();
+    setCurrentButton()
   }
 }
 
@@ -75,6 +82,9 @@ function moveLeft() {
     sliderList = slider.querySelector('.js-slider__list');
     clickNext = null;
   }
+
+  setCurrentSlide();
+  setCurrentButton()
 }
 
 function removeSlide() {
@@ -94,4 +104,33 @@ function removeSlide() {
   }
 
   sliderList = slider.querySelector('.js-slider__list');
+}
+
+function setCurrentSlide() {
+  switch (direction) {
+    case 'left':
+      if (currentSlide < slidesAmount - 1 ) {
+        currentSlide++;
+      } else {
+        currentSlide = 0;
+      }
+      break;
+    case 'right':
+      if (currentSlide > 0) {
+        currentSlide--;
+      } else {
+        currentSlide = slidesAmount - 1;
+      }
+      break;
+  }
+}
+
+function setCurrentButton() {
+  paginationButtons.forEach((item, i, button) => {
+    button[i].classList.remove('pagination__button--active');
+
+    if (i === currentSlide) {
+      button[i].classList.add('pagination__button--active');
+    }
+  })
 }
