@@ -8,6 +8,7 @@
   margin-bottom: 20px;
   padding: 10px;
 
+  color: var(--primary-text-color);
   background-color: transparent;
   border: none;
   border-bottom: 1px solid var(--secondary-text-color);
@@ -42,7 +43,7 @@
 
 .form__submit {
   min-width: auto;
-  margin-bottom: 4px;
+  margin-bottom: 16px;
 }
 
 .form__reset {
