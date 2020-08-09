@@ -16,7 +16,11 @@ window.addEventListener('resize', function(){
 
 slider_BUTTON_PREV.addEventListener('click', clickPrev);
 slider_BUTTON_NEXT.addEventListener('click', clickNext);
-sliderList.addEventListener('transitionend', removeSlide);
+sliderList.addEventListener('transitionend', (event) => {
+  if ( event.target.contains(sliderList) ) {
+    removeSlide();
+  }
+});
 
 function prev() {
   direction = 1;

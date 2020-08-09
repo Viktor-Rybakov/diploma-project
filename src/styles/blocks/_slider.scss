@@ -48,7 +48,10 @@
 }
 
 .slider__item {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  padding-bottom: 10px;
 }
 
 .slider__picture {
@@ -80,10 +83,13 @@
 }
 
 .slider__description {
+  align-self: center;
   font-weight: 500;
   font-size: 18px;
 
+  border-radius: 2px;
   text-align: center;
+  transition: box-shadow 0.3s, color 0.3s;
 
   @include min-width(1024px) {
     font-size: 25px;
@@ -92,6 +98,18 @@
   @include desktop {
     font-size: 20px;
   }
+}
+
+.slider__link {
+  outline: none;
+}
+
+.slider__link:focus .slider__description {
+  box-shadow: 0 0 0 2px var(--focus-link-color);
+}
+
+.slider__link:hover .slider__description {
+  color: var(--hover-link-color);
 }
 
 .slider__button {
