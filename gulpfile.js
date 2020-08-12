@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const htmlmin = require('gulp-htmlmin');
 const sync = require('browser-sync').create();
+const del = require('del');
 
 // HTML
 
@@ -73,6 +74,14 @@ const server = () => {
 
 exports.server = server;
 
+// Delete build
+
+const clean = () => {
+  return del(['build/*']);
+}
+
+exports.clean = clean;
+
 // Watch
 
 const watch = () => {
@@ -90,6 +99,7 @@ const watch = () => {
 exports.watch = watch;
 
 exports.default = gulp.series(
+  clean,
   gulp.parallel(
       html,
       styles,

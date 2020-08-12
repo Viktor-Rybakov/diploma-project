@@ -16,6 +16,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
+    "del": "^5.1.0",
     "pixel-glass": "^1.0.13",
     "postcss-csso": "^4.0.0"
   }
