@@ -102,7 +102,8 @@
 
     <a class="link header__phone" href="tel:+79215522700">+7&nbsp;(921)&nbsp;552&#8209;27&#8209;00</a>
 
-    <button id="header-call-back" class="button button--header header__call-back-button js-popup-button" type="button" aria-label="Заказать звонок" aria-controls="order-dialog">
+    <button id="header-call-back" class="button button--header header__call-back-button js-popup-button"
+            type="button" aria-label="Заказать звонок" aria-controls="order-dialog">
       <svg class="button__icon button__icon--mobile" width="40" height="40" aria-hidden="true">
         <use class="button__icon-symbol" href="#call-back-button"></use>
       </svg>
@@ -261,7 +262,10 @@
         </ul>
       </div>
 
-      <button id="order-project" class="button my-projects-section__button js-popup-button" type="button" aria-controls="order-dialog">Заказать проект</button>
+      <button id="order-project" class="button my-projects-section__button js-popup-button"
+              type="button" aria-controls="order-dialog">
+        Заказать проект
+      </button>
     </section>
 
     <section id="price" class="price-section">
@@ -312,7 +316,10 @@
         </li>
       </ul>
 
-      <button id="call-back-footer" class="button button--footer footer__callback-button js-popup-button" type="button" aria-controls="order-dialog">Заказать звонок</button>
+      <button id="call-back-footer" class="button button--footer footer__callback-button js-popup-button"
+              type="button" aria-controls="order-dialog">
+        Заказать звонок
+      </button>
 
       <ul class="socials footer__socials">
         <li class="socials__list-item">
@@ -354,56 +361,56 @@
     </p>
   </footer>
 
-  <section class="order-dialog closed js-order-dialog" id="order-dialog" role="dialog" aria-modal="true">
-    <h2 class="order-dialog__title">Закажите вёрстку Вашего сайта</h2>
+  <div class="dialog-backdrop js-dialog-backdrop">
+    <section class="order-dialog hidden js-order-dialog" id="order-dialog" role="dialog" aria-modal="true">
+      <h2 class="order-dialog__title">Закажите вёрстку Вашего сайта</h2>
 
-    <div class="order-dialog__container">
-      <form class="form order-dialog__form" action="https://echo.htmlacademy.ru/courses" method="post">
-        <label class="form__label" for="name-field">
-          Ваше имя:<sup>*</sup>
-        </label>
-        <input type="text" class="form__input" id="name-field" name="name"
-               placeholder="Иванов Иван" required autocomplete="on">
+      <div class="order-dialog__container">
+        <form class="form order-dialog__form" action="https://echo.htmlacademy.ru/courses" method="get">
+          <label class="form__label" for="name-field">
+            Ваше имя:<sup>*</sup>
+          </label>
+          <input type="text" class="form__input" id="name-field" name="name"
+                 placeholder="Иванов Иван" required autocomplete="on">
 
-        <label class="form__label" for="phone-field">Ваш телефон:</label>
-        <input type="tel" class="form__input" id="phone-field" name="phone"
-               placeholder="+7 (999) 999-99-99"
-               pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
-               autocomplete="on">
+          <label class="form__label" for="phone-field">Ваш телефон:</label>
+          <input type="tel" class="form__input" id="phone-field" name="phone"
+                 placeholder="+7 (999) 999-99-99"
+                 pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"
+                 autocomplete="on">
 
-        <label class="form__label" for="email-field">
-          Ваш email:<sup>*</sup>
-        </label>
-        <input type="email" class="form__input" id="email-field" name="email"
-               placeholder="email@email.ru" required autocomplete="on">
+          <label class="form__label" for="email-field">
+            Ваш email:<sup>*</sup>
+          </label>
+          <input type="email" class="form__input" id="email-field" name="email"
+                 placeholder="email@email.ru" required autocomplete="on">
 
-        <label class="checkbox form__checkbox">
-          <input class="checkbox__input visually-hidden" type="checkbox" name="agreement" checked required>
-          <span class="checkbox__box"></span>
-          <span class="checkbox__text">
-            Я соглашаюсь с <a class="link" href="#" target="_blank">политикой</a> обработки персональных данных
-          </span>
-        </label>
+          <label class="checkbox form__checkbox">
+            <input class="checkbox__input visually-hidden" type="checkbox" name="agreement" checked required>
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text">
+              Я соглашаюсь с <a class="link" href="#" target="_blank">политикой</a> обработки персональных данных
+            </span>
+          </label>
 
-        <p class="form__text">
-          <sup>*</sup> &mdash; Обязательные поля
-        </p>
+          <p class="form__text">
+            <sup>*</sup> &mdash; Обязательные поля
+          </p>
 
-        <div class="form__actions">
-          <button class="button form__submit" type="submit">Заказать</button>
-          <button class="form__reset" type="reset">Очистить</button>
-        </div>
-      </form>
+          <div class="form__actions">
+            <button class="button form__submit" type="submit">Заказать</button>
+            <button class="form__reset" type="reset">Очистить</button>
+          </div>
+        </form>
 
-      <button class="order-dialog__close-button js-modal-close" type="button" aria-label="Закрыть форму заказа" aria-controls="order-dialog">
-        <svg class="order-dialog__close-button-icon" width="20" height="20" aria-hidden="true">
-          <use class="order-dialog__close-button-icon-symbol" href="#cross-button"></use>
-        </svg>
-      </button>
-    </div>
-  </section>
-
-  <div class="modal-overlay closed js-modal-overlay"></div>
+        <button class="order-dialog__close-button js-modal-close" type="button" aria-label="Закрыть форму заказа" aria-controls="order-dialog">
+          <svg class="order-dialog__close-button-icon" width="20" height="20" aria-hidden="true">
+            <use class="order-dialog__close-button-icon-symbol" href="#cross-button"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+  </div>
 
   <script src="js/menu.js"></script>
   <script src="js/header.js"></script>

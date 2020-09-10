@@ -1,5 +1,5 @@
 .order-dialog {
-  position: fixed;
+  position: absolute;
   z-index: 110;
   left: 0;
   right: 0;
@@ -34,7 +34,7 @@
     width: auto;
   }
 
-  &.closed {
+  &.hidden {
     display: none;
   }
 }
@@ -42,10 +42,6 @@
 .order-dialog__container {
   overflow-y: auto;
   overscroll-behavior: none;
-}
-
-.order-dialog__form {
-  flex-grow: 1;
 }
 
 .order-dialog__title {

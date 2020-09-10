@@ -3,7 +3,7 @@
 const BUTTONS = document.querySelectorAll('.js-popup-button');
 const BODY = document.querySelector('.js-body');
 const ORDER_DIALOG = document.querySelector(('.js-order-dialog'));
-const OVERLAY = document.querySelector('.js-modal-overlay');
+const OVERLAY = document.querySelector('.js-dialog-backdrop');
 const CLOSE_BUTTON = document.querySelector('.js-modal-close');
 
 BUTTONS.forEach((item, i, BUTTONS) => {
@@ -30,15 +30,15 @@ BODY.addEventListener('keydown', (event) => {
 });
 
 function toggleOrderDialog() {
-    ORDER_DIALOG.classList.toggle('closed');
+    ORDER_DIALOG.classList.toggle('hidden');
 }
 
 function toggleOverlay() {
-  OVERLAY.classList.toggle('closed');
+  OVERLAY.classList.toggle('active');
 }
 
 function toggleFixBodyScroll() {
-    BODY.classList.toggle('modal-active');
+    BODY.classList.toggle('has-dialog');
 
     if ( BODY.hasAttribute('style') ) {
         BODY.removeAttribute('style');
