@@ -1,47 +1,51 @@
-'use strict'
+(function () {
 
-const MENU = document.querySelector('.js-menu');
-const MENU_BUTTON = document.querySelector('.js-menu-button');
+  'use strict'
 
-window.addEventListener('click', (event) => {
-  let target = event.target;
+  const menu = document.querySelector('.js-menu');
+  const menuButton = document.querySelector('.js-menu-button');
 
-  if ( MENU_BUTTON.contains(target) && ( MENU_BUTTON.getAttribute('aria-expanded') === 'false') ) {
-    openMenu();
-  } else if ( MENU_BUTTON.getAttribute('aria-expanded') === 'true' ) {
+  window.addEventListener('click', (event) => {
+    let target = event.target;
 
-    if ( MENU_BUTTON.contains(target) ) {
-      closeMenu();
-    } else if ( !MENU.contains(target) ) {
-      closeMenu();
-    } else if ( MENU.contains(target) && target.closest('.menu__link') ) {
+    if ( menuButton.contains(target) && ( menuButton.getAttribute('aria-expanded') === 'false') ) {
+      openMenu();
+    } else if ( menuButton.getAttribute('aria-expanded') === 'true' ) {
+
+      if ( menuButton.contains(target) ) {
+        closeMenu();
+      } else if ( !menu.contains(target) ) {
+        closeMenu();
+      } else if ( menu.contains(target) && target.closest('.menu__link') ) {
+        closeMenu();
+      }
+    }
+  });
+
+  window.addEventListener('scroll', () => {
+    if ( menuButton.getAttribute('aria-expanded') === 'true' ) {
       closeMenu();
     }
+  });
+
+  window.addEventListener('resize', () => {
+    if ( menuButton.getAttribute('aria-expanded') === 'true' ) {
+      closeMenu();
+    }
+  });
+
+  function openMenu() {
+    menu.classList.add('menu--open');
+    menuButton.setAttribute('aria-expanded', 'true');
+    menuButton.setAttribute('aria-label', 'Закрыть меню');
+    menuButton.classList.add('menu-button--open');
   }
-});
 
-window.addEventListener('scroll', () => {
-  if ( MENU_BUTTON.getAttribute('aria-expanded') === 'true' ) {
-    closeMenu();
+  function closeMenu() {
+    menu.classList.remove('menu--open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Открыть меню');
+    menuButton.classList.remove('menu-button--open');
   }
-});
-
-window.addEventListener('resize', () => {
-  if ( MENU_BUTTON.getAttribute('aria-expanded') === 'true' ) {
-    closeMenu();
-  }
-});
-
-function openMenu() {
-  MENU.classList.add('menu--open');
-  MENU_BUTTON.setAttribute('aria-expanded', 'true');
-  MENU_BUTTON.setAttribute('aria-label', 'Закрыть меню');
-  MENU_BUTTON.classList.add('menu-button--open');
-}
-
-function closeMenu() {
-  MENU.classList.remove('menu--open');
-  MENU_BUTTON.setAttribute('aria-expanded', 'false');
-  MENU_BUTTON.setAttribute('aria-label', 'Открыть меню');
-  MENU_BUTTON.classList.remove('menu-button--open');
-}
+  
+}());

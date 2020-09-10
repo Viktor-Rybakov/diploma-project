@@ -1,28 +1,32 @@
-'use strict'
+(function () {
 
-const HEADER = document.querySelector('.js-header');
-const HTML = document.querySelector('.js-page');
+  'use strict'
 
-let headerHeight;
+  const header = document.querySelector('.js-header');
+  const html = document.querySelector('.js-page');
 
-if ( window.innerWidth <= 1024 ) {
-  headerHeight = HEADER.getBoundingClientRect().height;
-  addScrollPadding(headerHeight);
-}
+  let headerHeight;
 
-window.addEventListener('resize', () => {
   if ( window.innerWidth <= 1024 ) {
-    headerHeight = HEADER.getBoundingClientRect().height;
+    headerHeight = header.getBoundingClientRect().height;
     addScrollPadding(headerHeight);
-  } else {
-    removeScrollPadding();
   }
-});
 
-function addScrollPadding(height) {
-  HTML.style.scrollPaddingTop = height + 'px';
-}
+  window.addEventListener('resize', () => {
+    if ( window.innerWidth <= 1024 ) {
+      headerHeight = header.getBoundingClientRect().height;
+      addScrollPadding(headerHeight);
+    } else {
+      removeScrollPadding();
+    }
+  });
 
-function removeScrollPadding() {
-  HTML.removeAttribute('style');
-}
+  function addScrollPadding(height) {
+    html.style.scrollPaddingTop = height + 'px';
+  }
+
+  function removeScrollPadding() {
+    html.removeAttribute('style');
+  }
+  
+}());

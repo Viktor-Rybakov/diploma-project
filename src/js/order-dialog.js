@@ -1,53 +1,55 @@
-'use strict';
+(function () {
 
-const BUTTONS = document.querySelectorAll('.js-popup-button');
-const BODY = document.querySelector('.js-body');
-const ORDER_DIALOG = document.querySelector(('.js-order-dialog'));
-const OVERLAY = document.querySelector('.js-dialog-backdrop');
-const CLOSE_BUTTON = document.querySelector('.js-modal-close');
+  'use strict';
 
-BUTTONS.forEach((item, i, BUTTONS) => {
-    BUTTONS[i].addEventListener('click', () => {
-        toggleOrderDialog();
-        toggleOverlay();
-        toggleFixBodyScroll();
+  const buttons = document.querySelectorAll('.js-popup-button');
+  const body = document.querySelector('.js-body');
+  const orderDialog = document.querySelector(('.js-order-dialog'));
+  const overlay = document.querySelector('.js-dialog-backdrop');
+  const closeButton = document.querySelector('.js-modal-close');
+
+  buttons.forEach((item, i, buttons) => {
+    buttons[i].addEventListener('click', () => {
+      toggleOrderDialog();
+      toggleOverlay();
+      toggleFixBodyScroll();
     })
-})
+  })
 
-CLOSE_BUTTON.addEventListener('click', () => {
+  closeButton.addEventListener('click', () => {
     toggleOrderDialog();
     toggleOverlay();
     toggleFixBodyScroll();
-})
+  })
 
-BODY.addEventListener('keydown', (event) => {
+  body.addEventListener('keydown', (event) => {
     let keyCode = event.key;
-    if (keyCode === 'Escape' && !ORDER_DIALOG.classList.contains('closed')) {
-        toggleOrderDialog();
-        toggleOverlay();
-        toggleFixBodyScroll();
-    }
-});
+    if (keyCode === 'Escape' && !orderDialog.classList.contains('closed')) {
+      toggleOrderDialog();
+      toggleOverlay();
+      toggleFixBodyScroll();
+      }
+  });
 
-function toggleOrderDialog() {
-    ORDER_DIALOG.classList.toggle('hidden');
-}
+  function toggleOrderDialog() {
+    orderDialog.classList.toggle('hidden');
+  }
 
-function toggleOverlay() {
-  OVERLAY.classList.toggle('active');
-}
+  function toggleOverlay() {
+    overlay.classList.toggle('active');
+  }
 
-function toggleFixBodyScroll() {
-    BODY.classList.toggle('has-dialog');
+  function toggleFixBodyScroll() {
+    body.classList.toggle('has-dialog');
 
-    if ( BODY.hasAttribute('style') ) {
-        BODY.removeAttribute('style');
+    if ( body.hasAttribute('style') ) {
+        body.removeAttribute('style');
     } else {
-        BODY.style.paddingRight = getScrollWidth() + 'px';
+        body.style.paddingRight = getScrollWidth() + 'px';
     }
-}
+  }
 
-function getScrollWidth() {
+  function getScrollWidth() {
     let div = document.createElement('div');
 
     div.style.overflowY = 'scroll';
@@ -60,4 +62,6 @@ function getScrollWidth() {
     div.remove();
 
     return scrollWidth;
-}
+  }
+
+}());
