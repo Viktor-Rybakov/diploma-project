@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "start": "gulp"
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "browserslist": [
     "last 2 version",

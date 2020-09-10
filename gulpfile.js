@@ -110,5 +110,15 @@ exports.default = gulp.series(
   gulp.parallel(
       watch,
       server,
-  ),
+  )
+);
+
+exports.build = gulp.series(
+  clean,
+  gulp.parallel(
+      html,
+      styles,
+      scripts,
+      copy,
+  )
 );
