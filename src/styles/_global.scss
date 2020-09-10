@@ -1,7 +1,10 @@
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+  }
 }
 
 *,
