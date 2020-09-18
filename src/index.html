@@ -370,7 +370,7 @@
           <label class="form__label" for="name-field">
             Ваше имя:<sup>*</sup>
           </label>
-          <input type="text" class="form__input" id="name-field" name="name"
+          <input type="text" class="form__input js-first-focus" id="name-field" name="name"
                  placeholder="Иванов Иван" required autocomplete="on">
 
           <label class="form__label" for="phone-field">Ваш телефон:</label>
@@ -403,7 +403,7 @@
           </div>
         </form>
 
-        <button class="order-dialog__close-button js-modal-close" type="button" aria-label="Закрыть форму заказа" aria-controls="order-dialog">
+        <button class="order-dialog__close-button js-modal-close js-last-focus" type="button" aria-label="Закрыть форму заказа" aria-controls="order-dialog">
           <svg class="order-dialog__close-button-icon" width="20" height="20" aria-hidden="true">
             <use class="order-dialog__close-button-icon-symbol" href="#cross-button"></use>
           </svg>

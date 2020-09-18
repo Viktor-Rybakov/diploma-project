@@ -2,44 +2,63 @@
 
   'use strict';
 
-  const buttons = document.querySelectorAll('.js-popup-button');
+  const openButtons = document.querySelectorAll('.js-popup-button');
   const body = document.querySelector('.js-body');
-  const orderDialog = document.querySelector(('.js-order-dialog'));
+  const dialog = document.querySelector(('.js-order-dialog'));
   const overlay = document.querySelector('.js-dialog-backdrop');
   const closeButton = document.querySelector('.js-modal-close');
+  const firstFocusElement = document.querySelector('.js-first-focus');
+  const lastFocusElement = document.querySelector('.js-last-focus');
 
-  buttons.forEach((item, i, buttons) => {
-    buttons[i].addEventListener('click', () => {
-      toggleOrderDialog();
-      toggleOverlay();
-      toggleFixBodyScroll();
-    })
-  })
+  let focusAfterClose;
+  let preDiv;
+  let postDiv;
 
-  closeButton.addEventListener('click', () => {
-    toggleOrderDialog();
-    toggleOverlay();
-    toggleFixBodyScroll();
-  })
+  openButtons.forEach((item, i, buttons) => {
+    buttons[i].addEventListener( 'click', (event) => {
+      openDialog(dialog, overlay, body, firstFocusElement, lastFocusElement);
+      focusAfterClose = event.target;
+    });
+  });
+
+  closeButton.addEventListener( 'click', () => {
+    closeDialog(dialog, overlay, body, focusAfterClose);
+   });
 
   body.addEventListener('keydown', (event) => {
     let keyCode = event.key;
-    if (keyCode === 'Escape' && !orderDialog.classList.contains('closed')) {
-      toggleOrderDialog();
-      toggleOverlay();
-      toggleFixBodyScroll();
+    if (keyCode === 'Escape' && !dialog.classList.contains('hidden')) {
+      closeDialog(dialog, overlay, body, focusAfterClose);
       }
   });
 
-  function toggleOrderDialog() {
-    orderDialog.classList.toggle('hidden');
+  function openDialog(dialog, overlay, body, firstFocusElement, lastFocusElement) {
+    toggleDialog(dialog);
+    toggleOverlay(overlay);
+    toggleBodyScroll(body);
+    setFocus(firstFocusElement);
+    setTrapFocus(dialog, firstFocusElement, lastFocusElement);
   }
 
-  function toggleOverlay() {
+  function closeDialog(dialog, overlay, body, focusAfterClose) {
+    toggleDialog(dialog);
+    toggleOverlay(overlay);
+    toggleBodyScroll(body);
+    removeTrapFocus();
+    setFocus(focusAfterClose);
+
+    focusAfterClose = undefined;
+  }
+
+  function toggleDialog(dialog) {
+    dialog.classList.toggle('hidden');
+  }
+
+  function toggleOverlay(overlay) {
     overlay.classList.toggle('active');
   }
 
-  function toggleFixBodyScroll() {
+  function toggleBodyScroll(body) {
     body.classList.toggle('has-dialog');
 
     if ( body.hasAttribute('style') ) {
@@ -63,5 +82,31 @@
 
     return scrollWidth;
   }
+
+  function setFocus(element) {
+    element.focus();
+  }
+ 
+  function setTrapFocus(dialog, firstFocusElement, lastFocusElement) {
+    preDiv = document.createElement('div');
+    postDiv = document.createElement('div');
+    preDiv.tabIndex = 0;
+    postDiv.tabIndex = 0;
+    dialog.prepend(preDiv);
+    dialog.append(postDiv);
+
+    preDiv.addEventListener('focus', () => {
+      setFocus(lastFocusElement);
+    });
+
+    postDiv.addEventListener('focus', () => {
+      setFocus(firstFocusElement);
+    });
+  }
+
+  function removeTrapFocus() {
+    preDiv.remove();
+    postDiv.remove();
+  };
 
 }());
