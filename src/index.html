@@ -74,6 +74,11 @@
       <path d="M2.5,18.5 L18.5,2.5" stroke-width="3" stroke-linecap="round"/>
       <path d="M2.5,2.5 L18.5,18.5" stroke-width="3" stroke-linecap="round"/>
     </symbol>
+
+    <symbol id="up-button" viewBox="0 0 490.667 490.667">
+      <path d="M245.333,0C109.839,0,0,109.839,0,245.333s109.839,245.333,245.333,245.333 s245.333-109.839,245.333-245.333C490.514,109.903,380.764,0.153,245.333,0z"/>
+      <path fill="#fff" d="M267.968,82.219c-12.496-12.492-32.752-12.492-45.248,0L104.533,200.533 c-18.889,18.894-18.889,49.522,0,68.416c19.139,18.289,49.277,18.289,68.416,0l19.2-19.2v123.584 c0,29.455,23.878,53.333,53.333,53.333c29.455,0,53.333-23.878,53.333-53.333V249.749l19.2,19.2 c19.139,18.289,49.277,18.289,68.416,0c18.889-18.894,18.889-49.522,0-68.416L267.968,82.219z"/>
+    </symbol>
   </svg>
 
   <header class="header js-header fix-container">
@@ -412,11 +417,18 @@
     </section>
   </div>
 
+  <button class="up-button up-button--hidden js-up-button" type="button" aria-label="Наверх">
+    <svg class="up-button__icon" width="40" hight="40" aria-label="true">
+      <use class="up-button__icon-symbol" href="#up-button"></use>
+    </svg>
+  </button>
+
   <script src="js/menu.js"></script>
   <script src="js/header.js"></script>
   <script src="js/order-dialog.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/ajax-send.js"></script>
+  <script src='js/up-button.js'></script>
 </body>
 
 </html>

@@ -1,0 +1,37 @@
+.up-button {
+  --focus-color: var(--focus-button-color);
+
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(000, 000, 000, 0.5);
+  cursor: pointer;
+  transition: box-shadow 0.3s, opacity 0.3s;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 8px var(--focus-color);
+  }
+
+  &--hidden {
+    opacity: 0;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__icon-symbol {
+    fill: url('#gradient-vertical');
+  }
+}
