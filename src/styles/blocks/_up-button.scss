@@ -26,15 +26,15 @@
   &--hidden {
     opacity: 0;
   }
+}
 
-  &__icon {
-    width: 40px;
-    height: 40px;
-  }
+.up-button__icon {
+  width: 40px;
+  height: 40px;
+}
 
-  &__icon-symbol {
-    fill: url('#gradient-vertical');
-  }
+.up-button__icon-symbol {
+  fill: url('#gradient-vertical');
 }
 
 body.has-dialog .up-button {
