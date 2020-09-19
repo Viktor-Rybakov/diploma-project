@@ -5,6 +5,7 @@
   const openButtons = document.querySelectorAll('.js-popup-button');
   const body = document.querySelector('.js-body');
   const dialog = document.querySelector(('.js-order-dialog'));
+  const form = document.querySelector('.js-form');
   const overlay = document.querySelector('.js-dialog-backdrop');
   const closeButton = document.querySelector('.js-modal-close');
   const firstFocusElement = document.querySelector('.js-first-focus');
@@ -109,4 +110,19 @@
     postDiv.remove();
   };
 
+
+  // Form submit
+
+  form.onsubmit = async (event) => {
+    event.preventDefault();
+
+    fetch('mail.php', {
+      method: 'POST',
+      body: new FormData(form)
+    });
+
+    setTimeout(() => {
+      closeDialog(dialog, overlay, body, focusAfterClose);
+    }, 500);
+  };
 }());
