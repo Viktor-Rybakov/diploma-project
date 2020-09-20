@@ -9,10 +9,10 @@
 
   <link rel="stylesheet" href="css/index.css">
 
-  <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-500.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-700.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-v20-cyrillic_latin-900.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-400.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-900.woff2" as="font" crossorigin="anonymous">
 
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#f26522">
@@ -82,7 +82,7 @@
   </svg>
 
   <header class="header js-header fix-container">
-    <nav id="navigation" class="navigation header__navigation">
+    <nav class="navigation header__navigation">
       <button class="menu-button js-menu-button navigation__menu-button" type="button" aria-label="Открыть меню" aria-controls="menu" aria-expanded="false">
         <svg class="menu-button__icon" width="24" height="18" aria-hidden="true">
           <use class="menu-button__icon-symbol menu-button__icon-symbol--menu" href="#menu-button--menu"></use>
@@ -107,13 +107,12 @@
 
     <a class="link header__phone" href="tel:+79215522700">+7&nbsp;(921)&nbsp;552&#8209;27&#8209;00</a>
 
-    <button id="header-call-back" class="button button--header header__call-back-button js-popup-button"
-            type="button" aria-label="Заказать звонок" aria-controls="order-dialog">
+    <a class="button button--header header__call-back-button js-popup-button" href="form.html" aria-label="Заказать звонок" aria-controls="order-dialog">
       <svg class="button__icon button__icon--mobile" width="40" height="40" aria-hidden="true">
         <use class="button__icon-symbol" href="#call-back-button"></use>
       </svg>
       <span class="button__text button__text--tablet">Заказать звонок</span>
-    </button>
+    </a>
   </header>
 
   <main class="main">
@@ -140,7 +139,7 @@
           <span class="top-section__subtitle">Frontend&#8209;разработчик и&nbsp;веб&#8209;верстальщик</span>
         </h1>
 
-        <a id="learn-more" class="button top-section__button" href="#what-i-do">Узнать больше</a>
+        <a class="button top-section__button" href="#what-i-do">Узнать больше</a>
 
         <div class="fly-tags fly-tags--top-section top-section__fly-tags" aria-hidden="true">
           <span class="fly-tags__item">{&nbsp;}</span>
@@ -164,7 +163,7 @@
           <li class="services__item services__item--coding">Исправление и доработка существующей вёрстки</li>
         </ul>
 
-        <a id="ask-price" class="button what-i-do-section__button" href="#price">Узнать стоимость</a>
+        <a class="button what-i-do-section__button" href="#price">Узнать стоимость</a>
       </div>
     </section>
 
@@ -267,10 +266,9 @@
         </ul>
       </div>
 
-      <button id="order-project" class="button my-projects-section__button js-popup-button"
-              type="button" aria-controls="order-dialog">
+      <a class="button my-projects-section__button js-popup-button" href="form.html" aria-controls="order-dialog">
         Заказать проект
-      </button>
+      </a>
     </section>
 
     <section id="price" class="price-section">
@@ -295,7 +293,7 @@
     </section>
   </main>
 
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="footer__container fix-container">
       <ul class="menu menu--footer footer__menu">
         <li class="menu__item">
@@ -321,10 +319,9 @@
         </li>
       </ul>
 
-      <button id="call-back-footer" class="button button--footer footer__callback-button js-popup-button"
-              type="button" aria-controls="order-dialog">
+      <a class="button button--footer footer__callback-button js-popup-button" href="form.html" aria-controls="order-dialog">
         Заказать звонок
-      </button>
+      </a>
 
       <ul class="socials footer__socials">
         <li class="socials__list-item">
@@ -367,7 +364,7 @@
   </footer>
 
   <div class="dialog-backdrop js-dialog-backdrop">
-    <section class="order-dialog hidden js-order-dialog" id="order-dialog" role="dialog" aria-modal="true">
+    <section id="order-dialog" class="order-dialog hidden js-order-dialog" role="dialog" aria-modal="true">
       <h2 class="order-dialog__title">Закажите вёрстку Вашего сайта</h2>
 
       <div class="order-dialog__container">
@@ -418,7 +415,7 @@
   </div>
 
   <button class="up-button up-button--hidden js-up-button" type="button" aria-label="Наверх">
-    <svg class="up-button__icon" width="40" hight="40" aria-label="true">
+    <svg class="up-button__icon" width="40" height="40" aria-label="true">
       <use class="up-button__icon-symbol" href="#up-button"></use>
     </svg>
   </button>

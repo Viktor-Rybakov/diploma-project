@@ -17,19 +17,20 @@
 
   openButtons.forEach((item, i, buttons) => {
     buttons[i].addEventListener( 'click', (event) => {
+      event.preventDefault();
       openDialog(dialog, overlay, body, firstFocusElement, lastFocusElement);
       focusAfterClose = event.target;
     });
   });
 
   closeButton.addEventListener( 'click', () => {
-    closeDialog(dialog, overlay, body, focusAfterClose);
+    closeDialog(dialog, form, overlay, body, focusAfterClose);
    });
 
   body.addEventListener('keydown', (event) => {
     let keyCode = event.key;
     if (keyCode === 'Escape' && !dialog.classList.contains('hidden')) {
-      closeDialog(dialog, overlay, body, focusAfterClose);
+      closeDialog(dialog, form, overlay, body, focusAfterClose);
       }
   });
 
@@ -41,7 +42,8 @@
     setTrapFocus(dialog, firstFocusElement, lastFocusElement);
   }
 
-  function closeDialog(dialog, overlay, body, focusAfterClose) {
+  function closeDialog(dialog, form, overlay, body, focusAfterClose) {
+    form.reset();
     toggleDialog(dialog);
     toggleOverlay(overlay);
     toggleBodyScroll(body);
@@ -122,7 +124,7 @@
     });
 
     setTimeout(() => {
-      closeDialog(dialog, overlay, body, focusAfterClose);
+      closeDialog(dialog, form, overlay, body, focusAfterClose);
     }, 500);
   };
 }());
