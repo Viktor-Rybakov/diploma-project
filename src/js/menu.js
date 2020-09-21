@@ -26,7 +26,7 @@
     if ( menuButton.getAttribute('aria-expanded') === 'true' ) {
       closeMenu();
     }
-  });
+  }, {passive: true});
 
   window.addEventListener('resize', () => {
     if ( menuButton.getAttribute('aria-expanded') === 'true' ) {

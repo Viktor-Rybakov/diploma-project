@@ -32,7 +32,7 @@
 
   sliderList.addEventListener('touchstart', (event) => {
     touchStartPageX = event.touches[0].pageX;
-  });
+  }, {passive: true});
 
   sliderList.addEventListener('touchend', (event) => {
     let touchEndPageX = event.changedTouches[0].pageX;
@@ -44,7 +44,7 @@
     }
 
     touchStartPageX = undefined;
-  });
+  }, {passive: true});
 
   function moveRight() {
     direction = 'right';
