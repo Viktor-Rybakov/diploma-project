@@ -29,7 +29,7 @@
     margin: 0 auto 111px;
   }
 
-  @include desktop {
+  @include min-width(1280px) {
     width: 1170px; /* 3 больших слайда */
     margin: 0 auto;
   }
@@ -42,7 +42,7 @@
     margin-right: 36px;
   }
 
-  @include desktop {
+  @include min-width(1280px) {
     margin-right: 30px;
   }
 }
@@ -66,7 +66,7 @@
     margin-bottom: 32px;
   }
   
-  @include desktop {
+  @include min-width(1280px) {
     width: 370px;
     height: 290px;
     margin-bottom: 49px;
@@ -95,7 +95,7 @@
     font-size: 25px;
   }
 
-  @include desktop {
+  @include min-width(1280px) {
     font-size: 20px;
   }
 }
@@ -133,7 +133,7 @@
   cursor: pointer;
   transition: 0.3s;
 
-  @include desktop {
+  @include min-width(1280px) {
     display: flex;
   }
 
@@ -167,7 +167,7 @@
 .slider__pagination {
   margin: 0;
 
-  @include desktop {
+  @include min-width(1280px) {
     display: none;
   }
 }

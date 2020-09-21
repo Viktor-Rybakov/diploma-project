@@ -32,7 +32,7 @@
   @include phone {
     grid-template-areas:  "heading photo"
                           "button photo";
-    grid-template-columns: 1fr min-content;
+    grid-template-columns: 1fr minmax(auto, 450px);
     grid-template-rows: repeat(2, 1fr);
     row-gap: 33px;
     
@@ -44,6 +44,10 @@
     row-gap: 48px;
 
     min-height: 663px;
+  }
+
+  @include tablet-ipad {
+    grid-template-columns: 1fr minmax(auto, 480px);
   }
 
   @include min-max-width(560px, 767px) {
@@ -81,19 +85,14 @@
 
   @include phone {
     display: block;
-    width: 250px;
+    width: auto;
     min-height: auto;
 
     background: none;
   }
 
   @include tablet {
-    width: 450px;
     filter: drop-shadow(30px 0 30px rgba(0, 0, 0, 0.25));
-  }
-  
-  @include tablet-ipad {
-    width: 480px;
   }
 
   @include min-width(1510px) {
@@ -108,11 +107,7 @@
   margin-right: 20px;
 
   @include min-width(400px) {
-    margin-right: 40px;
-  }
-  
-  @include min-width(500px) {
-    margin-right: 60px;
+    margin-right: auto;
   }
 
   @include phone {
