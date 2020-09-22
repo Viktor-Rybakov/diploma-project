@@ -51,7 +51,9 @@ const copy = () => {
     'src/img/**/*',
     'src/favicon.ico',
     'src/manifest.json',
-    'src/mail.php'
+    'src/mail.php',
+    'src/.htaccess',
+    'src/robots.txt'
   ], {
     base: 'src'
   })
