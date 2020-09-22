@@ -78,23 +78,30 @@ function dialog() {
   let preDiv;
   let postDiv;
 
-  openButtons.forEach((item, i, buttons) => {
-    buttons[i].addEventListener( 'click', (event) => {
-      event.preventDefault();
-      openDialog(dialog, overlay, body, firstFocusElement, lastFocusElement);
-      focusAfterClose = event.target;
-    });
-  });
 
-  closeButton.addEventListener( 'click', () => {
-    closeDialog(dialog, form, overlay, body, focusAfterClose);
-   });
 
   body.addEventListener('keydown', (event) => {
     let keyCode = event.key;
     if (keyCode === 'Escape' && !dialog.classList.contains('hidden')) {
       closeDialog(dialog, form, overlay, body, focusAfterClose);
       }
+  });
+
+  body.addEventListener('click', (event) => {
+    if ( !dialog.classList.contains('hidden') && !event.target.classList.contains('js-popup-button')) {
+
+      if ( closeButton.contains(event.target) || !dialog.contains(event.target) ) {
+        closeDialog(dialog, form, overlay, body, focusAfterClose);
+      }
+    }
+  });
+
+  openButtons.forEach((item, i, buttons) => {
+    buttons[i].addEventListener( 'click', (event) => {
+      event.preventDefault();
+      openDialog(dialog, overlay, body, firstFocusElement, lastFocusElement);
+      focusAfterClose = event.target;
+    });
   });
 
   function openDialog(dialog, overlay, body, firstFocusElement, lastFocusElement) {
