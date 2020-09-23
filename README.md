@@ -1,4 +1,5 @@
 # diploma-project
 Skillbox diploma project
 
-Script for building: npm dev
+Script for server start: npm dev
+Script for building: npm build
