@@ -30,7 +30,7 @@
         <stop offset="1" stop-color="var(--gradient-color-2)" />
       </linearGradient>
     </defs>
-    
+
     <symbol id="menu-button--menu" viewBox="0 0 24 18">
       <path d="M0 1.5 h24 M0 9 h24 M0 16.5 h24" stroke-width="3" />
     </symbol>
@@ -129,7 +129,7 @@
           <source media="(min-width: 768px)"
                   srcset="img/photo-480.png 1x,
                           img/photo-960.png 2x">
-          <img  class="top-section__image" 
+          <img  class="top-section__image"
                 src="img/photo-250.png"
                 srcset="img/photo-500.png 2x"
                 alt="Фотография Виктора Рыбакова">
@@ -239,6 +239,28 @@
                 </figure>
               </a>
             </li>
+
+            <li class="slider__list-item">
+              <a href="#" class="slider__link">
+                <figure class="slider__item">
+                  <picture class="slider__picture">
+                    <source type="image/webp"
+                            sizes="(min-width: 1210px) 370px, (min-width: 1024px) 456px, 282px"
+                            srcset="img/webp/project_1-370.webp 370w,
+                                   img/webp/project_1-555.webp 555w,
+                                    img/webp/project_1-740.webp 740w">
+                    <img  class="slider__image"
+                          src="img/project_1-370.jpg"
+                          sizes="(min-width: 1210px) 370px, (min-width: 1024px) 456px, 282px"
+                          srcset="img/project_1-555.jpg 555w,
+                                  img/project_1-740.jpg 740w"
+                          alt="Сайт психолога Веры Антоновой">
+                  </picture>
+
+                  <figcaption class="slider__description">Сайт психолога Веры Антоновой</figcaption>
+                </figure>
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -247,24 +269,21 @@
             <use class="slider__button-icon-symbol" href="#slider-button--prev"></use>
           </svg>
         </button>
-        
+
         <button class="slider__button slider__button--next js-slider__next" type="button" aria-label="Следующий слайд">
           <svg class="slider__button-icon" width="14" height="24" aria-hidden="true">
             <use class="slider__button-icon-symbol" href="#slider-button--next"></use>
           </svg>
         </button>
 
-        <ul class="pagination slider__pagination">
-          <li class="pagination__list-item">
-            <button class="pagination__button pagination__button--active js-pagination-button" type="button" aria-label="Слайд 1"></button>
-          </li>
-          <li class="pagination__list-item">
-            <button class="pagination__button js-pagination-button" type="button" aria-label="Слайд 2"></button>
-          </li>
-          <li class="pagination__list-item">
-            <button class="pagination__button js-pagination-button" type="button" aria-label="Слайд 3"></button>
-          </li>
+        <ul class="pagination slider__pagination js-pagination-list">
         </ul>
+
+        <template id="pagination__button-template">
+          <li class="pagination__list-item">
+            <button class="pagination__button js-pagination-button" type="button"></button>
+          </li>
+        </template>
       </div>
 
       <a class="button my-projects-section__button js-popup-button" href="form.html" aria-controls="order-dialog">
@@ -283,7 +302,7 @@
             зависимости от сложности задач.</small>
         </p>
       </div>
-      
+
       <div class="fly-tags fly-tags--price-section price-section__fly-tags" aria-hidden="true">
         <span class="fly-tags__item">{&nbsp;}</span>
         <span class="fly-tags__item">&lt;div&gt;</span>

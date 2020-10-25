@@ -159,7 +159,7 @@ function dialog() {
   function setFocus(element) {
     element.focus();
   }
- 
+
   function setTrapFocus(dialog, firstFocusElement, lastFocusElement) {
     preDiv = document.createElement('div');
     postDiv = document.createElement('div');
@@ -238,139 +238,189 @@ function slider() {
 
   'use strict'
 
-  let slider = document.querySelector('.js-slider');
-  let sliderList = slider.querySelector('.js-slider__list');
+  const slider = document.querySelector('.js-slider');
+  const sliderList = slider.querySelector('.js-slider__list');
   const sliderButtonNext = slider.querySelector('.js-slider__next');
   const sliderButtonPrev = slider.querySelector('.js-slider__prev');
-  let paginationButtons = slider.querySelectorAll('.js-pagination-button');
-  let slidesAmount = sliderList.childNodes.length;
-  let currentSlide = 0;
-  let direction;
+  const paginationList = slider.querySelector('.js-pagination-list');
+  const templatePaginationButton = slider.querySelector('#pagination__button-template');
+  const slidesAmount = sliderList.childNodes.length;
+
+  let currentSlide = 1;
   let touchStartPageX;
-  let clickPrev = moveRight;
-  let clickNext = moveLeft;
-  let slideWidth = sliderList.children[1].getBoundingClientRect().left - sliderList.children[0].getBoundingClientRect().left;
+  let slideWidth = getSlideWidth();
+  let frameSize = getFrameSizes();
+  let paginationButtons;
+  let windowWidth = window.innerWidth;
+  let maxPosition = slidesAmount - frameSize + 1;
 
-  setCurrentButton();
+  createPaginationButtons();
+  setActivePaginationButton();
+  addListenerForButtons();
+  updateControlButtons();
 
-  window.addEventListener('resize', function(){
-    slideWidth = sliderList.children[1].getBoundingClientRect().left - sliderList.children[0].getBoundingClientRect().left;
+  window.addEventListener('resize', function() {
+    setTimeout(() => {
+      let newWindowWidth = window.innerWidth;
+
+      if (windowWidth < 620 && newWindowWidth >= 620 ||
+          windowWidth > 620 && newWindowWidth <= 620 ||
+          windowWidth < 1280 && newWindowWidth >= 1280 ||
+          windowWidth > 1280 && newWindowWidth <= 1280) {
+        slideWidth = getSlideWidth();
+        frameSize = getFrameSizes();
+        maxPosition = slidesAmount - frameSize + 1;
+        resetSliderPosition();
+        removePaginationButtons();
+        createPaginationButtons();
+        setActivePaginationButton();
+        addListenerForButtons();
+        updateControlButtons();
+      }
+
+      windowWidth = newWindowWidth;
+    }, 100);
   });
 
-  sliderButtonPrev.addEventListener('click', clickPrev);
-  sliderButtonNext.addEventListener('click', clickNext);
+  sliderButtonPrev.addEventListener('click', () => {
+    currentSlide = getNewPosition('prev', currentSlide, 1, maxPosition);
+    translateSlider(currentSlide);
+    updateControlButtons();
+    setActivePaginationButton();
+  });
 
-  sliderList.addEventListener('transitionend', (event) => {
-    if ( event.target.contains(sliderList) ) {
-      removeSlide();
-    }
+  sliderButtonNext.addEventListener('click', () => {
+    currentSlide = getNewPosition('next', currentSlide, 1, maxPosition);
+    translateSlider(currentSlide);
+    updateControlButtons();
+    setActivePaginationButton();
   });
 
   sliderList.addEventListener('touchstart', (event) => {
     touchStartPageX = event.touches[0].pageX;
-  }, {passive: true});
+  });
+
+  sliderList.addEventListener('touchmove', (event) => {
+    let touchOffset = touchStartPageX - event.changedTouches[0].pageX;
+    translateSlider(currentSlide, touchOffset);
+    touchOffset = undefined;
+  });
 
   sliderList.addEventListener('touchend', (event) => {
     let touchEndPageX = event.changedTouches[0].pageX;
 
     if (touchEndPageX < touchStartPageX) {
-      moveLeft();
+      currentSlide = getNewPosition('next', currentSlide, 1, maxPosition);
+      translateSlider(currentSlide);
+      updateControlButtons();
+      setActivePaginationButton();
     } else if (touchEndPageX > touchStartPageX) {
-      moveRight();
+      currentSlide = getNewPosition('prev', currentSlide, 1, maxPosition);
+      translateSlider(currentSlide);
+      updateControlButtons();
+      setActivePaginationButton();
     }
 
     touchStartPageX = undefined;
-  }, {passive: true});
+  });
 
-  function moveRight() {
-    direction = 'right';
-    if (clickPrev == null) {
-      return false;
+  function getSlideWidth() {
+    return sliderList.children[1].getBoundingClientRect().left - sliderList.children[0].getBoundingClientRect().left;
+  }
+
+  function getFrameSizes() {
+    if (window.innerWidth >= 1280) {
+      return 3;
+    }
+    if (620 <= window.innerWidth && window.innerWidth < 1280) {
+      return 2;
+    }
+    if (window.innerWidth < 620) {
+      return 1;
+    }
+  }
+
+  function resetSliderPosition() {
+    currentSlide = 1;
+    sliderList.style.transform = `translateX(0px)`;
+  }
+
+  function updateControlButtons() {
+    if (currentSlide === 1) {
+      sliderButtonPrev.setAttribute('disabled', 'disabled');
     } else {
-      clickPrev = null;
-      sliderList.style.transition = 'none';
-      sliderList.style.transform = `translateX(-${slideWidth}px)`;
-
-      let nextSlide = sliderList.lastElementChild.cloneNode(true);
-
-      sliderList.prepend(nextSlide);
-
-      setTimeout(() => {
-        sliderList.style.transition = '0.2s';
-        sliderList.style.transform = 'translateX(0)';
-      }, 50);
-
-      sliderList = slider.querySelector('.js-slider__list');
-
-      setCurrentSlide();
-      setCurrentButton()
+      sliderButtonPrev.removeAttribute('disabled');
     }
-  }
 
-  function moveLeft() {
-    direction = 'left';
-    if (clickNext == null) {
-      return false;
+    if (currentSlide === maxPosition) {
+      sliderButtonNext.setAttribute('disabled', 'disabled');
     } else {
-      let nextSlide = sliderList.firstElementChild.cloneNode(true);
-
-      sliderList.append(nextSlide);
-      sliderList.style.transform = `translateX(-${slideWidth}px)`;
-
-      sliderList = slider.querySelector('.js-slider__list');
-      clickNext = null;
+      sliderButtonNext.removeAttribute('disabled');
     }
-
-    setCurrentSlide();
-    setCurrentButton()
   }
 
-  function removeSlide() {
-    if (direction === 'left') {
-      sliderList.firstElementChild.remove();
-
-      sliderList.style.transition = 'none';
-      sliderList.style.transform = 'translateX(0)';
-      setTimeout(function(){
-        sliderList.style.transition = '0.2s';
-        clickNext = moveLeft;
-      }, 50);
-
-    } else if (direction === 'right') {
-      sliderList.lastElementChild.remove();
-      clickPrev = moveRight;
-    }
-
-    sliderList = slider.querySelector('.js-slider__list');
-  }
-
-  function setCurrentSlide() {
-    switch (direction) {
-      case 'left':
-        if (currentSlide < slidesAmount - 1 ) {
-          currentSlide++;
-        } else {
-          currentSlide = 0;
+  function getNewPosition(direction, position, min, max) {
+    switch(direction) {
+      case 'next':
+        if (position < max) {
+          return ++position;
+        }
+        else {
+          return position;
         }
         break;
-      case 'right':
-        if (currentSlide > 0) {
-          currentSlide--;
-        } else {
-          currentSlide = slidesAmount - 1;
+
+      case 'prev':
+        if (position > min) {
+          return --position;
+        }
+        else {
+          return position;
         }
         break;
     }
   }
 
-  function setCurrentButton() {
-    paginationButtons.forEach((item, i, button) => {
-      button[i].classList.remove('pagination__button--active');
+  function translateSlider(position, offset = 0) {
+    let translateWidht = (1 - position) * slideWidth - offset;
+    sliderList.style.transform = `translateX(${translateWidht}px)`;
+  }
 
+  function createPaginationButtons() {
+    for (let i = 1; i <= maxPosition; i++) {
+      let newElement = templatePaginationButton.content.cloneNode(true);
+      paginationList.appendChild(newElement);
+    }
+
+    paginationButtons = slider.querySelectorAll('.js-pagination-button');
+  }
+
+  function removePaginationButtons() {
+    while (paginationList.firstChild) {
+      paginationList.removeChild(paginationList.firstChild);
+    }
+  }
+
+  function setActivePaginationButton() {
+    for (let i = 1; i <= maxPosition; i++) {
       if (i === currentSlide) {
-        button[i].classList.add('pagination__button--active');
+        paginationButtons[i-1].classList.add('pagination__button--active');
       }
-    })
+      else {
+        paginationButtons[i-1].classList.remove('pagination__button--active');
+      }
+    }
+  }
+
+  function addListenerForButtons() {
+    for (let i = 1; i <= maxPosition; i++) {
+      paginationButtons[i-1].addEventListener('click', () => {
+        currentSlide = i;
+        translateSlider(currentSlide);
+        updateControlButtons();
+        setActivePaginationButton();
+      });
+    }
   }
 }
 

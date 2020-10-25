@@ -17,7 +17,7 @@
 
   list-style: none;
 
-  transition: 0.2s;
+  transition: 0.1s;
   will-change: transform;
 
   @include min-width(620px) {
@@ -65,7 +65,7 @@
     height: 359px;
     margin-bottom: 32px;
   }
-  
+
   @include min-width(1280px) {
     width: 370px;
     height: 290px;
@@ -149,6 +149,10 @@
     outline: none;
     box-shadow: 0 0 20px transparent, 0 0 0 2px var(--focus-button-color);
   }
+
+  &:disabled {
+    cursor: initial;
+  }
 }
 
 .slider__button-icon {
@@ -162,6 +166,10 @@
 
 .slider__button:hover .slider__button-icon-symbol {
   stroke: url('#gradient-vertical');
+}
+
+.slider__button:disabled .slider__button-icon-symbol {
+  stroke: grey;
 }
 
 .slider__pagination {
