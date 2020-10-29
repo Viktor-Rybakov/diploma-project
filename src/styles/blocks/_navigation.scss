@@ -5,10 +5,30 @@
 
   height: 100vh;
   padding-top: 20px;
-  
+
   background-color: transparent;
 
   pointer-events: none;
+
+  &::before {
+    content: "";
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    z-index: 1;
+    display: block;
+    background-color: rgba(0, 0, 0, 0);
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-delay: 0;
+
+    pointer-events: none;
+  }
+
+  &--open {
+    &::before {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
 
   @include tablet {
     row-gap: 30px;
@@ -23,10 +43,15 @@
     padding-top: 0;
 
     pointer-events: initial;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
 .navigation__menu-button{
+  grid-row: 1 / span 1;
   justify-self: start;
   margin-left: 12px;
 
@@ -39,4 +64,10 @@
   @include min-width(1025px) {
     display: none;
   }
+}
+
+.navigation__menu {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+  z-index: 2;
 }

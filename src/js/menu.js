@@ -7,6 +7,7 @@ function menu() {
 
   const menu = document.querySelector('.js-menu');
   const menuButton = document.querySelector('.js-menu-button');
+  const navigation = document.querySelector('.js-navigation');
 
   window.addEventListener('click', (event) => {
     let target = event.target;
@@ -42,6 +43,7 @@ function menu() {
     menuButton.setAttribute('aria-expanded', 'true');
     menuButton.setAttribute('aria-label', 'Закрыть меню');
     menuButton.classList.add('menu-button--open');
+    navigation.classList.add('navigation--open');
   }
 
   function closeMenu() {
@@ -49,5 +51,6 @@ function menu() {
     menuButton.setAttribute('aria-expanded', 'false');
     menuButton.setAttribute('aria-label', 'Открыть меню');
     menuButton.classList.remove('menu-button--open');
+    navigation.classList.remove('navigation--open');
   }
 }

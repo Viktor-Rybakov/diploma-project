@@ -14,7 +14,7 @@
   width: 300px;
   padding: 30px;
   visibility: hidden;
-  
+
   background-color: var(--primary-background-color);
   transform: translateX(-100%);
   transition-property: transform, visibility;
@@ -40,7 +40,6 @@
   z-index: 1;
   visibility: initial;
 
-  box-shadow: 0 100vw 0 100vw rgba(0, 0, 0, 0.6);
   transform: translateX(0);
 }
 
