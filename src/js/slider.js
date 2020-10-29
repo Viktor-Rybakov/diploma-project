@@ -155,7 +155,10 @@ function slider() {
 
   function createPaginationButtons() {
     for (let i = 1; i <= maxPosition; i++) {
-      let newElement = templatePaginationButton.content.cloneNode(true);
+      let newElement = document.createElement('li');
+      newElement = templatePaginationButton.content.cloneNode(true);
+      let newButton = newElement.querySelector('.js-pagination-button');
+      newButton.setAttribute('aria-label', `Положение слайдера ${i}`);
       paginationList.appendChild(newElement);
     }
 
