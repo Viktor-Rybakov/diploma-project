@@ -4,6 +4,7 @@ const postcss = require('gulp-postcss');
 const htmlmin = require('gulp-htmlmin');
 const sync = require('browser-sync').create();
 const del = require('del');
+const concat = require('gulp-concat');
 
 // HTML
 
@@ -38,6 +39,7 @@ exports.styles = styles;
 
 const scripts = () => {
   return gulp.src('src/js/*.js')
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest('build/js'))
     .pipe(sync.stream());
 };
