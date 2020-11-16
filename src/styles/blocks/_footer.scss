@@ -35,20 +35,20 @@
 
     margin: 0 40px;
     padding-top: 106px;
-    padding-bottom: 73px;
+    padding-bottom: 83px;
   }
 
   @include desktop {
     margin: 0 auto;
     padding-top: 84px;
-    padding-bottom: 74px;
+    padding-bottom: 80px;
   }
 }
 
 .footer__menu {
   grid-area: footer-menu;
 
-  margin-bottom: 50px;
+  margin-bottom: 46px;
 
   @include tablet {
     margin-bottom: 0;
@@ -58,10 +58,16 @@
 .footer__contacts {
   grid-area: contacts;
 
-  margin: 0 0 30px;
+  margin: 0 0 28px;
 
   @include tablet {
     margin: 0;
+    margin-left: 16px;
+  }
+
+  @include desktop {
+    margin: 0;
+    margin-left: 54px;
   }
 }
 
@@ -72,6 +78,11 @@
 
   @include tablet {
     margin: 0;
+    margin-top: -8px;
+  }
+
+  @include desktop {
+    margin-right: 20px;
   }
 }
 

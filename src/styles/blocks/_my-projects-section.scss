@@ -4,10 +4,21 @@
   align-items: center;
 }
 
+.my-projects-section__title {
+
+  @include tablet-ipad {
+    margin-bottom: 117px;
+  }
+}
+
 .my-projects-section__slider {
-  margin-bottom: 38px;
-  
+  margin-bottom: 48px;
+
   @include min-width(1024px) {
-    margin-bottom: 89px;
+    margin-bottom: 97px;
+  }
+
+  @include desktop {
+    margin-bottom: 98px;
   }
 }

@@ -30,15 +30,15 @@
 
 /*----------------- Top Section -----------------*/
 
-.fly-tags--top-section .fly-tags__item { 
+.fly-tags--top-section .fly-tags__item {
   bottom: 0;
   right: 100px;
   opacity: 0;
-  
+
   background: linear-gradient(to top right, var(--gradient-color-1), var(--gradient-color-2));
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+
   font-weight: bold;
 
   animation-fill-mode: forwards;
@@ -47,7 +47,7 @@
   @include min-width(400px) {
     right: 120px;
   }
-  
+
   @include min-width(500px) {
     right: 140px;
   }
@@ -68,11 +68,11 @@
 .fly-tags--top-section .fly-tags__item:nth-child(1) {
   line-height: 1.5;
   font-size: 25px;
-  
+
   animation-name: fly-tag-1;
   animation-duration: 1s;
   animation-delay: 1s;
-  
+
   @include min-width(400px) {
     animation-name: fly-tag-1--400;
   }
@@ -112,7 +112,7 @@
   animation-name: fly-tag-2;
   animation-duration: 1s;
   animation-delay: 1.5s;
-  
+
   @include min-width(400px) {
     animation-name: fly-tag-2--400;
   }
@@ -151,7 +151,7 @@
   animation-name: fly-tag-3;
   animation-duration: 0.5s;
   animation-delay: 1.7s;
-  
+
   @include min-width(400px) {
     animation-name: fly-tag-3--400;
   }
@@ -181,7 +181,7 @@
   animation-name: fly-tag-4;
   animation-duration: 0.7s;
   animation-delay: .8s;
-  
+
   @include min-width(400px) {
     animation-name: fly-tag-4--400;
   }
@@ -221,7 +221,7 @@
     animation-duration: 2s;
     animation-delay: 1s;
   }
-  
+
   @include desktop {
     animation-name: fly-tag-5--desktop;
   }
@@ -235,12 +235,12 @@
 
 .fly-tags--top-section .fly-tags__item:nth-child(6) {
   display: none;
-  
+
   @include tablet-ipad {
     display: block;
 
     font-size: 45px;
-    
+
     animation-name: fly-tag-6--tablet-ipad;
     animation-duration: 0.7s;
     animation-delay: 1s;
@@ -260,11 +260,11 @@
 
 .fly-tags--price-section .fly-tags__item:nth-child(1) {
   top: 23px;
-  left: 156px;
+  left: 155px;
   transform: rotate(28deg);
-  
+
   font-size: 33px;
-  
+
   @include desktop {
     top: 61px;
     left: 70px;
@@ -280,11 +280,11 @@
 
 .fly-tags--price-section .fly-tags__item:nth-child(2) {
   bottom: 33px;
-  right: 453px;
+  right: 454px;
   transform: rotate(20deg);
-  
+
   font-size: 25px;
-  
+
   @include desktop {
     bottom: 19px;
     right: 404px;
@@ -294,11 +294,11 @@
 
 .fly-tags--price-section .fly-tags__item:nth-child(3) {
   bottom: 35px;
-  right: 94px;
+  right: 92px;
   transform: rotate(-24deg);
-  
+
   font-size: 40px;
-  
+
   @include desktop {
     top: 77px;
     bottom: auto;
@@ -313,7 +313,7 @@
 
 .fly-tags--price-section .fly-tags__item:nth-child(4) {
   display: none;
-  
+
   @include desktop {
     bottom: 53px;
     right: 107px;

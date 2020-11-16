@@ -26,7 +26,7 @@
 
   @include min-width(1024px) {
     width: 948px; /* 2 средних слайда */
-    margin: 0 auto 111px;
+    margin: 0 auto 102px;
   }
 
   @include min-width(1280px) {
@@ -51,7 +51,6 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding-bottom: 10px;
 }
 
 .slider__picture {
@@ -63,13 +62,13 @@
   @include min-width(1024px) {
     width: 456px;
     height: 359px;
-    margin-bottom: 32px;
+    margin-bottom: 21px;
   }
 
   @include min-width(1280px) {
     width: 370px;
     height: 290px;
-    margin-bottom: 49px;
+    margin-bottom: 36px;
   }
 }
 

@@ -6,7 +6,7 @@
                         "coding";
   grid-template-columns: 220px;
   grid-template-rows: repeat(4, 1fr);
-  gap: 50px;
+  gap: 54px;
 
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@
                           "frontend coding";
     grid-template-columns: repeat(2, 270px);
     grid-template-rows: repeat(2, 1fr);
-    gap: 70px 125px;
+    gap: 78px 125px;
   }
 
   @include desktop {
@@ -26,7 +26,7 @@
     grid-template-areas:  "pages adaptiv frontend coding";
     grid-template-columns: repeat(4, 270px);
     grid-template-rows: 1fr;
-    gap: 30px;
+    gap: 35px;
     justify-content: space-between;
   }
 }
@@ -43,7 +43,7 @@
   background-position: 50% 0;
 
   @include tablet {
-    padding-top: 100px;
+    padding-top: 93px;
 
     font-size: 20px;
     line-height: 30px;

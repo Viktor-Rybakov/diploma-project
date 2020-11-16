@@ -15,7 +15,7 @@
     margin-bottom: 24px;
 
     @include tablet {
-      margin-bottom: 31px;
+      margin-bottom: 36px;
     }
   }
 }
@@ -24,13 +24,13 @@
   padding-left: 32px;
 
   color: inherit;
-  
+
   background-repeat: no-repeat;
   background-position: 0 50%;
-  
+
   @include tablet {
     padding-left: 37px;
-    
+
     color: var(--primary-text-color);
   }
 

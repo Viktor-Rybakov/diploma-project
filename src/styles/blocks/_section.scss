@@ -5,8 +5,8 @@
   scroll-snap-align: start;
 
   @include tablet {
-    padding-top: 100px;
-    padding-bottom: 105px;
+    padding-top: 102px;
+    padding-bottom: 102px;
   }
 }
 
@@ -22,13 +22,13 @@
   text-align: center;
 
   @include tablet {
-    margin: 0 auto 95px;
+    margin: 0 auto 101px;
 
     font-weight: 700;
     font-size: 54px;
   }
 
   @include desktop {
-    margin: 0 auto 100px;
+    margin: 0 auto 104px;
   }
 }
