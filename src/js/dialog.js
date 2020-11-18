@@ -26,10 +26,12 @@ function dialog() {
     let keyCode = event.key;
     if (keyCode === 'Escape' && !dialog.classList.contains('hidden')) {
       closeDialog(dialog, form, overlay, body, focusAfterClose);
+      focusAfterClose = undefined;
       }
 
     if (keyCode === 'Escape' && !dialogSuccess.classList.contains('hidden')) {
-      closeSuccessDialog(dialog, overlay, body);
+      closeSuccessDialog(dialogSuccess, overlay, body, focusAfterClose);
+      focusAfterClose = undefined;
     }
   });
 
@@ -38,13 +40,15 @@ function dialog() {
 
       if ( closeButton.contains(event.target) || !dialog.contains(event.target) ) {
         closeDialog(dialog, form, overlay, body, focusAfterClose);
+        focusAfterClose = undefined;
       }
     }
 
     if ( !dialogSuccess.classList.contains('hidden') && !event.target.classList.contains('js-popup-button')) {
 
       if ( closeButtonSuccess.contains(event.target) ) {
-        closeSuccessDialog(dialog, overlay, body);
+        closeSuccessDialog(dialogSuccess, overlay, body, focusAfterClose);
+        focusAfterClose = undefined;
       }
     }
   });
@@ -72,8 +76,6 @@ function dialog() {
     toggleBodyScroll(body);
     removeTrapFocus();
     setFocus(focusAfterClose);
-
-    focusAfterClose = undefined;
   }
 
   function toggleDialog(dialog) {
@@ -135,18 +137,20 @@ function dialog() {
     postDiv.remove();
   }
 
-  function openSuccessDialog(dialog, overlay, body) {
+  function openSuccessDialog(dialog, overlay, body, closeButtonSuccess) {
     toggleDialog(dialog);
     toggleOverlay(overlay);
     toggleBodyScroll(body);
-
     setFocus(closeButtonSuccess);
+    setTrapFocus(dialog, closeButtonSuccess, closeButtonSuccess);
   }
 
-  function closeSuccessDialog(dialog, overlay, body) {
+  function closeSuccessDialog(dialog, overlay, body, focusAfterClose) {
     toggleDialog(dialog);
     toggleOverlay(overlay);
     toggleBodyScroll(body);
+    removeTrapFocus();
+    setFocus(focusAfterClose);
   }
 
   form.onsubmit = async (event) => {
@@ -162,7 +166,7 @@ function dialog() {
     }, 500);
 
     setTimeout(() => {
-      openSuccessDialog(dialogSuccess, overlay, body);
+      openSuccessDialog(dialogSuccess, overlay, body, closeButtonSuccess);
     }, 500);
   };
 }
