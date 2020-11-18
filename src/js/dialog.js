@@ -7,10 +7,12 @@ function dialog() {
 
   const openButtons = document.querySelectorAll('.js-popup-button');
   const body = document.querySelector('.js-body');
-  const dialog = document.querySelector(('.js-order-dialog'));
+  const dialog = document.querySelector('.js-order-dialog');
+  const dialogSuccess = document.querySelector('.js-order-dialog-success');
   const form = document.querySelector('.js-form');
   const overlay = document.querySelector('.js-dialog-backdrop');
   const closeButton = document.querySelector('.js-modal-close');
+  const closeButtonSuccess = document.querySelector('.js-modal-close-success');
   const firstFocusElement = document.querySelector('.js-first-focus');
   const lastFocusElement = document.querySelector('.js-last-focus');
 
@@ -25,6 +27,10 @@ function dialog() {
     if (keyCode === 'Escape' && !dialog.classList.contains('hidden')) {
       closeDialog(dialog, form, overlay, body, focusAfterClose);
       }
+
+    if (keyCode === 'Escape' && !dialogSuccess.classList.contains('hidden')) {
+      closeSuccessDialog(dialog, overlay, body);
+    }
   });
 
   body.addEventListener('click', (event) => {
@@ -32,6 +38,13 @@ function dialog() {
 
       if ( closeButton.contains(event.target) || !dialog.contains(event.target) ) {
         closeDialog(dialog, form, overlay, body, focusAfterClose);
+      }
+    }
+
+    if ( !dialogSuccess.classList.contains('hidden') && !event.target.classList.contains('js-popup-button')) {
+
+      if ( closeButtonSuccess.contains(event.target) ) {
+        closeSuccessDialog(dialog, overlay, body);
       }
     }
   });
@@ -120,7 +133,21 @@ function dialog() {
   function removeTrapFocus() {
     preDiv.remove();
     postDiv.remove();
-  };
+  }
+
+  function openSuccessDialog(dialog, overlay, body) {
+    toggleDialog(dialog);
+    toggleOverlay(overlay);
+    toggleBodyScroll(body);
+
+    setFocus(closeButtonSuccess);
+  }
+
+  function closeSuccessDialog(dialog, overlay, body) {
+    toggleDialog(dialog);
+    toggleOverlay(overlay);
+    toggleBodyScroll(body);
+  }
 
   form.onsubmit = async (event) => {
     event.preventDefault();
@@ -132,6 +159,10 @@ function dialog() {
 
     setTimeout(() => {
       closeDialog(dialog, form, overlay, body, focusAfterClose);
+    }, 500);
+
+    setTimeout(() => {
+      openSuccessDialog(dialogSuccess, overlay, body);
     }, 500);
   };
 }
