@@ -36,7 +36,7 @@ function dialog() {
   });
 
   body.addEventListener('click', (event) => {
-    if ( !dialog.classList.contains('hidden') && !event.target.classList.contains('js-popup-button')) {
+    if ( !dialog.classList.contains('hidden') && !event.target.classList.contains('js-popup-button') && !event.target.closest('.js-popup-button') ) {
 
       if ( closeButton.contains(event.target) || !dialog.contains(event.target) ) {
         closeDialog(dialog, form, overlay, body, focusAfterClose);
